@@ -2,7 +2,7 @@ import re
 from tagging import Tagging, Tense, Tag, Type, Semantic_Role_Labelling
 import logging
 import stemmer
-# This is a test to check if git works
+
 class NLP:
     def __init__(self):
         self.patterns = {
