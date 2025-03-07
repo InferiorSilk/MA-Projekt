@@ -16,6 +16,7 @@ class Tag(Enum):
     PUNCTUATION = 'punctuation'
 
 class Tagging:
+    """Pattern matching (_is_is_pattern()), _get_pattern_tag(), comments and formating done by AI"""
     def __init__(self, patterns, word_endings):
         self.patterns = patterns
         self.word_endings = word_endings
@@ -306,6 +307,8 @@ class Tense:
             
         Returns:
             str: The identified tense
+
+        Self made; The complex looking append statement and formating done by AI, just like the check for irregular verbs
         """
         words = []
         verb_forms = []
@@ -390,10 +393,7 @@ class Type(Enum):
     MANNER = 'manner'
 
 class Semantic_Role_Labelling():
-    """
-    This class is responsible for performing Semantic Role Labelling (SRL) on a sentence.
-    SRL identifies the semantic role of each word in the sentence.
-    """
+    """Self made"""
 
     def __init__(self):
         pass
