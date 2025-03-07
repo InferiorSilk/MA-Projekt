@@ -308,7 +308,7 @@ class Tense:
         Returns:
             str: The identified tense
 
-        Self made; The complex looking append statement and formating done by AI, just like the check for irregular verbs
+        Self made; The complex looking append statement and formating done by AI, just like the check for irregular verbs and small statements like the one to handle multi word auxiliaries and the blueprint for checking the tense.
         """
         words = []
         verb_forms = []
@@ -327,15 +327,13 @@ class Tense:
         # Join words to handle multi-word auxiliaries
         text = ' '.join(words)
         
-        # Check for future perfect continuous
-        if any(aux in text for aux in ['will have been', 'shall have been']) and any(v[1] == 'ing' for v in verb_forms):
-            return 'future_perfect_continuous'
+        # Check for future
+        if any(aux in text for aux in ['will', 'shall', 'going to']):
+            return 'future'
             
         # Check for present/past perfect continuous
-        if 'have been' in text and any(v[1] == 'ing' for v in verb_forms):
-            return 'present_perfect_continuous'
-        if 'had been' in text and any(v[1] == 'ing' for v in verb_forms):
-            return 'past_perfect_continuous'
+        if 'have been' in text and any(v[1] == 'ing' for v in verb_forms) or 'had been' in text and any(v[1] == 'ing' for v in verb_forms):
+            return 'present'
             
         # Check compound tenses
         for pattern in self.auxiliary_patterns:
@@ -361,9 +359,9 @@ class Tense:
                 if word in verb_info['past_participle']:
                     # Look for auxiliary to determine perfect tense
                     if any(aux in words for aux in ['have', 'has']):
-                        return 'present_perfect'
+                        return 'present'
                     if 'had' in words:
-                        return 'past_perfect'
+                        return 'past'
         
         # Check regular verb patterns
         for word, ending in verb_forms:
@@ -372,9 +370,9 @@ class Tense:
             elif ending == 'ing':
                 # Check for auxiliary to determine continuous tense
                 if any(aux in words for aux in ['am', 'is', 'are']):
-                    return 'present_continuous'
+                    return 'present'
                 if any(aux in words for aux in ['was', 'were']):
-                    return 'past_continuous'
+                    return 'past'
             elif ending == 's':
                 return 'present'  # Third person singular present
             
