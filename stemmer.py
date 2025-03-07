@@ -1,5 +1,6 @@
 import logging
 class Stemmer:
+    """Porter stemmer algorithm: Shown by AI, partially executed by me"""
     def __init__(self):
         self.vowels = "aeiou"
         self.consonants = "bcdfghjklmnpqrstvwxyz"
