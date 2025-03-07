@@ -5,6 +5,7 @@ import stemmer
 
 class NLP:
     def __init__(self):
+        """Self made; Regular expressions and comments done by AI"""
         self.patterns = {
             'determiners': frozenset(['a', 'an', 'the', 'this', 'that', 'these', 'those', 'my', 'your', 'his', 'her']),
             'prepositions': frozenset(['in', 'on', 'at', 'by', 'with', 'from', 'to', 'for', 'of']),
@@ -36,6 +37,7 @@ class NLP:
         return stemmed, ending
 
     def process(self, text):
+        """Self made; Example for isinstance-check and comments by AI"""
         if not isinstance(text, str):
             raise TypeError("Input must be a string")
         if len(text) == 0:
@@ -78,6 +80,8 @@ class NLP:
         Raises:
             ValueError: If there's an error processing the sentence
             TypeError: If input is not a string
+
+        Self made; Docstrings, contraction handling, regular expressions, punctuation handling, formating and comments by AI
         """
         if not isinstance(sentence, str):
             raise TypeError("Input sentence must be a string")
@@ -149,6 +153,8 @@ class NLP:
         Raises:
             ValueError: If there's an error processing the words
             TypeError: If input is not a list
+
+        Self made; Docstrings and formating by AI
         """
         if not isinstance(sentence_list, list):
             raise TypeError("Input must be a list of words")
@@ -200,12 +206,14 @@ class NLP:
             raise ValueError(f"Error processing words in context: {str(e)}")
         
     def _clean_sentence(self, word, tagged_words):
-        # Remove unnecessary words
+        """Self made"""
+        # Remove unnecessary words / stopwords
         if tagged_words[word]['tag'] == Tag.CONJUNCTION.value or\
             tagged_words[word]['tag'] == Tag.PREPOSITION.value:
             tagged_words.pop(word)
 
 if __name__ == "__main__":
+    """Logging by AI"""
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
     nlp = NLP()
     print("Enter text to process:")
