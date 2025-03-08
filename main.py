@@ -183,7 +183,6 @@ class NLP:
                         next_word, 
                         prev_prev_word, 
                         next_next_word, 
-                        sentence_list, 
                         tagged_words
                     )
                 except Exception as e:

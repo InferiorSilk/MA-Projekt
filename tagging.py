@@ -35,6 +35,7 @@ class Tagging:
         return getattr(self, '_last_pattern_tag', 'undefined')
 
     def _tag_first_word(self, word, next_word):
+        logging.debug("Trying to tag first word")
         if word in self.patterns['pronouns']:
             return 'pronoun'
         elif next_word in dictionaries.verbs:
@@ -47,58 +48,62 @@ class Tagging:
             return Tag.VERB.value
         else:
             return Tag.NOUN.value
+        
 
-    def _tag_word_in_context(self, word, prev_word, next_word, prev_prev_word, next_next_word, sentence_list, tagged_words):
-            # First check for auxiliary verbs and common verb forms
-            for verb_forms in dictionaries.irregular_verbs.values():
-                if word in verb_forms['present'] or word in verb_forms['past'] or word in verb_forms['past_participle']:
-                    return Tag.VERB.value
-                    
-            if word in ['.', ',', '?', '!']:
-                return Tag.PUNCTUATION.value
-            if prev_word is not None and tagged_words[prev_word]['tag'] == Tag.DETERMINER.value:
-                if self._is_verb_after_determiner(word, tagged_words):
-                    return Tag.VERB.value
-                if self._is_adjective_after_determiner(word, tagged_words):
-                    return Tag.ADJECTIVE.value
-                if self._is_noun_after_determiner(word, tagged_words):
-                    return Tag.NOUN.value
-            if self._get_tag_by_ending(word, tagged_words) == Tag.ADVERB.value:
-                return Tag.ADVERB.value
-            if self._get_tag_by_ending(word, tagged_words) == Tag.ADJECTIVE.value:
-                return Tag.ADJECTIVE.value
-            if self._get_tag_by_ending(word, tagged_words) == Tag.VERB.value:
+    def _tag_word_in_context(self, word, prev_word, next_word, prev_prev_word, next_next_word, tagged_words):
+        # First check for auxiliary verbs and common verb forms
+        logging.debug("Trying to tag word")
+        if prev_word is None:
+            return self._tag_first_word(word, next_word)
+        logging.debug("First word checked")
+        if word in ['.', ',', '?', '!']:
+            return Tag.PUNCTUATION.value
+        logging.debug("Punctuation checked")
+        if prev_word is not None and tagged_words[prev_word]['tag'] == Tag.DETERMINER.value:
+            if self._is_verb_after_determiner(word, tagged_words):
                 return Tag.VERB.value
-            if self._is_number(word):
-                return Tag.NUMBER.value
-            if self._is_determiner(word):
-                return Tag.DETERMINER.value
-            if self._is_preposition(word):
-                return Tag.PREPOSITION.value
-            if self._is_conjunction(word):
-                return Tag.CONJUNCTION.value
-            if self._is_pronoun(word):
-                return Tag.PRONOUN.value
-            if self._is_adverb(word):
-                return Tag.ADVERB.value
-            if self._is_auxiliary_after(prev_word):
-                return self._tag_after_auxiliary(word)
-            if self._is_pronoun_after(prev_word):
-                return Tag.PRONOUN.value
-            if self._is_adjective_after_adverb(prev_word):
+            if self._is_adjective_after_determiner(word, tagged_words):
                 return Tag.ADJECTIVE.value
-            if self._is_noun_after_preposition(next_word, next_next_word):
+            if self._is_noun_after_determiner(word, tagged_words):
                 return Tag.NOUN.value
-            if self._is_sentence_connection(tagged_words, word, prev_word, prev_prev_word) and 'tag' in tagged_words[prev_prev_word]:
-                return tagged_words[prev_prev_word]['tag']
-            if self._is_verb_after_verb(tagged_words, prev_word, prev_prev_word):
-                return Tag.VERB.value
-            if self._is_adverb_after_verb(word, prev_word, tagged_words, prev_prev_word):
-                return Tag.ADVERB.value
-            if self._is_interjection(word):
-                return Tag.INTERJECTION.value
+        logging.debug("Previous determiner checked") #Somewhere after here there's a problem
+        """if self._get_tag_by_ending(word, tagged_words) == Tag.ADVERB.value:
+            return Tag.ADVERB.value
+        if self._get_tag_by_ending(word, tagged_words) == Tag.ADJECTIVE.value:
+            return Tag.ADJECTIVE.value
+        if self._get_tag_by_ending(word, tagged_words) == Tag.VERB.value:
+            return Tag.VERB.value"""
+        logging.debug("Tagging by ending checked")
+        if self._is_number(word):
+            return Tag.NUMBER.value
+        if self._is_determiner(word):
+            return Tag.DETERMINER.value
+        if self._is_preposition(word):
+            return Tag.PREPOSITION.value
+        if self._is_conjunction(word):
+            return Tag.CONJUNCTION.value
+        if self._is_pronoun(word):
+            return Tag.PRONOUN.value
+        if self._is_adverb(word):
+            return Tag.ADVERB.value
+        if self._is_auxiliary_after(prev_word):
+            return self._tag_after_auxiliary(word)
+        if self._is_pronoun_after(prev_word):
+            return Tag.PRONOUN.value
+        if self._is_adjective_after_adverb(prev_word):
+            return Tag.ADJECTIVE.value
+        if self._is_noun_after_preposition(next_word, next_next_word):
+            return Tag.NOUN.value
+        if self._is_sentence_connection(tagged_words, word, prev_word, prev_prev_word) and 'tag' in tagged_words[prev_prev_word]:
+            return tagged_words[prev_prev_word]['tag']
+        if self._is_verb_after_verb(tagged_words, prev_word, prev_prev_word):
+            return Tag.VERB.value
+        if self._is_adverb_after_verb(word, prev_word, tagged_words, prev_prev_word):
+            return Tag.ADVERB.value
+        if self._is_interjection(word):
+            return Tag.INTERJECTION.value
 
-            return self._fallback_tagging(word, prev_word, next_word)
+        return self._fallback_tagging(word, prev_word, next_word)
 
     def _get_tag_by_ending(self, word, tagged_words):
         """Helper method to get the tag based on the word ending.""" 
