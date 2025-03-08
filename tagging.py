@@ -1,6 +1,7 @@
 import dictionaries
 from enum import Enum
 import logging
+from main import NLP
 
 class Tag(Enum):
     NOUN = 'noun'
@@ -46,16 +47,29 @@ class Tagging:
             return Tag.NOUN.value
         elif word in self.word_endings and self.word_endings[word] == 'ing':
             return Tag.VERB.value
-        else:
-            return Tag.NOUN.value
+        # TODO: Implement checking for determiners etc
         
 
     def _tag_word_in_context(self, word, prev_word, next_word, prev_prev_word, next_next_word, tagged_words):
         # First check for auxiliary verbs and common verb forms
-        logging.debug("Trying to tag word")
+        logging.debug(f"Trying to tag word \"{word}\"")
         if prev_word is None:
             return self._tag_first_word(word, next_word)
-        logging.debug("First word checked")
+        logging.debug(f"First word \"{word}\" checked")
+        if self._is_number(word):
+            return Tag.NUMBER.value
+        logging.debug("Checking for determiner")
+        if self._is_determiner(word):
+            return Tag.DETERMINER.value
+        logging.debug("Checked for determiner")
+        if self._is_preposition(word):
+            return Tag.PREPOSITION.value
+        if self._is_conjunction(word):
+            return Tag.CONJUNCTION.value
+        if self._is_pronoun(word):
+            return Tag.PRONOUN.value
+        if self._is_adverb(word):
+            return Tag.ADVERB.value
         if word in ['.', ',', '?', '!']:
             return Tag.PUNCTUATION.value
         logging.debug("Punctuation checked")
@@ -74,18 +88,6 @@ class Tagging:
         if self._get_tag_by_ending(word, tagged_words) == Tag.VERB.value:
             return Tag.VERB.value"""
         logging.debug("Tagging by ending checked")
-        if self._is_number(word):
-            return Tag.NUMBER.value
-        if self._is_determiner(word):
-            return Tag.DETERMINER.value
-        if self._is_preposition(word):
-            return Tag.PREPOSITION.value
-        if self._is_conjunction(word):
-            return Tag.CONJUNCTION.value
-        if self._is_pronoun(word):
-            return Tag.PRONOUN.value
-        if self._is_adverb(word):
-            return Tag.ADVERB.value
         if self._is_auxiliary_after(prev_word):
             return self._tag_after_auxiliary(word)
         if self._is_pronoun_after(prev_word):
@@ -107,12 +109,12 @@ class Tagging:
 
     def _get_tag_by_ending(self, word, tagged_words):
         """Helper method to get the tag based on the word ending.""" 
-        if word.endswith('ly'):
+        if tagged_words[word]['ending'] == 'ly':
             return Tag.ADVERB.value
-        elif word.endswith('tion'):
+        elif tagged_words[word]['ending'] == 'tion':
             return Tag.NOUN.value
-        elif word.endswith(('able', 'ible', 'ic', 'al')):
-            return Tag.ADJECTIVE.value
+        #elif tagged_words[word]['ending'] == 'able' or tagged_words[word]['ending'] == 'ible'or tagged_words[word]['ending'] == 'ic' or tagged_words[word]['ending'] == 'al':
+            #return Tag.ADJECTIVE.value
         elif tagged_words[word]['ending'] == 'es':
             return Tag.VERB.value
         elif tagged_words[word]['ending'] == 'ing':
@@ -123,16 +125,16 @@ class Tagging:
         return word.isdigit()
 
     def _is_determiner(self, word):
-        return word in self.patterns['determiners']
+        return word in NLP.patterns['determiners']
 
     def _is_preposition(self, word):
-        return word in self.patterns['prepositions']
+        return word in NLP.patterns['prepositions']
 
     def _is_conjunction(self, word):
-        return word in self.patterns['conjunctions']
+        return word in NLP.patterns['conjunctions']
 
     def _is_pronoun(self, word):
-        return word in self.patterns['pronouns']
+        return word in NLP.patterns['pronouns']
     
     def _is_adverb(self, word):
         return word in set({'veri', 'quite', 'rather', 'extremely'})
@@ -150,13 +152,13 @@ class Tagging:
         return Tag.NOUN.value
 
     def _is_pronoun_after(self, word):
-        return word in self.patterns['pronouns']
+        return word in NLP.patterns['pronouns']
 
     def _is_adjective_after_adverb(self, prev_word):
         return prev_word in {'veri', 'quite', 'rather', 'extremely'}
 
     def _is_noun_after_preposition(self, next_word, next_next_word):
-        return next_word in self.patterns['prepositions'] and next_next_word in self.patterns['determiners']
+        return next_word in NLP.patterns['prepositions'] and next_next_word in NLP.patterns['determiners']
 
     def _is_sentence_connection(self, tagged_words, word, prev_word, prev_prev_word):
         if (prev_word is not None and prev_prev_word is not None and 

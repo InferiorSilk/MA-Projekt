@@ -1,12 +1,10 @@
 import re
-from tagging import Tagging, Tense, Tag, Type, Semantic_Role_Labelling
+import tagging 
 import logging
 import stemmer
 
 class NLP:
-    def __init__(self):
-        """Self made; Regular expressions and comments done by AI"""
-        self.patterns = {
+    patterns = {
             'determiners': frozenset(['a', 'an', 'the', 'this', 'that', 'these', 'those', 'my', 'your', 'his', 'her']),
             'prepositions': frozenset(['in', 'on', 'at', 'by', 'with', 'from', 'to', 'for', 'of']),
             'conjunctions': frozenset(['and', 'but', 'or', 'nor', 'for', 'yet', 'so', 'also']),
@@ -14,6 +12,8 @@ class NLP:
             'modals': frozenset(['will', 'shall', 'would', 'should', 'may', 'might', 'can', 'could', 'must']),
             'verb_suffixes': frozenset(['ed', 'ing', 's', 'es', 'er', 'ly', 'tion', 'able', 'ible', 'al', 'ial', 'ful', 'ic', 'ical', 'ive', 'less', 'ous', 'y']),
         }
+    def __init__(self):
+        """Self made; Regular expressions and comments done by AI"""
         self.stemmer = stemmer.Stemmer()
         self.contractions = {
             "n't": " not",
@@ -28,8 +28,8 @@ class NLP:
             "'d": " would",
         }
         self.contraction_pattern = re.compile(r'\b(' + '|'.join(re.escape(key) for key in self.contractions.keys()) + r')\b')
-        self.tagging = Tagging(self.patterns, {})  # Initialize Tagging with patterns and empty word_endings
-        self.tense = Tense()  # Initialize the Tense analyzer
+        self.tagging = tagging.Tagging(self.patterns, {})  # Initialize Tagging with patterns and empty word_endings
+        self.tense = tagging.Tense()  # Initialize the Tense analyzer
         logging.debug
 
     def _stem(self, word):
@@ -207,8 +207,8 @@ class NLP:
     def _clean_sentence(self, word, tagged_words):
         """Self made"""
         # Remove unnecessary words / stopwords
-        if tagged_words[word]['tag'] == Tag.CONJUNCTION.value or\
-            tagged_words[word]['tag'] == Tag.PREPOSITION.value:
+        if tagged_words[word]['tag'] == tagging.Tag.CONJUNCTION.value or\
+            tagged_words[word]['tag'] == tagging.Tag.PREPOSITION.value:
             tagged_words.pop(word)
 
 if __name__ == "__main__":
