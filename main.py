@@ -2,16 +2,9 @@ import re
 import tagging 
 import logging
 import stemmer
+import dictionaries
 
 class NLP:
-    patterns = {
-            'determiners': frozenset(['a', 'an', 'the', 'this', 'that', 'these', 'those', 'my', 'your', 'his', 'her']),
-            'prepositions': frozenset(['in', 'on', 'at', 'by', 'with', 'from', 'to', 'for', 'of']),
-            'conjunctions': frozenset(['and', 'but', 'or', 'nor', 'for', 'yet', 'so', 'also']),
-            'pronouns': frozenset(['i', 'you', 'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us', 'them']),
-            'modals': frozenset(['will', 'shall', 'would', 'should', 'may', 'might', 'can', 'could', 'must']),
-            'verb_suffixes': frozenset(['ed', 'ing', 's', 'es', 'er', 'ly', 'tion', 'able', 'ible', 'al', 'ial', 'ful', 'ic', 'ical', 'ive', 'less', 'ous', 'y']),
-        }
     def __init__(self):
         """Self made; Regular expressions and comments done by AI"""
         self.stemmer = stemmer.Stemmer()
@@ -28,7 +21,7 @@ class NLP:
             "'d": " would",
         }
         self.contraction_pattern = re.compile(r'\b(' + '|'.join(re.escape(key) for key in self.contractions.keys()) + r')\b')
-        self.tagging = tagging.Tagging(self.patterns, {})  # Initialize Tagging with patterns and empty word_endings
+        self.tagging = tagging.Tagging(dictionaries.patterns)  # Initialize Tagging with patterns and empty word_endings
         self.tense = tagging.Tense()  # Initialize the Tense analyzer
         logging.debug
 
@@ -111,11 +104,11 @@ class NLP:
                     stemmed_words.append(word)
                 else:
                     # Check if word needs stemming
-                    if word not in self.patterns['determiners'] and \
-                       word not in self.patterns['prepositions'] and \
-                       word not in self.patterns['conjunctions'] and \
-                       word not in self.patterns['pronouns'] and \
-                       word not in self.patterns['modals']:
+                    if word not in dictionaries.patterns['determiners'] and \
+                       word not in dictionaries.patterns['prepositions'] and \
+                       word not in dictionaries.patterns['conjunctions'] and \
+                       word not in dictionaries.patterns['pronouns'] and \
+                       word not in dictionaries.patterns['modals']:
                         stemmed, ending = self._stem(word)
                         if stemmed:  # Only add non-empty stemmed words
                             self.word_endings[stemmed] = ending

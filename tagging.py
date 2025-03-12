@@ -18,9 +18,8 @@ class Tag(Enum):
 
 class Tagging:
     """Pattern matching (_is_is_pattern()), _get_pattern_tag()), comments and formating done by AI"""
-    def __init__(self, patterns, word_endings):
+    def __init__(self, patterns):
         self.patterns = patterns
-        self.word_endings = word_endings
         self.sentence_connectors = frozenset(['and', 'but', 'or', 'nor', 'for', 'yet', 'so'])  # Add sentence connectors
         self.sentence_amount = 0
         self.list_of_sentences = []
@@ -35,26 +34,42 @@ class Tagging:
     def _get_pattern_tag(self):
         return getattr(self, '_last_pattern_tag', 'undefined')
 
-    def _tag_first_word(self, word, next_word):
+    def _tag_first_word(self, word, next_word, tagged_words):
         logging.debug("Trying to tag first word")
         if word in self.patterns['pronouns']:
             return 'pronoun'
         elif next_word in dictionaries.verbs:
             return Tag.ADJECTIVE.value
-        elif word in self.word_endings and self.word_endings[word] in {'ly', 'tion', 'able', 'ible', 'ic', 'al'}:
+        elif tagged_words[word]['ending'] in {'ly', 'tion', 'able', 'ible', 'ic', 'al'}:
             return Tag.ADVERB.value
-        elif word in self.word_endings and self.word_endings[word] == 's':
+        elif tagged_words[word]['ending'] == 's':
             return Tag.NOUN.value
-        elif word in self.word_endings and self.word_endings[word] == 'ing':
+        elif tagged_words[word]['ending'] == 'ing':
             return Tag.VERB.value
+        elif self._is_preposition(word):
+            return Tag.PREPOSITION.value
+        elif self._is_conjunction(word):
+            return Tag.CONJUNCTION.value
+        elif self._is_pronoun(word):
+            return Tag.PRONOUN.value
+        elif self._is_adverb(word, tagged_words):
+            return Tag.ADVERB.value
+        elif word in ['.', ',', '?', '!']:
+            return Tag.PUNCTUATION.value
         # TODO: Implement checking for determiners etc
         
 
     def _tag_word_in_context(self, word, prev_word, next_word, prev_prev_word, next_next_word, tagged_words):
         # First check for auxiliary verbs and common verb forms
         logging.debug(f"Trying to tag word \"{word}\"")
-        if prev_word is None:
-            return self._tag_first_word(word, next_word)
+        if self._tag_first_word(word, next_word, tagged_words) == Tag.NOUN.value:
+            return Tag.NOUN.value
+        if self._tag_first_word(word, next_word, tagged_words) == Tag.ADVERB.value:
+            return Tag.ADVERB.value
+        if self._tag_first_word(word, next_word, tagged_words) == Tag.VERB.value:
+            return Tag.VERB.value
+        if self._tag_first_word(word, next_word, tagged_words) == Tag.ADJECTIVE:
+            return Tag.ADJECTIVE.value
         logging.debug(f"First word \"{word}\" checked")
         if self._is_number(word):
             return Tag.NUMBER.value
@@ -87,6 +102,8 @@ class Tagging:
             return Tag.ADJECTIVE.value
         if self._get_tag_by_ending(word, tagged_words) == Tag.VERB.value:
             return Tag.VERB.value"""
+        if self._get_tag_by_ending(word, tagged_words) == Tag.NOUN.value:
+            return Tag.NOUN.value
         logging.debug("Tagging by ending checked")
         if self._is_auxiliary_after(prev_word):
             return self._tag_after_auxiliary(word)
@@ -113,31 +130,30 @@ class Tagging:
             return Tag.ADVERB.value
         elif tagged_words[word]['ending'] == 'tion':
             return Tag.NOUN.value
-        #elif tagged_words[word]['ending'] == 'able' or tagged_words[word]['ending'] == 'ible'or tagged_words[word]['ending'] == 'ic' or tagged_words[word]['ending'] == 'al':
-            #return Tag.ADJECTIVE.value
+        elif tagged_words[word]['ending'] == 'able' or tagged_words[word]['ending'] == 'ible'or tagged_words[word]['ending'] == 'ic' or tagged_words[word]['ending'] == 'al':
+            return Tag.ADJECTIVE.value
         elif tagged_words[word]['ending'] == 'es':
             return Tag.VERB.value
         elif tagged_words[word]['ending'] == 'ing':
             return Tag.VERB.value
-        return 'undefined'  # Return 'undefined' for unrecognized endings
 
     def _is_number(self, word):
         return word.isdigit()
 
     def _is_determiner(self, word):
-        return word in NLP.patterns['determiners']
+        return word in self.patterns['determiners']
 
     def _is_preposition(self, word):
-        return word in NLP.patterns['prepositions']
+        return word in self.patterns['prepositions']
 
     def _is_conjunction(self, word):
-        return word in NLP.patterns['conjunctions']
+        return word in self.patterns['conjunctions']
 
     def _is_pronoun(self, word):
-        return word in NLP.patterns['pronouns']
+        return word in self.patterns['pronouns']
     
-    def _is_adverb(self, word):
-        return word in set({'veri', 'quite', 'rather', 'extremely'})
+    def _is_adverb(self, word, tagged_words):
+        return tagged_words[word]['ending'] in set()
 
     def _is_auxiliary_after(self, word):
         return word in set({'to', 'will', 'can', 'must', 'should', 'would', 'could', 'may', 'might'})
