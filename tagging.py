@@ -61,16 +61,6 @@ class Tagging:
 
     def _tag_word_in_context(self, word, prev_word, next_word, prev_prev_word, next_next_word, tagged_words):
         # First check for auxiliary verbs and common verb forms
-        logging.debug(f"Trying to tag word \"{word}\"")
-        if self._tag_first_word(word, next_word, tagged_words) == Tag.NOUN.value:
-            return Tag.NOUN.value
-        if self._tag_first_word(word, next_word, tagged_words) == Tag.ADVERB.value:
-            return Tag.ADVERB.value
-        if self._tag_first_word(word, next_word, tagged_words) == Tag.VERB.value:
-            return Tag.VERB.value
-        if self._tag_first_word(word, next_word, tagged_words) == Tag.ADJECTIVE:
-            return Tag.ADJECTIVE.value
-        logging.debug(f"First word \"{word}\" checked")
         if self._is_number(word):
             return Tag.NUMBER.value
         logging.debug("Checking for determiner")
@@ -79,16 +69,23 @@ class Tagging:
         logging.debug("Checked for determiner")
         if self._is_preposition(word):
             return Tag.PREPOSITION.value
+        logging.debug("Checked for preposition")
         if self._is_conjunction(word):
             return Tag.CONJUNCTION.value
+        logging.debug("Checked for conjunction")
         if self._is_pronoun(word):
             return Tag.PRONOUN.value
-        if self._is_adverb(word):
+        logging.debug("Checked for pronoun")
+        if self._is_adverb(word, tagged_words):
+            """This doesnt work, causes an error"""
+            # TODO Fix this shit
             return Tag.ADVERB.value
+        logging.debug("Checked for adverb")
         if word in ['.', ',', '?', '!']:
             return Tag.PUNCTUATION.value
         logging.debug("Punctuation checked")
         if prev_word is not None and tagged_words[prev_word]['tag'] == Tag.DETERMINER.value:
+            logging.debug("Checking after determiner")
             if self._is_verb_after_determiner(word, tagged_words):
                 return Tag.VERB.value
             if self._is_adjective_after_determiner(word, tagged_words):
@@ -103,6 +100,7 @@ class Tagging:
         if self._get_tag_by_ending(word, tagged_words) == Tag.VERB.value:
             return Tag.VERB.value"""
         if self._get_tag_by_ending(word, tagged_words) == Tag.NOUN.value:
+            # TODO Fix this shit
             return Tag.NOUN.value
         logging.debug("Tagging by ending checked")
         if self._is_auxiliary_after(prev_word):
@@ -153,7 +151,9 @@ class Tagging:
         return word in self.patterns['pronouns']
     
     def _is_adverb(self, word, tagged_words):
-        return tagged_words[word]['ending'] in set()
+        logging.debug("Checking for adverb")
+        # return tagged_words[word]['ending'] == "ly"
+        return False
 
     def _is_auxiliary_after(self, word):
         return word in set({'to', 'will', 'can', 'must', 'should', 'would', 'could', 'may', 'might'})
