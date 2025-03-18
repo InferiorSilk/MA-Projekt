@@ -183,6 +183,7 @@ class NLP:
                     continue
                 
                 # Store word information
+                logging.debug(f"word_endings are: {self.word_endings}")
                 tagged_words[word] = {
                     'ending': self.word_endings.get(word, ''),
                     'tag': tag

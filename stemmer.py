@@ -106,6 +106,11 @@ class Stemmer:
                     word = self._step1b_helper(word)
 
         # Step 2 - More conservative y handling
+        if word.endswith("ly"):
+            if len(word) > 2 and word[-2] not in self.vowels:
+                ending = "ly"
+                word = word[:-2]
+
         if word.endswith("y"):
             if len(word) > 2 and word[-2] not in self.vowels:
                 ending = "y"
