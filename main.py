@@ -109,8 +109,9 @@ class NLP:
                     word not in dictionaries.patterns['pronouns'] and \
                     word not in dictionaries.patterns['modals']:
                         stemmed, ending = self._stem(word)
+                        logging.debug(f"Stemmed word is '{stemmed}', ending is '{ending}'")
                         if stemmed:
-                            self.word_endings[word] = ending  # Store ending for original word
+                            self.word_endings[stemmed] = ending  # Store ending for original word
                             stemmed_words.append(stemmed)
                     else:
                         self.word_endings[word] = ''
@@ -170,6 +171,10 @@ class NLP:
                 next_next_word = sentence_list[i + 2] if i + 2 < len(sentence_list) else None
                 
                 # Get tag for the word
+                tagged_words[word] = {
+                    'ending': self.word_endings.get(word, ''),
+                    'tag': None
+                }
                 try:
                     tag = self.tagging._tag_word_in_context(
                         word, 
@@ -179,6 +184,7 @@ class NLP:
                         next_next_word, 
                         tagged_words
                     )
+                    logging.debug(f"The tag of the word '{word}' is '{tag}'.")
                 except Exception as e:
                     logging.warning(f"Error tagging word '{word}': {str(e)}")
                     continue

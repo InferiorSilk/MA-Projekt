@@ -104,6 +104,8 @@ class Stemmer:
                     ending = "ing"
                     word = temp
                     word = self._step1b_helper(word)
+                    logging.debug(f"The stemmed word is '{word}', the ending is '{ending}'.")
+                    return word, ending
 
         # Step 2 - More conservative y handling
         if word.endswith("ly"):
