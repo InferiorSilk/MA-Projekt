@@ -252,7 +252,7 @@ verbs = set([
 ])
 
 irregular_verbs_list = set([
-    "be", "become", "begin", "bend", "bet", "bite", "bring", "build", "burn", "burst", "buy", 
+    "be", "is", "am", "become", "begin", "bend", "bet", "bite", "bring", "build", "burn", "burst", "buy", 
     "catch", "choose", "come", "cost", "cut", "deal", "do", "draw", "drink", "drive", "eat", 
     "fall", "feed", "feel", "fight", "find", "fly", "forget", "forgive", "freeze", "get", "give", 
     "go", "grow", "have", "hear", "hide", "hit", "hold", "hurt", "keep", "know", "lay", "lead", 

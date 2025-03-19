@@ -103,6 +103,8 @@ class Tagging:
                     return self._tag_after_auxiliary(word)
                 if self._is_pronoun_after(prev_word):
                     return Tag.PRONOUN.value
+                if self._is_adjective(prev_word, tagged_words):
+                    return Tag.ADJECTIVE.value
                 if self._is_adjective_after_adverb(prev_word):
                     return Tag.ADJECTIVE.value
                 if self._is_noun_after_preposition(next_word, next_next_word):
@@ -120,10 +122,12 @@ class Tagging:
             except Exception as e:
                 logging.warning(f"Error tagging '{word}: {str(e)}")
 
+    def _is_adjective(self, prev_word, tagged_words):
+        return tagged_words[prev_word]['tag'] == Tag.VERB.value and prev_word in set(["is", "am", "be"])
+
     def _get_tag_by_ending(self, word, tagged_words):
         """Helper method to get the tag based on the word ending.""" 
         try:
-            # THE ISSUE IS THAT THE WORD DOESNT HAVE A DICTIONARY ENTRY YET, WE NEED TO USE THE WORD_ENDINGS DICT
             logging.debug("Trying to tag by ending")
             logging.debug(tagged_words)
             logging.debug("Did this work?")
@@ -137,7 +141,6 @@ class Tagging:
             elif tagged_words[word]['ending'] == 'es':
                 return Tag.VERB.value
             elif tagged_words[word]['ending'] == 'ing':
-                logging.debug(f"The word '{word}' has the tag 'verb'")
                 return Tag.VERB.value
             else:
                 return False
@@ -239,13 +242,15 @@ class Tagging:
     def _is_noun_after_determiner(self, word, tagged_words):
         """Check if the word is a noun following a determiner."""
         logging.debug(f"Checking if '{word}' is a noun after a determiner.")
+        if word in dictionaries.verbs or word in dictionaries.irregular_verbs_list:
+            return False
         if word in tagged_words and tagged_words[word]['ending'] == '':
-            logging.debug(f"'{word}' is a noun after a determiner.")
             return True
         return False
 
     def _is_verb_after_determiner(self, word, tagged_words):
         """Check if the word is a verb following a determiner."""
+        # TODO Completely wrong
         logging.debug(f"Checking if '{word}' is a verb after a determiner.")
         if word in tagged_words and tagged_words[word]['ending'] == 'ing':
             logging.debug(f"'{word}' is a verb after a determiner.")
@@ -266,12 +271,13 @@ class Tagging:
         elif word in dictionaries.adverbs:
             return Tag.ADVERB.value
         elif word in dictionaries.adjectives and prev_word in {'very', 'quite', 'rather'}:
-            return Tag.ADJECTIVE.value  # Context-aware tagging for adjectives
+            return Tag.ADJECTIVE.value
         return self._additional_contextual_patterns(prev_word, next_word)
 
     def _additional_contextual_patterns(self, prev_word, next_word):
         if prev_word is not None and prev_word in {'is', 'are', 'was', 'were'} and next_word is not None and next_word in {'by', 'with'}:
             return Tag.VERB.value
+        logging.info("The tag was given by exclusion")
         return Tag.NOUN.value  # Default to noun if no pattern matches
 
 class Tense:
