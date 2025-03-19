@@ -95,26 +95,27 @@ class NLP:
             
             # Process each word
             for word in words:
-                if not word:  # Skip empty words
+                if not word:
                     continue
                     
                 if any(c in word for c in '.,?!'):
-                    # Handle punctuation
                     self.word_endings[word] = ''
                     stemmed_words.append(word)
                 else:
-                    # Check if word needs stemming
+                    # Stem all words except special categories
                     if word not in dictionaries.patterns['determiners'] and \
-                       word not in dictionaries.patterns['prepositions'] and \
-                       word not in dictionaries.patterns['conjunctions'] and \
-                       word not in dictionaries.patterns['pronouns'] and \
-                       word not in dictionaries.patterns['modals']:
+                    word not in dictionaries.patterns['prepositions'] and \
+                    word not in dictionaries.patterns['conjunctions'] and \
+                    word not in dictionaries.patterns['pronouns'] and \
+                    word not in dictionaries.patterns['modals']:
                         stemmed, ending = self._stem(word)
-                        if stemmed:  # Only add non-empty stemmed words
-                            self.word_endings[stemmed] = ending
+                        if stemmed:
+                            self.word_endings[word] = ending  # Store ending for original word
                             stemmed_words.append(stemmed)
                     else:
+                        self.word_endings[word] = ''
                         stemmed_words.append(word)
+            
             
             if not stemmed_words:
                 raise ValueError("No valid words remained after preprocessing")

@@ -15,6 +15,7 @@ class Tag(Enum):
     INTERJECTION = 'interjection'
     NUMBER = 'number'
     PUNCTUATION = 'punctuation'
+    UNDEFINED = 'undefined'
 
 class Tagging:
     """Pattern matching (_is_is_pattern()), _get_pattern_tag()), comments and formating done by AI"""
@@ -87,12 +88,13 @@ class Tagging:
                 logging.debug("Checking after determiner")
                 if self._is_verb_after_determiner(word, tagged_words):
                     return Tag.VERB.value
+                # This doesnt seem to work
                 if self._is_adjective_after_determiner(word, tagged_words):
                     return Tag.ADJECTIVE.value
                 if self._is_noun_after_determiner(word, tagged_words):
                     return Tag.NOUN.value
             logging.debug("Previous determiner checked") #Somewhere after here there's a problem
-            if self._get_tag_by_ending(word, tagged_words) != False and tagged_words[word]['ending'] != '':
+            if self._get_tag_by_ending(word, tagged_words) != False:
                 return self._get_tag_by_ending(word, tagged_words)
             logging.debug("Tagging by ending checked")
             if self._is_auxiliary_after(prev_word):
@@ -120,8 +122,9 @@ class Tagging:
         """Helper method to get the tag based on the word ending.""" 
         try:
             logging.debug("Trying to tag by ending")
-            logging.debug(f"Trying to check ending '{tagged_words[word]["ending"]}' of word '{tagged_words[word]}'")
+            # logging.debug(f"Trying to check ending '{tagged_words[word]["ending"]}' of word")
             logging.debug("Did this work?")
+            print(tagged_words)
             if tagged_words[word]['ending'] == 'ly':
                 return Tag.ADVERB.value
             elif tagged_words[word]['ending'] == 'tion':
