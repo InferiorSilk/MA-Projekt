@@ -23,103 +23,55 @@ class Tagging:
         self.patterns = patterns
         self.sentence_connectors = frozenset(['and', 'but', 'or', 'nor', 'for', 'yet', 'so'])  # Add sentence connectors
         self.sentence_amount = 0
-        self.list_of_sentences = []
-    
-    def _is_in_pattern(self, word):
-        for pattern in self.patterns.values():
-            if word in pattern:
-                self._last_pattern_tag = next(iter(self.patterns)).rstrip('s')
-                return True
-        return False
-
-    def _get_pattern_tag(self):
-        return getattr(self, '_last_pattern_tag', 'undefined')
-
-    def _tag_first_word(self, word, next_word, tagged_words):
-        logging.debug("Trying to tag first word")
-        if word in self.patterns['pronouns']:
-            return 'pronoun'
-        elif next_word in dictionaries.verbs:
-            return Tag.ADJECTIVE.value
-        elif tagged_words[word]['ending'] in {'ly', 'tion', 'able', 'ible', 'ic', 'al'}:
-            return Tag.ADVERB.value
-        elif tagged_words[word]['ending'] == 's':
-            return Tag.NOUN.value
-        elif tagged_words[word]['ending'] == 'ing':
-            return Tag.VERB.value
-        elif self._is_preposition(word):
-            return Tag.PREPOSITION.value
-        elif self._is_conjunction(word):
-            return Tag.CONJUNCTION.value
-        elif self._is_pronoun(word):
-            return Tag.PRONOUN.value
-        elif self._is_adverb(word, tagged_words):
-            return Tag.ADVERB.value
-        elif word in ['.', ',', '?', '!']:
-            return Tag.PUNCTUATION.value
-        else:
-            return None
-        
+        self.list_of_sentences = []   
 
     def _tag_word_in_context(self, word, prev_word, next_word, prev_prev_word, next_next_word, tagged_words):
-        # while tagged_words[word]['tag'] == None or tagged_words[word]['tag'] == '':
-            # First check for auxiliary verbs and common verb forms
-            try:
+        # First check for auxiliary verbs and common verb forms
+        try:
+            logging.info(tagged_words)
+            if self._is_number(word):
+                return Tag.NUMBER.value
+            logging.debug("Checking for determiner")
+            if self._is_determiner(word):
+                return Tag.DETERMINER.value
+            logging.debug("Checked for determiner")
+            if self._is_preposition(word):
+                return Tag.PREPOSITION.value
+            logging.debug("Checked for preposition")
+            if self._is_conjunction(word):
+                return Tag.CONJUNCTION.value
+            logging.debug("Checked for conjunction")
+            if self._is_pronoun(word):
+                return Tag.PRONOUN.value
+            logging.debug("Checked for pronoun")
+            if word in ['.', ',', '?', '!']:
+                return Tag.PUNCTUATION.value
+            logging.debug("Punctuation checked")
+            if self._get_tag_by_ending(word, tagged_words) != False:
+                logging.info(self._get_tag_by_ending(word, tagged_words))
                 logging.info(tagged_words)
-                if self._is_number(word):
-                    return Tag.NUMBER.value
-                logging.debug("Checking for determiner")
-                if self._is_determiner(word):
-                    return Tag.DETERMINER.value
-                logging.debug("Checked for determiner")
-                if self._is_preposition(word):
-                    return Tag.PREPOSITION.value
-                logging.debug("Checked for preposition")
-                if self._is_conjunction(word):
-                    return Tag.CONJUNCTION.value
-                logging.debug("Checked for conjunction")
-                if self._is_pronoun(word):
-                    return Tag.PRONOUN.value
-                logging.debug("Checked for pronoun")
-                if word in ['.', ',', '?', '!']:
-                    return Tag.PUNCTUATION.value
-                logging.debug("Punctuation checked")
-                if prev_word is not None and tagged_words[prev_word]['tag'] == Tag.DETERMINER.value:
-                    logging.debug("Checking after determiner")
-                    if self._is_verb_after_determiner(word, tagged_words):
-                        return Tag.VERB.value
-                    if self._is_adjective_after_determiner(word, tagged_words):
-                        return Tag.ADJECTIVE.value
-                    """if self._is_noun_after_determiner(word, tagged_words):
-                        return Tag.NOUN.value"""
-                logging.debug("Previous determiner checked") #Somewhere after here there's a problem
-                if self._get_tag_by_ending(word, tagged_words) != False:
-                    logging.info(self._get_tag_by_ending(word, tagged_words))
-                    logging.info(tagged_words)
-                    return self._get_tag_by_ending(word, tagged_words)
-                logging.debug("Tagging by ending checked")
-                """if self._is_auxiliary_after(prev_word) != False:
-                    return self._tag_after_auxiliary(word)"""
-                if self._is_pronoun_after(prev_word):
-                    return Tag.PRONOUN.value
-                if self._is_adjective(prev_word, tagged_words):
-                    return Tag.ADJECTIVE.value
-                if self._is_adjective_after_adverb(prev_word):
-                    return Tag.ADJECTIVE.value
-                if self._is_noun_after_preposition(next_word, next_next_word):
-                    return Tag.NOUN.value
-                if self._is_sentence_connection(tagged_words, word, prev_word, prev_prev_word) and 'tag' in tagged_words[prev_prev_word]:
-                    return tagged_words[prev_prev_word]['tag']
-                if self._is_verb_after_verb(tagged_words, prev_word, prev_prev_word):
-                    return Tag.VERB.value
-                if self._is_adverb_after_verb(word, prev_word, tagged_words, prev_prev_word):
-                    return Tag.ADVERB.value
-                if self._is_interjection(word):
-                    return Tag.INTERJECTION.value
+                return self._get_tag_by_ending(word, tagged_words)
+            logging.debug("Tagging by ending checked")
+            if self._is_pronoun_after(prev_word):
+                return Tag.PRONOUN.value
+            if self._is_adjective(prev_word, tagged_words):
+                return Tag.ADJECTIVE.value
+            if self._is_adjective_after_adverb(prev_word):
+                return Tag.ADJECTIVE.value
+            if self._is_noun_after_preposition(next_word, next_next_word):
+                return Tag.NOUN.value
+            if self._is_sentence_connection(tagged_words, word, prev_word, prev_prev_word) and 'tag' in tagged_words[prev_prev_word]:
+                return tagged_words[prev_prev_word]['tag']
+            if self._is_verb_after_verb(tagged_words, prev_word, prev_prev_word):
+                return Tag.VERB.value
+            if self._is_adverb_after_verb(word, prev_word, tagged_words, prev_prev_word):
+                return Tag.ADVERB.value
+            if self._is_interjection(word):
+                return Tag.INTERJECTION.value
 
-                return self._fallback_tagging(word, prev_word, next_word)
-            except Exception as e:
-                logging.warning(f"Error tagging '{word}: {str(e)}")
+            return self._fallback_tagging(word, prev_word, next_word)
+        except Exception as e:
+            logging.warning(f"Error tagging '{word}: {str(e)}")
 
     def _is_adjective(self, prev_word, tagged_words):
         return tagged_words[prev_word]['tag'] == Tag.VERB.value and prev_word in set(["is", "am", "be"])
@@ -160,20 +112,9 @@ class Tagging:
 
     def _is_pronoun(self, word):
         return word in self.patterns['pronouns']
-    
-    def _is_adverb(self, word, tagged_words):
-        logging.debug("Checking for adverb")
-        tagged_words[word]['ending'] == "ly"
 
     def _is_auxiliary_after(self, word):
         return word in set({'to', 'will', 'can', 'must', 'should', 'would', 'could', 'may', 'might'})
-    
-    def _tag_after_auxiliary(self, word, prev_word):
-        # TODO: Pass prev_word into function, add tagging
-        if prev_word in set({"am", "are", "is", "can", "have", "has"}):
-            if True:
-                return False
-        return False
 
     def _is_pronoun_after(self, word):
         return word in dictionaries.patterns['pronouns']
@@ -226,32 +167,6 @@ class Tagging:
             tagged_words[prev_word]['ending'] != 'ing'):
             return True
             
-        return False
-        
-    def _is_adjective_after_determiner(self, word, tagged_words):
-        """Check if the word is an adjective following a determiner."""
-        logging.debug(f"Checking if '{word}' is an adjective after a determiner.")
-        if word in tagged_words and tagged_words[word]['ending'] in {'y', 'able', 'ible', 'ic', 'al'}:
-            logging.debug(f"'{word}' is an adjective after a determiner.")
-            return True
-        return word in dictionaries.adjectives
-
-    def _is_noun_after_determiner(self, word, tagged_words):
-        """Check if the word is a noun following a determiner."""
-        logging.debug(f"Checking if '{word}' is a noun after a determiner.")
-        if word in dictionaries.verbs or word in dictionaries.irregular_verbs_list:
-            return False
-        if word in tagged_words and tagged_words[word]['ending'] == '':
-            return True
-        return False
-
-    def _is_verb_after_determiner(self, word, tagged_words):
-        """Check if the word is a verb following a determiner."""
-        # TODO Completely wrong
-        logging.debug(f"Checking if '{word}' is a verb after a determiner.")
-        if word in tagged_words and tagged_words[word]['ending'] == 'ing':
-            logging.debug(f"'{word}' is a verb after a determiner.")
-            return True
         return False
 
     def _is_interjection(self, word):
