@@ -15,7 +15,7 @@ class Tag(Enum):
     INTERJECTION = 'interjection'
     NUMBER = 'number'
     PUNCTUATION = 'punctuation'
-    UNDEFINED = 'undefined'
+    UNCERTAIN = 'uncertain'
 
 class Tagging:
     """Pattern matching (_is_is_pattern()), _get_pattern_tag()), comments and formating done by AI"""
@@ -88,18 +88,17 @@ class Tagging:
                     logging.debug("Checking after determiner")
                     if self._is_verb_after_determiner(word, tagged_words):
                         return Tag.VERB.value
-                    # This doesnt seem to work
                     if self._is_adjective_after_determiner(word, tagged_words):
                         return Tag.ADJECTIVE.value
-                    if self._is_noun_after_determiner(word, tagged_words):
-                        return Tag.NOUN.value
+                    """if self._is_noun_after_determiner(word, tagged_words):
+                        return Tag.NOUN.value"""
                 logging.debug("Previous determiner checked") #Somewhere after here there's a problem
                 if self._get_tag_by_ending(word, tagged_words) != False:
                     logging.info(self._get_tag_by_ending(word, tagged_words))
                     logging.info(tagged_words)
                     return self._get_tag_by_ending(word, tagged_words)
                 logging.debug("Tagging by ending checked")
-                if self._is_auxiliary_after(prev_word):
+                if self._is_auxiliary_after(prev_word) != False:
                     return self._tag_after_auxiliary(word)
                 if self._is_pronoun_after(prev_word):
                     return Tag.PRONOUN.value
@@ -169,14 +168,12 @@ class Tagging:
     def _is_auxiliary_after(self, word):
         return word in set({'to', 'will', 'can', 'must', 'should', 'would', 'could', 'may', 'might'})
     
-    def _tag_after_auxiliary(self, word):
-        if word in dictionaries.verbs:
-            return Tag.VERB.value
-        elif word in dictionaries.adverbs:
-            return Tag.ADVERB.value
-        elif word in dictionaries.adjectives:
-            return Tag.ADJECTIVE.value
-        return Tag.NOUN.value
+    def _tag_after_auxiliary(self, word, prev_word):
+        # TODO: Pass prev_word into function, add tagging
+        if prev_word in set({"am", "are", "is", "can", "have", "has"}):
+            if True:
+                return False
+        return False
 
     def _is_pronoun_after(self, word):
         return word in dictionaries.patterns['pronouns']
@@ -234,10 +231,10 @@ class Tagging:
     def _is_adjective_after_determiner(self, word, tagged_words):
         """Check if the word is an adjective following a determiner."""
         logging.debug(f"Checking if '{word}' is an adjective after a determiner.")
-        if word in tagged_words and tagged_words[word]['ending'] == 'y':
+        if word in tagged_words and tagged_words[word]['ending'] in {'y', 'able', 'ible', 'ic', 'al'}:
             logging.debug(f"'{word}' is an adjective after a determiner.")
             return True
-        return False
+        return word in dictionaries.adjectives
 
     def _is_noun_after_determiner(self, word, tagged_words):
         """Check if the word is a noun following a determiner."""
@@ -283,7 +280,7 @@ class Tagging:
 class Tense:
     def __init__(self):        
         # Modal verbs that indicate specific tenses
-        self.modal_verbs = {
+        self.modal_verbs_tense = {
             'will': 'future',
             'shall': 'future',
             'would': 'conditional',
@@ -382,7 +379,7 @@ class Tense:
                         return pattern['tense']
         
         # Check modal verbs
-        for modal, tense in self.modal_verbs.items():
+        for modal, tense in self.modal_verbs_tense.items():
             if modal in words:
                 return tense
                 

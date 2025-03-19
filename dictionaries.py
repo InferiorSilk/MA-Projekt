@@ -259,7 +259,7 @@ irregular_verbs_list = set([
     "leave", "lend", "let", "lie", "light", "lose", "make", "mean", "meet", "pay", "put", "read", 
     "ride", "ring", "rise", "run", "say", "see", "sell", "send", "set", "shake", "shine", "shoot", 
     "sing", "sit", "sleep", "speak", "spend", "stand", "steal", "stick", "swim", "take", "teach", 
-    "tear", "tell", "think", "throw", "understand", "wake", "wear", "win", "write", "hit"
+    "tear", "tell", "think", "throw", "understand", "wake", "wear", "win", "write", "hit", "can"
 ])
 
 adjectives = set([
@@ -1147,7 +1147,6 @@ nouns = set([
 "campanile",
 "camper",
 "campus",
-"can",
 "canal",
 "cancer",
 "candelabra",

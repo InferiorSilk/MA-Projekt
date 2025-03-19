@@ -85,8 +85,10 @@ class Stemmer:
                         ending = "s"
                         word = word[:-1]
 
-        elif word.endswith("en"): # e.g., "eaten" -> "eat"
-            pass
+        if word.endswith("en"): # e.g., "eaten" -> "eat"
+            if self.measure(word[:-2]) > 0 and len(word) > 4:
+                ending = "en"
+                word = word[:-2]
 
         # Step 1b - More conservative approach
         if word.endswith("eed"):
@@ -101,7 +103,7 @@ class Stemmer:
                     word = temp
                     word = self._step1b_helper(word)
         elif word.endswith("ing"):
-            if word in {"everything", "nothing", "thing"}:
+            if word in {"everything", "nothing", "thing"}: # Excluding certain words
                 ending = ""
                 logging.info("'Everything' did not get stemmed")
             elif any(self.is_vowel(char, word[i-1] if i > 0 else None, word[i+1] if i < len(word)-1 else None) for i, char in enumerate(word[:-3])):
