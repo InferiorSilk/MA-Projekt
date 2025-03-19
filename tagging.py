@@ -98,8 +98,8 @@ class Tagging:
                     logging.info(tagged_words)
                     return self._get_tag_by_ending(word, tagged_words)
                 logging.debug("Tagging by ending checked")
-                if self._is_auxiliary_after(prev_word) != False:
-                    return self._tag_after_auxiliary(word)
+                """if self._is_auxiliary_after(prev_word) != False:
+                    return self._tag_after_auxiliary(word)"""
                 if self._is_pronoun_after(prev_word):
                     return Tag.PRONOUN.value
                 if self._is_adjective(prev_word, tagged_words):
