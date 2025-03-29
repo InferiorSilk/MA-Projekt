@@ -5,6 +5,7 @@ patterns = {
             'pronouns': frozenset(['i', 'you', 'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us', 'them']),
             'modals': frozenset(['will', 'shall', 'would', 'should', 'may', 'might', 'can', 'could', 'must']),
             'verb_suffixes': frozenset(['ed', 'ing', 's', 'es', 'er', 'ly', 'tion', 'able', 'ible', 'al', 'ial', 'ful', 'ic', 'ical', 'ive', 'less', 'ous', 'y']),
+            'reflexives': frozenset(['me', 'him', 'them', 'us'])
         }
 
 irregular_verbs = {

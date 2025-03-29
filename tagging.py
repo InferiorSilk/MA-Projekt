@@ -47,15 +47,11 @@ class Tagging:
             if word in ['.', ',', '?', '!']:
                 return Tag.PUNCTUATION.value
             logging.debug("Punctuation checked")
-            if self._get_tag_by_ending(word, tagged_words) != False:
-                logging.info(self._get_tag_by_ending(word, tagged_words))
-                logging.info(tagged_words)
-                return self._get_tag_by_ending(word, tagged_words)
-            logging.debug("Tagging by ending checked")
-            if self._is_pronoun_after(prev_word):
-                return Tag.PRONOUN.value
             if self._is_adjective(prev_word, tagged_words):
                 return Tag.ADJECTIVE.value
+            if self._is_verb(word, prev_word, tagged_words):
+                return Tag.VERB.value
+            logging.debug(f"Checked for verb for word '{word}'")
             if self._is_adjective_after_adverb(prev_word):
                 return Tag.ADJECTIVE.value
             if self._is_noun_after_preposition(next_word, next_next_word):
@@ -68,6 +64,11 @@ class Tagging:
                 return Tag.ADVERB.value
             if self._is_interjection(word):
                 return Tag.INTERJECTION.value
+            if self._get_tag_by_ending(word, tagged_words) != False:
+                logging.info(self._get_tag_by_ending(word, tagged_words))
+                logging.info(tagged_words)
+                return self._get_tag_by_ending(word, tagged_words)
+            logging.debug("Tagging by ending checked")
 
             return self._fallback_tagging(word, prev_word, next_word)
         except Exception as e:
@@ -75,6 +76,9 @@ class Tagging:
 
     def _is_adjective(self, prev_word, tagged_words):
         return tagged_words[prev_word]['tag'] == Tag.VERB.value and prev_word in set(["is", "am", "be"])
+
+    def _is_verb(self, word, prev_word, tagged_words):
+        return tagged_words[prev_word]['tag'] == Tag.PRONOUN.value
 
     def _get_tag_by_ending(self, word, tagged_words):
         """Helper method to get the tag based on the word ending.""" 
@@ -91,7 +95,7 @@ class Tagging:
                 return Tag.ADJECTIVE.value
             elif tagged_words[word]['ending'] == 'es':
                 return Tag.VERB.value
-            elif tagged_words[word]['ending'] == 'ing':
+            elif tagged_words[word]['ending'] == 'ing' or tagged_words[word]['ending'] == 'ed':
                 return Tag.VERB.value
             else:
                 return False
@@ -115,9 +119,6 @@ class Tagging:
 
     def _is_auxiliary_after(self, word):
         return word in set({'to', 'will', 'can', 'must', 'should', 'would', 'could', 'may', 'might'})
-
-    def _is_pronoun_after(self, word):
-        return word in dictionaries.patterns['pronouns']
 
     def _is_adjective_after_adverb(self, prev_word):
         return prev_word in {'veri', 'quite', 'rather', 'extremely'}
@@ -190,7 +191,7 @@ class Tagging:
         if prev_word is not None and prev_word in {'is', 'are', 'was', 'were'} and next_word is not None and next_word in {'by', 'with'}:
             return Tag.VERB.value
         logging.info("The tag was given by exclusion")
-        return Tag.NOUN.value  # Default to noun if no pattern matches
+        return Tag.UNCERTAIN.value  # Default to uncertain if no pattern matches
 
 class Tense:
     def __init__(self):        
@@ -264,7 +265,7 @@ class Tense:
         
         # Extract words and identify verb forms
         for word_info in sentence.values():
-            word = word_info.get('word', '').lower()
+            word = word_info.get('word', '') # .lower()
             tag = word_info.get('tag', '')
             ending = word_info.get('ending', '')
             
@@ -345,33 +346,28 @@ class Semantic_Role_Labelling():
     def __init__(self):
         pass
 
-    def label_roles(self, word, prev_word,tagged_words):
+    def label_roles(self, word, prev_word, tagged_words, next_word):
         """
         Label the semantic roles of each word in the sentence.
         """
         for word in tagged_words:
-            if self._is_subject(word, tagged_words):
+            if self._is_subject(word, prev_word, tagged_words, next_word):
                 tagged_words[word]['type'] = Type.SUBJECT.value
             elif self._is_action(word, tagged_words):
                 tagged_words[word]['type'] = Type.ACTION.value
-            elif self._is_object(word, word, prev_word, tagged_words):
+            elif self._is_object(word, prev_word, tagged_words):
                 tagged_words[word]['type'] = Type.OBJECT.value
-            elif self._is_location(word, tagged_words):
+            elif self._is_location(word):
                 tagged_words[word]['type'] = Type.LOCATION.value
-            elif self._is_time(word, tagged_words):
+            elif self._is_time(word):
                 tagged_words[word]['type'] = Type.TIME.value
             elif self._is_manner(word, tagged_words):
                 tagged_words[word]['type'] = Type.MANNER.value
         return tagged_words
     
-    def _is_subject(self, word, prev_word, tagged_words):
-        # If the word is a noun and not the object or action of a previous word, it's a subject
-        if tagged_words[word]['tag'] == Tag.NOUN.value:
-            if prev_word and tagged_words[prev_word]['type'] in [Type.OBJECT.value, Type.ACTION.value]:
-                return False
-            return True
-        # If the word is a pronoun and not the action of a previous word, it's a subject
-        elif tagged_words[word]['tag'] == Tag.PRONOUN.value:
+    def _is_subject(self, word, prev_word, tagged_words, next_word):
+        # A pronoun is either a subject or an object, i assume it to be an subject
+        if tagged_words[word]['tag'] == Tag.PRONOUN.value and word not in dictionaries.patterns['reflexives']:
             if prev_word and tagged_words[prev_word]['type'] == Type.ACTION.value:
                 return False
             return True
@@ -388,20 +384,26 @@ class Semantic_Role_Labelling():
     
     def _is_object(self, word, prev_word, tagged_words):
         # If the word is a noun and the previous word is an action, it's an object
-        if tagged_words[word]['tag'] == Tag.NOUN.value:
-            if prev_word and tagged_words[prev_word]['type'] == Type.ACTION.value:
+        if tagged_words[word]['tag'] == Tag.NOUN.value or tagged_words[word]['tag'] == Tag.PRONOUN.value:
+            if tagged_words[prev_word]['tag'] == Type.ACTION.value:
+                return True
+            elif any(tagged_words[word]['type'] == Type.SUBJECT.value for word in tagged_words.keys()):
                 return True
         return False
+        """if tagged_words[word]['tag'] == Tag.NOUN.value:
+            if prev_word and tagged_words[prev_word]['type'] == Type.ACTION.value:
+                return True
+        return False"""
 
     def _is_location(self, prev_word):
         # If the previous word is a preposition indicating location, return True
-        if prev_word in set(["in", "on", "near", "under", "above", "behind"]):
+        if prev_word in set(["in", "on", "near", "under", "above", "behind", "beside", "between", "among", "around", "over", "through", "across", "into", "onto", "toward"]):
             return True
         return False
     
     def _is_time(self, prev_word):
         # If the previous word is a preposition indicating time, return True
-        if prev_word in set(["before", "after", "during", "since", "until"]):
+        if prev_word in set(["before", "after", "during", "since", "until", "at", "by"]):
             return True
         return False
 

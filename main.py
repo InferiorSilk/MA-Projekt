@@ -23,7 +23,7 @@ class NLP:
         self.contraction_pattern = re.compile(r'\b(' + '|'.join(re.escape(key) for key in self.contractions.keys()) + r')\b')
         self.tagging = tagging.Tagging(dictionaries.patterns)  # Initialize Tagging with patterns and empty word_endings
         self.tense = tagging.Tense()  # Initialize the Tense analyzer
-        logging.debug
+        self.semantic_role_labelling = tagging.Semantic_Role_Labelling() # Initialize srl
 
     def _stem(self, word):
         stemmed, ending = self.stemmer.stem(word)
@@ -157,6 +157,7 @@ class NLP:
             raise ValueError("Input list cannot be empty")
             
         try:
+            global tagged_words
             tagged_words = {}
             for i, word in enumerate(sentence_list):
                 if word is None or not isinstance(word, str):
@@ -172,8 +173,10 @@ class NLP:
                 
                 # Get tag for the word
                 tagged_words[word] = {
+                    'word': word,
                     'ending': self.word_endings.get(word, ''),
-                    'tag': None
+                    'tag': None,
+                    'type': None
                 }
                 try:
                     tag = self.tagging._tag_word_in_context(
@@ -192,8 +195,10 @@ class NLP:
                 # Store word information
                 logging.debug(f"word_endings are: {self.word_endings}")
                 tagged_words[word] = {
+                    'word': word,
                     'ending': self.word_endings.get(word, ''),
-                    'tag': tag
+                    'tag': tag,
+                    'type': self.semantic_role_labelling.label_roles(word, prev_word, tagged_words, next_word)
                 }
             
                 

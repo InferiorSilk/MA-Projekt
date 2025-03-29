@@ -96,13 +96,14 @@ class Stemmer:
                 ending = "eed"
                 word = word[:-1]
         # TODO: Figure out solution for -ed
-        # elif word.endswith("ed"):
-            # if any(self.is_vowel(char, None, None) for char in word[:-2]):
-                # temp = word[:-2]
-                # if len(temp) > 2:  # Ensure we don't create too short words
-                    # ending = "ed"
-                    # word = temp
-                    # word = self._step1b_helper(word)
+        # What was the issue?
+        elif word.endswith("ed"):
+            if any(self.is_vowel(char, None, None) for char in word[:-2]):
+                temp = word[:-2]
+                if len(temp) > 2:  # Ensure we don't create too short words
+                    ending = "ed"
+                    word = temp
+                    word = self._step1b_helper(word)
         elif word.endswith("ing"):
             if word in {"everything", "nothing", "thing"}: # Excluding certain words
                 ending = ""
