@@ -198,7 +198,6 @@ class NLP:
                     'word': word,
                     'ending': self.word_endings.get(word, ''),
                     'tag': tag,
-                    'type': self.semantic_role_labelling.label_roles(word, prev_word, tagged_words, next_word)
                 }
             
                 

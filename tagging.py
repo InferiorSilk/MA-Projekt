@@ -185,6 +185,12 @@ class Tagging:
             return Tag.ADVERB.value
         elif word in dictionaries.adjectives and prev_word in {'very', 'quite', 'rather'}:
             return Tag.ADJECTIVE.value
+        elif word in dictionaries.irregular_verbs:
+            return Tag.VERB.value
+        for irregular_verb in dictionaries.irregular_verbs:
+            for time_form in dictionaries.irregular_verbs[irregular_verb]:
+                if word in dictionaries.irregular_verbs[irregular_verb][time_form]:
+                    return Tag.VERB.value
         return self._additional_contextual_patterns(prev_word, next_word)
 
     def _additional_contextual_patterns(self, prev_word, next_word):
