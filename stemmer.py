@@ -107,7 +107,6 @@ class Stemmer:
         elif word.endswith("ing"):
             if word in {"everything", "nothing", "thing"}: # Excluding certain words
                 ending = ""
-                logging.info("'Everything' did not get stemmed")
             elif any(self.is_vowel(char, word[i-1] if i > 0 else None, word[i+1] if i < len(word)-1 else None) for i, char in enumerate(word[:-3])):
                 temp = word[:-3]
                 if len(temp) > 2:  # Ensure we don't create too short words

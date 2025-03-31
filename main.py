@@ -212,7 +212,7 @@ class NLP:
     def _clean_sentence(self, word, tagged_words):
         """Self made"""
         # Remove unnecessary words / stopwords
-        if tagged_words[word]['tag'] == tagging.Tag.CONJUNCTION.value or\
+        if tagged_words[word]['tag'] == tagging.Tag.CONJUNCTION.value or \
             tagged_words[word]['tag'] == tagging.Tag.PREPOSITION.value:
             tagged_words.pop(word)
 
