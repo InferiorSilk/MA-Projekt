@@ -1,5 +1,9 @@
 __pycache__/
 build/
 dist/
+<<<<<<< HEAD
 main.spec
 .vs/
+=======
+main.spec
+>>>>>>> 633cb0c2b5935666f2c55891ff4aa1e7d20cc704
