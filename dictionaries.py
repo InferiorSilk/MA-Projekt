@@ -166,7 +166,6 @@ irregular_verbs = {
 }
 
 adverbs = set([
-    "well",
     "fast",
     "hard",
     "early",
@@ -186,10 +185,7 @@ adverbs = set([
     "even",
     "still",
     "yet",
-    "always",
-    "never",
     "sometimes",
-    "often",
     "always",
     "never",
     "ever",
