@@ -28,50 +28,16 @@ states = upos_tags = [
 
 observations = set()
 
-start_prob = {
-    "ADJ": 0,
-    "ADP": 0,
-    "ADV": 0,
-    "AUX": 0,
-    "CCONJ": 0,
-    "DET": 0,
-    "INTJ": 0,
-    "NOUN": 0,
-    "NUM": 0,
-    "PART": 0,
-    "PRON": 0,
-    "PROPN": 0,
-    "PUNCT": 0,
-    "SCONJ": 0,
-    "SYM": 0,
-    "VERB": 0,
-    "X": 0
-}
+start_prob = {state: 0 for state in states}
 
-trans_prob = {
-    "ADJ": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "ADP": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "ADV": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "AUX": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "CCONJ": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "DET": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "INTJ": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "NOUN": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "NUM": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "PART": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "PRON": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "PROPN": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "PUNCT": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "SCONJ": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "SYM": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "VERB": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0},
-    "X": {"ADJ": 0, "ADP": 0, "ADV": 0, "AUX": 0, "CCONJ": 0, "DET": 0, "INTJ": 0, "NOUN": 0, "NUM": 0, "PART": 0, "PRON": 0, "PROPN": 0, "PUNCT": 0, "SCONJ": 0, "SYM": 0, "VERB": 0, "X": 0}
-}
+trans_prob = {state: {state_to: 0 for state_to in states} for state in states}
 
-emit_prob = {}
+emit_prob = {state: {} for state in states}
 
 total_words = 0
 total_first_words = 0
+total_transitions = 0
+total_tag_count = {state: 0 for state in states}
 
 global hmm_params
 hmm_params = {
@@ -81,65 +47,89 @@ hmm_params = {
     'trans_prob': trans_prob,
     'emit_prob': emit_prob,
     'total_words': total_words,
-    'total_first_words': total_first_words
+    'total_first_words': total_first_words,
+    'total_transitions': total_transitions,
+    'total_tag_count': total_tag_count
 }
 
-def train(sent):
-    pass
-
-def write(params):
+def write_params():
     with open("hmm_params.json", "w", encoding="utf-8") as f:
         json.dump(hmm_params, f, indent=2)
 
-with open("UD_English-GUM/en_gum-ud-train.conllu", "r", encoding="utf-8") as f:
-    for tokenlist in parse_incr(f):
-        sentence = [(token["form"], token["upostag"]) for token in tokenlist if isinstance(token["id"], int)]
-        train(sentence)
-
-def open():
+def read_params():
     with open('hmm_params.json', 'r', encoding='utf-8') as f:
         hmm_params = json.load(f)
+        return hmm_params
 
 def read_observations():
     with open("UD_English-GUM/en_gum-ud-train.conllu", "r", encoding="utf-8") as f:
         for tokenlist in parse_incr(f):
             words = [token["form"] for token in tokenlist if isinstance(token["id"], int)]
             observations.update(words)
-
-        train_emit(words)
+            train_emit(words)
 
 def train(sentence):
+    if not sentence:
+        return
+    # Train first words
     train_first(sentence)
+    # Train transitions
     train_trans(sentence)
+
+    for word, tag in sentence:
+        # Add word to observations
+        if word not in hmm_params["observations"]:
+            hmm_params["observations"].add(word)
+    
+        # Emitions and stuff
+        if word not in hmm_params['emit_prob'][tag]:
+            hmm_params['emit_prob'][tag][word] = 0
+        hmm_params['emit_prob'][tag][word] += 1
+        # Tag counts
+        hmm_params['total_tag_count'][tag] += 1
+        # Total words
+        hmm_params["total_words"] += 1
 
 def train_emit(words):
     for word in words:
         if word in emit_prob:
-            emit_prob[word] += 1
+            emit_prob[word]["tag"] += 1
         else:
-            emit_prob[word] = 0
+            emit_prob[word] = 1
         
 def train_first(sentence):
     first_tag = sentence[0][1]
     hmm_params["start_prob"][first_tag] += 1
-    hmm_params["total_words"] += 1
+    hmm_params["total_first_words"] += 1
 
 def train_trans(sentence):
     for i in range(len(sentence) - 1):
+        hmm_params["total_transitions"] += 1
         current_tag = sentence[i][1]
         next_tag = sentence[i+1][1]
-        hmm_params['trans_prob'][current_tag][next_tag] += 1
+        hmm_params["trans_prob"][current_tag][next_tag] += 1
 
 def calculate_prob():
-    trans_prob_temp = trans_prob
-    start_prob_temp = start_prob
-    emit_prob_temp = emit_prob
-    for i in trans_prob_temp:
-        for ii in i:
-            trans_prob[ii] = trans_prob_temp[ii] / total_words
+    # Calculate Transition Probabilities 
+    for current_tag in hmm_params['trans_prob']:
+        total_transitions_from_current = sum(hmm_params['trans_prob'][current_tag].values())
+        if total_transitions_from_current > 0:
+            for next_tag in hmm_params['trans_prob'][current_tag]:
+                hmm_params['trans_prob'][current_tag][next_tag] /= total_transitions_from_current
     
-    for i in start_prob_temp:
-        start_prob[i] = start_prob_temp[i] / total_first_words
+    # Calculate Start Probabilities 
+    if hmm_params["total_first_words"] > 0:
+        for tag in hmm_params["start_prob"]:
+            hmm_params["start_prob"][tag] /= hmm_params["total_first_words"]
 
-    for i in emit_prob_temp:
-        emit_prob[i] = emit_prob_temp[i] / total_words
+    # Calculate Emission Probabilities 
+    for tag in hmm_params['emit_prob']:
+        total_occurrences_of_tag = hmm_params['total_tag_count'].get(tag, 0)
+        if total_occurrences_of_tag > 0:
+            for word in hmm_params['emit_prob'][tag]:
+                hmm_params['emit_prob'][tag][word] /= total_occurrences_of_tag
+
+with open("UD_English-GUM/en_gum-ud-train.conllu", "r", encoding="utf-8") as f:
+    for tokenlist in parse_incr(f):
+        sentence = [(token["form"], token["upostag"]) for token in tokenlist if isinstance(token["id"], int)]
+        train(sentence)
