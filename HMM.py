@@ -45,7 +45,7 @@ class HMM:
     def write_params(self, filepath="hmm_params.json"):
         params = {
             'states': self.states,
-            'observations': list(self.observations), # Convert set to list for JSON
+            'observations': list(self.observations), # Convert set to list for JSON (set can't be used with dump)
             'start_prob': self.start_counts,          # Using 'start_prob' key as in original JSON
             'trans_prob': self.transition_counts,     # Using 'trans_prob' key
             'emit_prob': self.emission_counts,        # Using 'emit_prob' key
