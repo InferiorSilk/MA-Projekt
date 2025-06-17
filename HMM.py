@@ -9,7 +9,7 @@ import copy
 import os
 
 class HMM:
-    UPOS_TAGS = [
+    UPOS_TAGS = [ # Universal Part of Speech Tags
         "ADJ",   # Adjective
         "ADP",   # Adposition
         "ADV",   # Adverb
