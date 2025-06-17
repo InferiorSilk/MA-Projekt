@@ -19,9 +19,6 @@ class Stemmer(object):
             else:
                 return (not self._cons(i - 1))
         return True
-            else:
-                return (not self._cons(i - 1))
-        return True
 
     def _m(self):
         """Measure the number of consonant sequences between k0 and j."""
@@ -315,29 +312,6 @@ class Stemmer(object):
         """Stem the given word and return the stem and the removed suffix."""
         if not word or len(word) <= 2:
             return word, ""
-        
-        self.b = list(word)
-        self.k = len(word) - 1 
-        self.k0 = 0
-        self._dirty_ending_tracker = ""
-
-        self._step1ab()
-        if self.k > self.k0 : 
-            self._step1c()
-        if self.k > self.k0 :
-            self._step2()
-        if self.k > self.k0 :
-            self._step3()
-        if self.k > self.k0 :
-            self._step4()
-        if self.k > self.k0 :
-            self._step5a()
-        if self.k > self.k0 :
-            self._step5b()
-        
-        final_stem = "".join(self.b[self.k0:self.k+1])
-        
-        return final_stem, self._dirty_ending_tracker
         
         self.b = list(word)
         self.k = len(word) - 1 
