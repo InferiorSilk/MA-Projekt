@@ -1,4 +1,5 @@
 class Stemmer(object):
+    """Explanation of the Porter stemmer by AI, implementation by me. Docstrings by AI."""
     def __init__(self):
         self.b = [] 
         self.k = 0  
@@ -7,6 +8,7 @@ class Stemmer(object):
         self._dirty_ending_tracker = ""
 
     def _cons(self, i):
+        """Check if the character at index i is a consonant."""
         if self.b[i] == 'a' or self.b[i] == 'e' or \
            self.b[i] == 'i' or self.b[i] == 'o' or \
            self.b[i] == 'u':
@@ -19,6 +21,7 @@ class Stemmer(object):
         return True
 
     def _m(self):
+        """Measure the number of consonant sequences between k0 and j."""
         n = 0
         i = self.k0
         while True:
@@ -46,12 +49,14 @@ class Stemmer(object):
             i += 1
 
     def _vowelinstem(self):
+        """Check if there is a vowel in the stem."""
         for i in range(self.k0, self.j + 1):
             if not self._cons(i):
                 return True
         return False
 
     def _doublec(self, j_idx):
+        """Check if the character at j_idx and j_idx-1 are the same consonant."""
         if j_idx < (self.k0 + 1):
             return False
         if (self.b[j_idx] != self.b[j_idx-1]):
@@ -59,6 +64,7 @@ class Stemmer(object):
         return self._cons(j_idx)
 
     def _cvc(self, i_idx):
+        """Check if the sequence at i_idx is consonant-vowel-consonant."""
         if i_idx < (self.k0 + 2) or \
            not self._cons(i_idx) or \
            self._cons(i_idx-1) or \
@@ -69,6 +75,7 @@ class Stemmer(object):
         return True
 
     def _ends(self, s_str):
+        """Check if the word ends with the string s_str."""
         length = len(s_str)
         s_list = list(s_str)
         if length > (self.k - self.k0 + 1):
@@ -79,12 +86,14 @@ class Stemmer(object):
         return True
 
     def _setto(self, s_str):
+        """Set the end of the word to s_str."""
         s_list = list(s_str)
         length = len(s_list)
         self.b[self.j+1 : self.k+1] = s_list
         self.k = self.j + length
 
     def _step1ab(self):
+        """Perform step 1a and 1b of the stemming algorithm."""
         if self.b[self.k] == 's':
             if self._ends("sses"):
                 self._dirty_ending_tracker = "sses"
@@ -134,6 +143,7 @@ class Stemmer(object):
                         self.j = original_j_val
 
     def _step1c(self):
+        """Perform step 1c of the stemming algorithm."""
         if self._ends("y"):
             contains_vowel = False
             for i_char_idx in range(self.k0, self.j + 1):
@@ -145,6 +155,7 @@ class Stemmer(object):
                 self._setto("i")
 
     def _step2(self):
+        """Perform step 2 of the stemming algorithm."""
         s1, s2 = "", ""
         if self.b[self.k] == 'l':
             if self._ends("ational"): s1, s2 = "ational", "ate"
@@ -191,6 +202,7 @@ class Stemmer(object):
             self._setto(s2)
 
     def _step3(self):
+        """Perform step 3 of the stemming algorithm."""
         s1, s2 = "", ""
         if self.b[self.k] == 'e':
             if self._ends("icate"): s1, s2 = "icate", "ic"
@@ -215,6 +227,7 @@ class Stemmer(object):
             self._setto(s2)
 
     def _step4(self):
+        """Perform step 4 of the stemming algorithm."""
         s1 = ""
         if self.k <= self.k0: return # Word too short for k-1 access
 
@@ -275,6 +288,7 @@ class Stemmer(object):
             self._setto("") 
 
     def _step5a(self):
+        """Perform step 5a of the stemming algorithm."""
         if self._ends("e"): 
             m_val = self._m()
             if m_val > 1:
@@ -285,6 +299,7 @@ class Stemmer(object):
                 self.k -=1 
 
     def _step5b(self):
+        """Perform step 5b of the stemming algorithm."""
         if self.b[self.k] == 'l':
             original_j_val = self.j
             self.j = self.k 
@@ -294,6 +309,7 @@ class Stemmer(object):
             self.j = original_j_val
 
     def stem(self, word):
+        """Stem the given word and return the stem and the removed suffix."""
         if not word or len(word) <= 2:
             return word, ""
         
