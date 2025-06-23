@@ -5,8 +5,8 @@
 """
 from conllu import parse_incr
 import json
-import copy
 import os
+from collections import Counter # For counting vocabulary. Suggested by AI.
 
 class HMM:
     UPOS_TAGS = [ # Universal Part of Speech Tags
@@ -29,17 +29,15 @@ class HMM:
         "X"      # Other
     ]
 
-    def __init__(self):
+    def __init__(self, vocabulary):
         self.states = self.UPOS_TAGS
-        self.observations = set()
+        self.observations = vocabulary
         
         self.start_counts = {state: 0 for state in self.states}
         self.transition_counts = {state: {state_to: 0 for state_to in self.states} for state in self.states}
         self.emission_counts = {state: {} for state in self.states}
         
-        self.total_words = 0
         self.total_first_words = 0
-        self.total_transitions = 0
         self.tag_counts = {state: 0 for state in self.states}
 
     def write_params(self, params, filepath="hmm_probabilities.json"):
@@ -51,28 +49,6 @@ class HMM:
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(params, f, indent=2)
         print(f"HMM parameters saved to {filepath}")
-
-    # For Viterbi, read written params
-    def read_params(self, filepath="hmm_params.json"):
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                loaded_params = json.load(f)
-                
-                self.observations = set(loaded_params.get('observations', []))
-                self.start_counts = loaded_params.get('start_prob', self.start_counts)
-                self.transition_counts = loaded_params.get('trans_prob', self.transition_counts)
-                self.emission_counts = loaded_params.get('emit_prob', self.emission_counts)
-                self.total_words = loaded_params.get('total_words', 0)
-                self.total_first_words = loaded_params.get('total_first_words', 0)
-                self.total_transitions = loaded_params.get('total_transitions', 0)
-                self.tag_counts = loaded_params.get('total_tag_count', self.tag_counts)
-                print(f"HMM parameters loaded from {filepath}")
-
-        except FileNotFoundError:
-            print(f"Warning: {filepath} not found. Initializing with empty parameters.")
-        except json.JSONDecodeError:
-            print(f"Error: Could not decode {filepath}. File might be corrupted. Initializing with empty parameters.")
-            self.__init__() # Reset to default (for safety)
 
     def _train_first(self, sentence_tags):
         if not sentence_tags:
@@ -88,7 +64,6 @@ class HMM:
             current_tag = sentence_tags[i]
             next_tag = sentence_tags[i+1]
             self.transition_counts[current_tag][next_tag] += 1
-            self.total_transitions += 1 # Increment for each valid transition pair
 
     def train(self, sentence_word_tag_pairs):
         if not sentence_word_tag_pairs:
@@ -96,64 +71,54 @@ class HMM:
 
         sentence_tags = [tag for word, tag in sentence_word_tag_pairs]
 
-        # Train first words based on tags
         self._train_first(sentence_tags)
-        # Train transitions based on tags
         self._train_trans(sentence_tags)
 
         for word, tag in sentence_word_tag_pairs:
-            # Add word to observations
-            self.observations.add(word)
     
-            # Emission counts
-            if word not in self.emission_counts[tag]:
-                self.emission_counts[tag][word] = 0
+            # Calculate emission counts
+            self.emission_counts[tag].setdefault(word, 0)
             self.emission_counts[tag][word] += 1
             
-            # Tag counts
+            # Calculate tag counts
             self.tag_counts[tag] += 1
-            # Total words
-            self.total_words += 1
         
     def get_probabilities(self):
         """
-        Calculates the start, transition, and emission probabilities from the raw counts. Laplace smoothing implemented.
+        Calculates the start, transition, and emission probabilities from the raw counts. 
+        Laplace smoothing is implemented.
         """
         num_states = len(self.states)
-        num_observations = len(self.observations)
+        vocabulary_size = len(self.observations)
 
         # Calculate Start Probabilities
         start_prob = {}
-        # + num_states for smoothing
-        denominator = self.total_first_words + num_states
         for tag in self.states:
-            # Add 1 to avoid counts of 0
-            start_prob[tag] = (self.start_counts.get(tag, 0) + 1) / denominator
+            start_prob[tag] = (self.start_counts.get(tag, 0) + 1) / (self.total_first_words + num_states)
 
         # Calculate Transition Probabilities
         trans_prob = {state: {} for state in self.states}
-        for from_state, transitions in self.transition_counts.items():
-            total_transitions_from_state = sum(transitions.values())
-            denominator = total_transitions_from_state + num_states
+        for from_state in self.states:
+            total_transitions_from_state = sum(self.transition_counts.get(from_state, {}).values())
+
             for to_state in self.states:
-                count = transitions.get(to_state, 0)
-                trans_prob[from_state][to_state] = (count + 1) / denominator
+                count = self.transition_counts.get(from_state, {}).get(to_state, 0)
+                trans_prob[from_state][to_state] = (count + 1) / (total_transitions_from_state + num_states)
 
         # Calculate Emission Probabilities
         emit_prob = {state: {} for state in self.states}
-        for state, emissions in self.emission_counts.items():
+        for state in self.states:
             total_emissions_from_state = self.tag_counts.get(state, 0)
-            # + num_states for smoothing
-            denominator = total_emissions_from_state + num_observations
-            for word, count in emissions.items():
+            denominator = total_emissions_from_state + vocabulary_size
+            
+            for word in self.observations:
+                count = self.emission_counts.get(state, {}).get(word, 0)
                 emit_prob[state][word] = (count + 1) / denominator
-            # Token for unknown words. Recommended by AI.
-            emit_prob[state]['<UNK>'] = 1 / denominator
 
         # Return a new dictionary containing the probabilities
         prob_params = {
             'states': self.states,
-            'observations': list(self.observations),
+            'observations': list(self.observations), # List for json.dump()
             'start_prob': start_prob,
             'trans_prob': trans_prob,
             'emit_prob': emit_prob,
@@ -161,33 +126,60 @@ class HMM:
         return prob_params
 
 if __name__ == "__main__":
-    # Initialize a new model every time the script runs.
-    model = HMM()
-
+    # The program flow was shown by AI. Specific variables and actions (e.g. <UNK> and the frequency threshold) shown by AI.
     training_file = "UD_English-GUM/en_gum-ud-train.conllu"
+    # Define a frequency threshold for a word to be considered "known"
+    # Words appearing less than or equal to this many times will get the tag "<UNK>"
+    FREQUENCY_THRESHOLD = 1 
+    UNK_TOKEN = "<UNK>"
 
     if not os.path.exists(training_file):
         print(f"Error: Training file not found at {training_file}")
         print("Please ensure the CoNLL-U file is in the correct location.")
-    else:
-        print(f"Starting training with data from {training_file}...")
-        sentence_count = 0
-        with open(training_file, "r", encoding="utf-8") as f:
-            for tokenlist in parse_incr(f):
-                sentence = []
-                for token in tokenlist:
-                    if isinstance(token["id"], int) and token["form"] and token["upostag"]:
-                        sentence.append((token["form"].lower(), token["upostag"]))
-                
-                if sentence:
-                    model.train(sentence)
-                    sentence_count += 1
+        exit()
+
+    # Build the vocabulary (for smoothing)
+    print("Building vocabulary...")
+    word_frequencies = Counter()
+    all_sentences = [] # Store sentences to avoid reading file twice. Suggested by AI
+    # Read the training file
+    with open(training_file, "r", encoding="utf-8") as f:
+        for tokenlist in parse_incr(f):
+            sentence = []
+            for token in tokenlist:
+                if isinstance(token["id"], int) and token["form"] and token["upostag"]:
+                    word = token["form"].lower()
+                    sentence.append((word, token["upostag"]))
+                    word_frequencies[word] += 1
+            if sentence:
+                all_sentences.append(sentence)
+
+    # Create the final vocabulary
+    final_vocabulary = {word for word, freq in word_frequencies.items() if freq > FREQUENCY_THRESHOLD}
+    final_vocabulary.add(UNK_TOKEN)
+    
+    print(f"Building vocabulary complete. Original words: {len(word_frequencies)}. Final vocabulary size: {len(final_vocabulary)}.")
+
+    # Initialize the Model with the final vocabulary
+    model = HMM(vocabulary=final_vocabulary)
+
+    # Train the Model
+    print("Training the HMM...")
+    for sentence in all_sentences:
+        processed_sentence = []
+        for word, tag in sentence:
+            # Replace rare words with the UNK_TOKEN
+            if word not in final_vocabulary:
+                processed_sentence.append((UNK_TOKEN, tag))
+            else:
+                processed_sentence.append((word, tag))
         
-        print(f"Training completed. Processed {sentence_count} sentences.")
-        
-        # Calculate probabilities after training is complete.
-        print("Calculating probabilities...")
-        final_params = model.get_probabilities()
-        
-        # Save the final calculated probabilities, not the raw counts.
-        model.write_params(final_params, "hmm_probabilities.json")
+        if processed_sentence:
+            model.train(processed_sentence)
+    
+    print(f"Training completed. Processed {len(all_sentences)} sentences.")
+    
+    # Calculate and Save Probabilities
+    print("Calculating probabilities...")
+    final_params = model.get_probabilities()
+    model.write_params(final_params, "hmm_probabilities.json")
