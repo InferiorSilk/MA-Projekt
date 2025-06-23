@@ -235,5 +235,6 @@ if __name__ == "__main__":
         print("Enter text to process:")
         user_input = input()
         results = viterbi.process(user_input)
+        print(results)
     else:
         print("Invalid input")

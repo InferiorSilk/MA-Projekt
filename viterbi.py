@@ -1,6 +1,7 @@
 import json
 import math
 import re
+import logging
 
 class Viterbi():
     def __init__(self):
@@ -23,16 +24,26 @@ class Viterbi():
             "VERB",  # Verb
             "X"      # Other
         ]
+        self.observations = set()
+        self.start_prob = {}
+        self.trans_prob = {}
+        self.emit_prob = {}
+        self.total_words = 0
+        self.total_first_words = 0
+        self.total_transitions = 0
+        self.tag_counts = {}
+        self.read_params()
 
-    def read_params(self, filepath="hmm_params.json"):
+    def read_params(self, filepath="hmm_probabilities.json"):
+        logging.debug("reading params...")
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 loaded_params = json.load(f)
                 
                 self.observations = set(loaded_params.get('observations', []))
-                self.start_prob = loaded_params.get('start_prob')
-                self.trans_prob = loaded_params.get('trans_prob')
-                self.emit_prob = loaded_params.get('emit_prob')
+                self.start_prob = loaded_params.get('start_prob', {})
+                self.trans_prob = loaded_params.get('trans_prob', {})
+                self.emit_prob = loaded_params.get('emit_prob', {})
                 self.total_words = loaded_params.get('total_words', 0)
                 self.total_first_words = loaded_params.get('total_first_words', 0)
                 self.total_transitions = loaded_params.get('total_transitions', 0)
@@ -43,13 +54,13 @@ class Viterbi():
             print(f"Warning: {filepath} not found. Initializing with empty parameters.")
         except json.JSONDecodeError:
             print(f"Error: Could not decode {filepath}. File might be corrupted. Initializing with empty parameters.")
-            self.__init__() # Reset to default (for safety)
     
     def process(self, text):
         """
         Self made; Example for isinstance-check and comments by AI.
         Ripped from main.py
         """
+        logging.debug("params read")
         if not isinstance(text, str):
             raise TypeError("Input must be a string")
         if len(text) == 0:
@@ -57,10 +68,15 @@ class Viterbi():
         
         # This will split on '.', '!', and '?' while preserving the punctuation
         sentences = re.split('([.!?])', text)
-        # Sentences is a list of lists, one list for every sentence in the input.
-        for sentence in sentences:
-            words = re.findall(r"\b[\w']+\b|[.,?!]", sentence.lower())
-            self.tag(words)
+        tagged_text = []
+        # Sentences is a list of substrings, one for every sentence in the input.
+        for sentence_part in sentences:
+            words = re.findall(r"\b[\w']+\b|[.,?!]", sentence_part.lower())
+            # Handling of processed sentences by AI.
+            if words:
+                tags = self.tag(words)
+                tagged_text.append(list(zip(words, tags)))
+        return tagged_text
 
     def tag(self, words):
         trellis = [{}] # Viterbi data structure. No idea why its called that.
@@ -68,7 +84,7 @@ class Viterbi():
 
         first_word = words[0]
         for tag in self.UPOS_TAGS:
-            start_prob = self.start_prob.get(tag)
+            start_prob = self.start_prob.get(tag, 1e-6)
             emit_prob = self.emit_prob.get(tag, {}).get(first_word, 1e-6) # Get emission probability, if not available set to a low smoothing number.
 
             trellis[0][tag] = math.log(start_prob) + math.log(emit_prob)
@@ -98,6 +114,7 @@ class Viterbi():
 
         best_last_tag = max(trellis[-1], key=trellis[-1].get)
 
+        logging.debug(f"best_path = {best_last_tag}")
         best_path = [best_last_tag]
 
         for t in range(len(words) - 1, 0, -1):
