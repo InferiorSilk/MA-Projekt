@@ -1,5 +1,6 @@
 import json
 import math
+import re
 
 class Viterbi():
     def __init__(self):
@@ -22,6 +23,7 @@ class Viterbi():
             "VERB",  # Verb
             "X"      # Other
         ]
+        self.results = []
     def read_params(self, filepath="hmm_params.json"):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
@@ -44,8 +46,39 @@ class Viterbi():
             self.__init__() # Reset to default (for safety)
 
     def first_word(self, first_word):
+        start_probabilities = {}
+        for tag in self.UPOS_TAGS:
+            # Log for very small numbers that float couldnt display
+            start_probabilities[tag] = math.log(self.emission_counts[tag][first_word]) + math.log(self.start_counts[tag])
+        self.highest_start_prob = max(start_probabilities, key=start_probabilities.get)
+        return {first_word: self.highest_start_prob}
+    
+    def not_first_word(self, word, previous_tag):
         probabilities = {}
         for tag in self.UPOS_TAGS:
-            probability = math.log(self.emission_counts[tag][first_word]) + math.log(self.start_counts[tag])
-            probabilities[tag] = probability
-        self.highest_prob = max(probabilities, key=probabilities.get)
+            probabilities[tag] = math.log(self.emission_counts[tag][word]) + math.log(self.transition_counts[previous_tag][tag])
+        return max(probabilities, key=probabilities.get)
+    
+    def process(self, text):
+        """
+        Self made; Example for isinstance-check and comments by AI.
+        Ripped from main.py
+        """
+        if not isinstance(text, str):
+            raise TypeError("Input must be a string")
+        if len(text) == 0:
+            raise ValueError("Input must not be empty")
+        
+        # This will split on '.', '!', and '?' while preserving the punctuation
+        sentences = re.split('([.!?])', text)
+        # Sentences is a list of lists, one list for every sentence in the input.
+        for sentence in sentences:
+            words = re.findall(r"\b[\w']+\b|[.,?!]", sentence.lower())
+            self.determine(words)
+
+    def determine(self, words):
+        for i in len(words):
+            if words[i-1] is None:
+                self.results.append(self.first_word(words[i]))
+            else:
+                self.results.append(self.not_first_word(words[i], self.results[i-1][words[i-1]]))
