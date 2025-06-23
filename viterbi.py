@@ -23,17 +23,16 @@ class Viterbi():
             "VERB",  # Verb
             "X"      # Other
         ]
-        self.results = []
-        self.log_smoothing = -1e6
+
     def read_params(self, filepath="hmm_params.json"):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 loaded_params = json.load(f)
                 
                 self.observations = set(loaded_params.get('observations', []))
-                self.start_counts = loaded_params.get('start_prob')
-                self.transition_counts = loaded_params.get('trans_prob')
-                self.emission_counts = loaded_params.get('emit_prob')
+                self.start_prob = loaded_params.get('start_prob')
+                self.trans_prob = loaded_params.get('trans_prob')
+                self.emit_prob = loaded_params.get('emit_prob')
                 self.total_words = loaded_params.get('total_words', 0)
                 self.total_first_words = loaded_params.get('total_first_words', 0)
                 self.total_transitions = loaded_params.get('total_transitions', 0)
@@ -69,8 +68,8 @@ class Viterbi():
 
         first_word = words[0]
         for tag in self.UPOS_TAGS:
-            start_prob = self.start_counts.get(tag)
-            emit_prob = self.emission_counts.get(tag, 1e-6) # Get emission probability, if not available set to a low smoothing number.
+            start_prob = self.start_prob.get(tag)
+            emit_prob = self.emit_prob.get(tag, {}).get(first_word, 1e-6) # Get emission probability, if not available set to a low smoothing number.
 
             trellis[0][tag] = math.log(start_prob) + math.log(emit_prob)
             backpointers[0][tag] = None
@@ -82,19 +81,20 @@ class Viterbi():
             current_word = words[t]
 
             for current_tag in self.UPOS_TAGS:
-                max_prob = 0e-9
+                max_prob = -math.inf
                 best_prev_tag = None
 
                 for prev_tag in self.UPOS_TAGS:
-                    trans_prob = self.transition_counts.get(prev_tag, {}).get(current_tag, 0)
+                    trans_prob = self.trans_prob.get(prev_tag, {}).get(current_tag, 1e-6)
 
                     path_prob = trellis[t-1][prev_tag] + math.log(trans_prob)
                     if path_prob > max_prob:
                         max_prob = path_prob
                         best_prev_tag = prev_tag
 
-                emission_prob = self.emission_counts.get(current_tag, {}).get(current_word, 1e-6)
+                emission_prob = self.emit_prob.get(current_tag, {}).get(current_word, 1e-6)
                 trellis[t][current_tag] = max_prob + math.log(emission_prob)
+                backpointers[t][current_tag] = best_prev_tag
 
         best_last_tag = max(trellis[-1], key=trellis[-1].get)
 
