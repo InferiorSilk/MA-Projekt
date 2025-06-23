@@ -24,19 +24,20 @@ class Viterbi():
             "X"      # Other
         ]
         self.results = []
+        self.log_smoothing = -1e6
     def read_params(self, filepath="hmm_params.json"):
         try:
             with open(filepath, 'r', encoding='utf-8') as f:
                 loaded_params = json.load(f)
                 
-                self.observations = set(loaded_params.get('observations', [])) # Provide fallback if the key doesnt exist (would be very weird)
-                self.start_counts = loaded_params.get('start_prob', self.start_counts)
-                self.transition_counts = loaded_params.get('trans_prob', self.transition_counts)
-                self.emission_counts = loaded_params.get('emit_prob', self.emission_counts)
+                self.observations = set(loaded_params.get('observations', []))
+                self.start_counts = loaded_params.get('start_prob')
+                self.transition_counts = loaded_params.get('trans_prob')
+                self.emission_counts = loaded_params.get('emit_prob')
                 self.total_words = loaded_params.get('total_words', 0)
                 self.total_first_words = loaded_params.get('total_first_words', 0)
                 self.total_transitions = loaded_params.get('total_transitions', 0)
-                self.tag_counts = loaded_params.get('total_tag_count', self.tag_counts)
+                self.tag_counts = loaded_params.get('total_tag_count')
                 print(f"HMM parameters loaded from {filepath}")
 
         except FileNotFoundError:
@@ -44,20 +45,6 @@ class Viterbi():
         except json.JSONDecodeError:
             print(f"Error: Could not decode {filepath}. File might be corrupted. Initializing with empty parameters.")
             self.__init__() # Reset to default (for safety)
-
-    def first_word(self, first_word):
-        start_probabilities = {}
-        for tag in self.UPOS_TAGS:
-            # Log for very small numbers that float couldnt display
-            start_probabilities[tag] = math.log(self.emission_counts[tag][first_word]) + math.log(self.start_counts[tag])
-        self.highest_start_prob = max(start_probabilities, key=start_probabilities.get)
-        return {first_word: self.highest_start_prob}
-    
-    def not_first_word(self, word, previous_tag):
-        probabilities = {}
-        for tag in self.UPOS_TAGS:
-            probabilities[tag] = math.log(self.emission_counts[tag][word]) + math.log(self.transition_counts[previous_tag][tag])
-        return max(probabilities, key=probabilities.get)
     
     def process(self, text):
         """
@@ -74,11 +61,47 @@ class Viterbi():
         # Sentences is a list of lists, one list for every sentence in the input.
         for sentence in sentences:
             words = re.findall(r"\b[\w']+\b|[.,?!]", sentence.lower())
-            self.determine(words)
+            self.tag(words)
 
-    def determine(self, words):
-        for i in len(words):
-            if words[i-1] is None:
-                self.results.append(self.first_word(words[i]))
-            else:
-                self.results.append(self.not_first_word(words[i], self.results[i-1][words[i-1]]))
+    def tag(self, words):
+        trellis = [{}] # Viterbi data structure. No idea why its called that.
+        backpointers = [{}]
+
+        first_word = words[0]
+        for tag in self.UPOS_TAGS:
+            start_prob = self.start_counts.get(tag)
+            emit_prob = self.emission_counts.get(tag, 1e-6) # Get emission probability, if not available set to a low smoothing number.
+
+            trellis[0][tag] = math.log(start_prob) + math.log(emit_prob)
+            backpointers[0][tag] = None
+
+        # Recursion
+        for t in range(1, len(words)):
+            trellis.append({})
+            backpointers.append({})
+            current_word = words[t]
+
+            for current_tag in self.UPOS_TAGS:
+                max_prob = 0e-9
+                best_prev_tag = None
+
+                for prev_tag in self.UPOS_TAGS:
+                    trans_prob = self.transition_counts.get(prev_tag, {}).get(current_tag, 0)
+
+                    path_prob = trellis[t-1][prev_tag] + math.log(trans_prob)
+                    if path_prob > max_prob:
+                        max_prob = path_prob
+                        best_prev_tag = prev_tag
+
+                emission_prob = self.emission_counts.get(current_tag, {}).get(current_word, 1e-6)
+                trellis[t][current_tag] = max_prob + math.log(emission_prob)
+
+        best_last_tag = max(trellis[-1], key=trellis[-1].get)
+
+        best_path = [best_last_tag]
+
+        for t in range(len(words) - 1, 0, -1):
+            best_last_tag = backpointers[t][best_last_tag]
+            best_path.insert(0, best_last_tag)
+
+        return best_path
