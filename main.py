@@ -1,5 +1,5 @@
 import re
-import sys
+import json
 import tagging 
 import logging
 import stemmer
@@ -251,13 +251,15 @@ if __name__ == "__main__":
             lines.append(line) 
         user_input = "\n".join(lines)
         results = nlp.process(user_input)
+        with open("rb_raw.txt", "w") as f:
+            json.dump(results, f)
         print("\nProcessed sentences:")
         for i, sentence_dict in enumerate(results, 1):
             print(f"\nSentence {i}:")
-            print("Words:", {word: info for word, info in sentence_dict.items() if word != 'sentence_tense'})
+            print("Words:", {word: info for word, info in sentence_dict.items()})
     elif model_input.lower() == "hmm":
         viterbi = viterbi.Viterbi()
-        print("Enter text to process (press \end to finish):")
+        print("Enter text to process (press \\end to finish):")
         lines = []
         while True:
             try:
@@ -271,6 +273,8 @@ if __name__ == "__main__":
             lines.append(line) 
         user_input = "\n".join(lines)
         results = viterbi.process(user_input)
+        with open("viterbi_raw.txt", "w") as f:
+            json.dump(results, f)
         print(results)
     else:
         print("Invalid input")
