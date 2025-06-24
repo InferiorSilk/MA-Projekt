@@ -23,7 +23,7 @@ class NLP:
         }
         self.contraction_pattern = re.compile(r'\b(' + '|'.join(re.escape(key) for key in self.contractions.keys()) + r')\b')
         self.tagging = tagging.Tagging(dictionaries.patterns)  # Initialize Tagging with patterns and empty word_endings
-        self.tense = tagging.Tense()  # Initialize the Tense analyzer
+        # self.tense = tagging.Tense()  # Initialize the Tense analyzer. NOT USED ANYMORE
         self.semantic_role_labelling = tagging.Semantic_Role_Labelling() # Initialize srl
 
     def _stem(self, word):
@@ -31,7 +31,19 @@ class NLP:
         return stemmed, ending
 
     def process(self, text):
-        """Self made; Example for isinstance-check and comments by AI"""
+        """Main processing function to handle text input, split it into sentences, and preprocess each sentence.
+        Args:
+            text: String containing the text to process
+        
+        Returns:
+            processed_sentences: List of dictionaries containing processed sentences with their words, tags, and properties
+
+        Raises:
+            ValueError: If the input is empty
+            TypeError: If input is not a string or is empty
+
+        Self made; Example for isinstance-check and comments by AI
+        """
         if not isinstance(text, str):
             raise TypeError("Input must be a string")
         if len(text) == 0:
@@ -71,10 +83,10 @@ class NLP:
             Dictionary containing processed words with their tags and properties
             
         Raises:
-            ValueError: If there's an error processing the sentence
+            ValueError: If there was an error processing the sentence
             TypeError: If input is not a string
 
-        Self made; Docstrings, contraction handling, regular expressions, punctuation handling, formating and comments by AI
+        Self made; Docstrings, contraction handling, regular expressions, punctuation handling, formating and splitting sentences by AI
         """
         if not isinstance(sentence, str):
             raise TypeError("Input sentence must be a string")
@@ -95,6 +107,7 @@ class NLP:
             
             # Process each word
             for word in words:
+                # Check for
                 if not word:
                     continue
                     
@@ -111,12 +124,11 @@ class NLP:
                         stemmed, ending = self._stem(word)
                         logging.debug(f"Stemmed word is '{stemmed}', ending is '{ending}'")
                         if stemmed:
-                            self.word_endings[stemmed] = ending  # Store ending for original word
+                            self.word_endings[stemmed] = ending  # Store ending for original word to use in tagging
                             stemmed_words.append(stemmed)
                     else:
                         self.word_endings[word] = ''
                         stemmed_words.append(word)
-            
             
             if not stemmed_words:
                 raise ValueError("No valid words remained after preprocessing")
@@ -163,7 +175,7 @@ class NLP:
                 if word is None or not isinstance(word, str):
                     continue
                     
-                # Get surrounding words with proper null checks
+                # Get surrounding words with null checks
                 global prev_word, next_word, prev_prev_word, next_next_word
 
                 prev_word = sentence_list[i - 1] if i > 0 else None
@@ -179,6 +191,7 @@ class NLP:
                     'type': None
                 }
                 try:
+                    # Get tag for the word
                     tag = self.tagging._tag_word_in_context(
                         word, 
                         prev_word, 

@@ -6,6 +6,7 @@
 from conllu import parse_incr
 import json
 import os
+import logging
 from collections import Counter # For counting vocabulary. Suggested by AI.
 
 class HMM:
@@ -43,7 +44,7 @@ class HMM:
     def write_params(self, params, filepath="hmm_probabilities.json"):
         """
         Writes a given dictionary of parameters to a JSON file.
-        It now accepts a 'params' dictionary as its primary data source.
+        It accepts a 'params' dictionary as its primary data source. Writes to hmm_probabilities.json by default.
         """
         # Use a passed-through dictionary instead of building one. Fix to accompany the refactor of __main__
         with open(filepath, "w", encoding="utf-8") as f:
@@ -118,7 +119,7 @@ class HMM:
         # Return a new dictionary containing the probabilities
         prob_params = {
             'states': self.states,
-            'observations': list(self.observations), # List for json.dump()
+            'observations': list(self.observations), # Json.dump() requires a list.
             'start_prob': start_prob,
             'trans_prob': trans_prob,
             'emit_prob': emit_prob,
@@ -139,7 +140,7 @@ if __name__ == "__main__":
         exit()
 
     # Build the vocabulary (for smoothing)
-    print("Building vocabulary...")
+    logging.info("Building vocabulary...")
     word_frequencies = Counter()
     all_sentences = [] # Store sentences to avoid reading file twice. Suggested by AI
     # Read the training file
@@ -158,13 +159,13 @@ if __name__ == "__main__":
     final_vocabulary = {word for word, freq in word_frequencies.items() if freq > FREQUENCY_THRESHOLD}
     final_vocabulary.add(UNK_TOKEN)
     
-    print(f"Building vocabulary complete. Original words: {len(word_frequencies)}. Final vocabulary size: {len(final_vocabulary)}.")
+    logging.info(f"Building vocabulary complete. Original words: {len(word_frequencies)}. Final vocabulary size: {len(final_vocabulary)}.")
 
     # Initialize the Model with the final vocabulary
     model = HMM(vocabulary=final_vocabulary)
 
     # Train the Model
-    print("Training the HMM...")
+    logging.info("Training the HMM...")
     for sentence in all_sentences:
         processed_sentence = []
         for word, tag in sentence:
@@ -181,5 +182,6 @@ if __name__ == "__main__":
     
     # Calculate and Save Probabilities
     print("Calculating probabilities...")
+    # Dictionary containing probabilities
     final_params = model.get_probabilities()
     model.write_params(final_params, "hmm_probabilities.json")

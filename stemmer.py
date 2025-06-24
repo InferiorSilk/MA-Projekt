@@ -1,5 +1,15 @@
 class Stemmer(object):
-    """Explanation of the Porter stemmer by AI, implementation by me. Docstrings by AI."""
+    """Stemmer class for stemming words.
+
+    Attributes:
+        b (list): List of characters in the word
+        k (int): Index of the current character in the word
+        k0 (int): Index of the first character in the word
+        j (int): Index of the last character in the word
+        _dirty_ending_tracker (str): String containing the stemmed word and the removed suffix
+    
+    Explanation of the Porter stemmer by AI, implementation by me. Docstrings by AI.
+    """
     def __init__(self):
         self.b = [] 
         self.k = 0  
@@ -8,7 +18,14 @@ class Stemmer(object):
         self._dirty_ending_tracker = ""
 
     def _cons(self, i):
-        """Check if the character at index i is a consonant."""
+        """Check if the character at index i is a consonant.
+        
+        Args:
+            i: Index of the character to check
+            
+        Returns:
+            True if the character is a consonant, False otherwise
+        """
         if self.b[i] == 'a' or self.b[i] == 'e' or \
            self.b[i] == 'i' or self.b[i] == 'o' or \
            self.b[i] == 'u':
@@ -21,7 +38,11 @@ class Stemmer(object):
         return True
 
     def _m(self):
-        """Measure the number of consonant sequences between k0 and j."""
+        """Measure the number of consonant sequences between k0 and j.
+        
+        Returns:
+            Number of consonant sequences between k0 and j
+        """
         n = 0
         i = self.k0
         while True:
@@ -49,22 +70,40 @@ class Stemmer(object):
             i += 1
 
     def _vowelinstem(self):
-        """Check if there is a vowel in the stem."""
+        """Check if there is a vowel in the stem.
+        
+        Returns:
+            True if there is a vowel in the stem, False otherwise
+        """
         for i in range(self.k0, self.j + 1):
             if not self._cons(i):
                 return True
         return False
 
-    def _doublec(self, j_idx):
-        """Check if the character at j_idx and j_idx-1 are the same consonant."""
-        if j_idx < (self.k0 + 1):
+    def _doublec(self, idx):
+        """Check if the character at idx and idx-1 are the same consonant.
+        
+        Args:
+            idx: Index of the character to check
+            
+        Returns:
+            True if the characters are the same, False otherwise
+        """
+        if idx < (self.k0 + 1):
             return False
-        if (self.b[j_idx] != self.b[j_idx-1]):
+        if (self.b[idx] != self.b[idx-1]):
             return False
-        return self._cons(j_idx)
+        return self._cons(idx)
 
     def _cvc(self, i_idx):
-        """Check if the sequence at i_idx is consonant-vowel-consonant."""
+        """Check if the sequence at i_idx is consonant-vowel-consonant.
+        
+        Args:
+            i_idx: Index of the character to check
+            
+        Returns:
+            True if the sequence is consonant-vowel-consonant, False otherwise
+        """
         if i_idx < (self.k0 + 2) or \
            not self._cons(i_idx) or \
            self._cons(i_idx-1) or \
@@ -75,7 +114,14 @@ class Stemmer(object):
         return True
 
     def _ends(self, s_str):
-        """Check if the word ends with the string s_str."""
+        """Check if the word ends with the string s_str.
+        
+        Args:
+            s_str: String to check
+            
+        Returns:
+            True if the word ends with the string, False otherwise
+        """
         length = len(s_str)
         s_list = list(s_str)
         if length > (self.k - self.k0 + 1):
@@ -86,7 +132,11 @@ class Stemmer(object):
         return True
 
     def _setto(self, s_str):
-        """Set the end of the word to s_str."""
+        """Set the end of the word to s_str.
+        
+        Args:
+            s_str: String to set the end of the word to
+        """
         s_list = list(s_str)
         length = len(s_list)
         self.b[self.j+1 : self.k+1] = s_list
@@ -309,7 +359,14 @@ class Stemmer(object):
             self.j = original_j_val
 
     def stem(self, word):
-        """Stem the given word and return the stem and the removed suffix."""
+        """Stem the given word and return the stem and the removed suffix.
+        
+        Args:
+            word: String to stem
+            
+        Returns:
+            Stemmed word and the removed suffix
+        """
         if not word or len(word) <= 2:
             return word, ""
         

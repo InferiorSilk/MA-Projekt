@@ -18,7 +18,16 @@ class Tag(Enum):
     UNCERTAIN = 'uncertain'
 
 class Tagging:
-    """Pattern matching (_is_is_pattern()), _get_pattern_tag()), comments and formating done by AI"""
+    """Tagging class for tagging words in context.
+
+    Attributes:
+        patterns (dict): Dictionary containing patterns for tagging words
+        sentence_connectors (frozenset): Frozen set containing sentence connectors
+        sentence_amount (int): Number of sentences in the list of sentences
+        list_of_sentences (list): List of sentences to process
+
+    Pattern matching (_is_is_pattern()), _get_pattern_tag()), comments and formating done by AI
+    """
     def __init__(self, patterns):
         self.patterns = patterns
         self.sentence_connectors = frozenset(['and', 'but', 'or', 'nor', 'for', 'yet', 'so'])  # Add sentence connectors
@@ -26,6 +35,19 @@ class Tagging:
         self.list_of_sentences = []   
 
     def _tag_word_in_context(self, word, prev_word, next_word, prev_prev_word, next_next_word, tagged_words):
+        """Tag the word in context.
+        
+        Args:
+            word: String containing the word to tag
+            prev_word: String containing the previous word
+            next_word: String containing the next word
+            prev_prev_word: String containing the previous previous word
+            next_next_word: String containing the next next word
+            tagged_words: Dictionary containing tagged words
+            
+        Returns:
+            Tag of the word
+        """
         # First check for auxiliary verbs and common verb forms
         try:
             logging.info(tagged_words)
@@ -83,7 +105,16 @@ class Tagging:
         return tagged_words[prev_word]['tag'] == Tag.PRONOUN.value
 
     def _get_tag_by_ending(self, word, prev_word, tagged_words):
-        """Helper method to get the tag based on the word ending.""" 
+        """Helper method to get the tag based on the word ending.
+        
+        Args:
+            word: String containing the word to tag
+            prev_word: String containing the previous word
+            tagged_words: Dictionary containing tagged words
+            
+        Returns:
+            Tag of the word
+        """ 
         try:
             logging.debug("Trying to tag by ending")
             if tagged_words[word]['ending'] == 'ly':
@@ -144,7 +175,17 @@ class Tagging:
         return False
 
     def _is_adverb_after_verb(self, word, prev_word, tagged_words, prev_prev_word):
-        """Check if word is an adverb that comes after a verb"""
+        """Check if word is an adverb that comes after a verb
+        
+        Args:
+            word: String containing the word to tag
+            prev_word: String containing the previous word
+            tagged_words: Dictionary containing tagged words
+            prev_prev_word: String containing the previous previous word
+            
+        Returns:
+            True if the word is an adverb that comes after a verb, False otherwise
+        """
         # First check if we have valid previous word data
         if not prev_word or prev_word not in tagged_words:
             return False
@@ -175,7 +216,16 @@ class Tagging:
         return word in set({'oh', 'wow', 'hey', 'uh', 'um'})
 
     def _fallback_tagging(self, word, prev_word, next_word):
-        """Fallback tagging logic with additional context awareness."""
+        """Fallback tagging logic with additional context awareness.
+        
+        Args:
+            word: String containing the word to tag
+            prev_word: String containing the previous word
+            next_word: String containing the next word
+            
+        Returns:
+            Tag of the word
+        """
         if word in dictionaries.verbs or word in dictionaries.irregular_verbs or word in dictionaries.irregular_verbs_list:
             return Tag.VERB.value
         elif word in dictionaries.nouns:
@@ -201,6 +251,7 @@ class Tagging:
         return Tag.UNCERTAIN.value  # Default to uncertain if no pattern matches
 
 class Tense:
+    """THE USE OF THIS CLASS IS DEPRECATED, I LEFT IT HERE FOR COMPLETENESS"""
     def __init__(self):        
         # Modal verbs that indicate specific tenses
         self.modal_verbs_tense = {
@@ -348,14 +399,22 @@ class Type(Enum):
     MANNER = 'manner'
 
 class Semantic_Role_Labelling():
-    """Self made"""
+    """Self made. Some comments by AI"""
 
     def __init__(self):
         pass
 
     def label_roles(self, word, prev_word, tagged_words, next_word):
-        """
-        Label the semantic roles of each word in the sentence.
+        """Label the semantic roles of each word in the sentence.
+
+        Args:
+            word: String containing the word to tag
+            prev_word: String containing the previous word
+            tagged_words: Dictionary containing tagged words
+            next_word: String containing the next word
+
+        Returns:
+            Dictionary containing tagged words with their semantic roles
         """
         for word in tagged_words:
             if self._is_subject(word, prev_word, tagged_words, next_word):
@@ -397,10 +456,6 @@ class Semantic_Role_Labelling():
             elif any(tagged_words[word]['type'] == Type.SUBJECT.value for word in tagged_words.keys()):
                 return True
         return False
-        """if tagged_words[word]['tag'] == Tag.NOUN.value:
-            if prev_word and tagged_words[prev_word]['type'] == Type.ACTION.value:
-                return True
-        return False"""
 
     def _is_location(self, prev_word):
         # If the previous word is a preposition indicating location, return True
