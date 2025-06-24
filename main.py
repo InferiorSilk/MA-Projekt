@@ -1,4 +1,5 @@
 import re
+import sys
 import tagging 
 import logging
 import stemmer
@@ -49,29 +50,30 @@ class NLP:
         if len(text) == 0:
             raise ValueError("Input must not be empty")
         
-        # This will split on '.', '!', and '?' while preserving the punctuation
-        sentences = re.split('([.!?])', text)
+        text = text.replace('\n', ' ')
         
-        # Pair up sentences with their punctuation
+        # This will split on delimiters while preserving them
+        sentences = re.split('([.!?:;-])', text)
+        
         processed_sentences = []
-        i = 0
-        while i < len(sentences):
-            if i + 1 < len(sentences) and sentences[i+1] in '.!?':
-                full_sentence = sentences[i] + sentences[i+1]
-                i += 2
-            else:
-                full_sentence = sentences[i]
-                i += 1
-            
-            # Skip empty sentences
-            if full_sentence.strip():
+        
+        # The re.split with a capturing group creates a list of [text, delim, text, delim, ...].
+        # This loop correctly pairs the text parts with their delimiters.
+        sentence_parts = sentences[::2]
+        delimiters = sentences[1::2]
+
+        for i, part in enumerate(sentence_parts):
+            delimiter = delimiters[i] if i < len(delimiters) else ""
+            full_sentence = (part + delimiter).strip()
+
+            # Skip empty sentences that might result from multiple delimiters
+            if full_sentence:
                 processed_sentence = self.preprocess_sentence(full_sentence)
-                # Add tense analysis to the processed sentence
-                logging.debug(f"Processing sentence: {processed_sentence}")
-                tense = self.tense._get_tense(processed_sentence)
-                processed_sentence['sentence_tense'] = tense
                 processed_sentences.append(processed_sentence)
-                return processed_sentences
+                
+        return processed_sentences
+
+
 
     def preprocess_sentence(self, sentence):
         """Preprocess a sentence by handling contractions, stemming words, and determining word endings.
@@ -98,7 +100,7 @@ class NLP:
             sentence = self.contraction_pattern.sub(lambda x: self.contractions[x.group()], sentence)
             
             # Split into words
-            words = re.findall(r"\b[\w']+\b|[.,?!]", sentence.lower())
+            words = re.findall(r"\b[\w']+\b|[.,?!:;-]", sentence.lower())
             if not words:
                 raise ValueError("No valid words found in sentence")
                 
@@ -111,7 +113,7 @@ class NLP:
                 if not word:
                     continue
                     
-                if any(c in word for c in '.,?!'):
+                if any(c in word for c in '.,?!:;-'):
                     self.word_endings[word] = ''
                     stemmed_words.append(word)
                 else:
@@ -235,18 +237,39 @@ if __name__ == "__main__":
     model_input = input("Which version?\nRule-based (rb)\nHidden Markov Model (hmm)\n")
     if model_input.lower() == "rb":
         nlp = NLP()
-        print("Enter text to process:")
-        user_input = input()
+        print("Enter text to process(press \end to finish):")
+        lines = []
+        while True:
+            try:
+                line = input()
+            except EOFError:
+                break
+
+            if line.strip().lower() == "\\end":
+                break
+
+            lines.append(line) 
+        user_input = "\n".join(lines)
         results = nlp.process(user_input)
         print("\nProcessed sentences:")
         for i, sentence_dict in enumerate(results, 1):
             print(f"\nSentence {i}:")
-            print(f"Tense: {sentence_dict['sentence_tense']}")
             print("Words:", {word: info for word, info in sentence_dict.items() if word != 'sentence_tense'})
     elif model_input.lower() == "hmm":
         viterbi = viterbi.Viterbi()
-        print("Enter text to process:")
-        user_input = input()
+        print("Enter text to process (press \end to finish):")
+        lines = []
+        while True:
+            try:
+                line = input()
+            except EOFError:
+                break
+
+            if line.strip().lower() == "\\end":
+                break
+
+            lines.append(line) 
+        user_input = "\n".join(lines)
         results = viterbi.process(user_input)
         print(results)
     else:

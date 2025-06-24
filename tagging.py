@@ -66,7 +66,7 @@ class Tagging:
             if self._is_pronoun(word):
                 return Tag.PRONOUN.value
             logging.debug("Checked for pronoun")
-            if word in ['.', ',', '?', '!']:
+            if word in ['.', ',', '?', '!', ':', ';', '-']:
                 return Tag.PUNCTUATION.value
             logging.debug("Punctuation checked")
             if self._is_adjective(word, prev_word, tagged_words):
