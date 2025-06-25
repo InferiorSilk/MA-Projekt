@@ -1,0 +1,514 @@
+# newdoc id = GUM_academic_discrimination
+# global.Entity = GRP-etype-infstat-centering-minspan-link-identity
+# meta::author = Brian B. Boutwell, Joseph L. Nedelec, Bo Winegard, and others (see URL)
+# meta::dateCollected = 2017-09-13
+# meta::dateCreated = 2017-08-24
+# meta::dateModified = 2017-08-24
+# meta::genre = academic
+# meta::salientEntities = 1, 2, 6, 78, 82, 92, 148
+# meta::sourceURL = http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0183356
+# meta::speakerCount = 0
+# meta::summary = This study of the prevalence of racial discrimination in the United States presents nationally representative numbers across racial groups from a survey covering reasons for discrimination and demographic information about the respondents.
+# meta::summary2 = This paper describes an exploratory study aiming to both estimate the number of experiences of discrimination and determine the reasons for the discrimination using a nationally representative sample of adults from America.
+# meta::title = The prevalence of discrimination across racial groups in contemporary America: Results from a nationally representative sample of adults
+# newpar
+# newpar_block = head (2 s) | hi rend:::"bold large" (2 s)
+# sent_id = GUM_academic_discrimination-1
+# s_prominence = 2
+# s_type = frag
+# transition = establishment
+# text = The prevalence of discrimination across racial groups in contemporary America:
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=organization-heading:1->38:5:grf-ly-+sem-lxchn-2,314+sem-rpt-4,316|Entity=(1-abstract-new-cf1-2-sgl
+2	prevalence	prevalence	NOUN	NN	Number=Sing	0	root	0:root	MSeg=preval-ence
+3	of	of	ADP	IN	_	4	case	4:case	_
+4	discrimination	discrimination	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	Entity=(2-abstract-new-cf4-1-coref)|MSeg=discriminat-ion
+5	across	across	ADP	IN	_	7	case	7:case	MSeg=a-cross
+6	racial	racial	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(3-person-new-cf3-2-sgl|MSeg=rac-ial
+7	groups	group	NOUN	NNS	Number=Plur	2	nmod	2:nmod:across	Entity=3)|MSeg=group-s
+8	in	in	ADP	IN	_	10	case	10:case	_
+9	contemporary	contemporary	ADJ	JJ	Degree=Pos	10	amod	10:amod	Entity=(4-place-new-cf2-2-sgl-United_States|MSeg=contempor-ary
+10	America	America	PROPN	NNP	Number=Sing	2	nmod	2:nmod:in	Entity=4)1)|SpaceAfter=No
+11	:	:	PUNCT	:	_	2	punct	2:punct	_
+
+# sent_id = GUM_academic_discrimination-2
+# s_prominence = 3
+# s_type = frag
+# transition = null
+# text = Results from a nationally representative sample of adults
+1	Results	result	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=elaboration-additional:2->1:0:_|Entity=(5-abstract-new-cf3-1-sgl|MSeg=Result-s
+2	from	from	ADP	IN	_	6	case	6:case	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	Entity=(6-person-new-cf1-4-coref
+4	nationally	nationally	ADV	RB	Degree=Pos	5	advmod	5:advmod	MSeg=nation-al-ly
+5	representative	representative	ADJ	JJ	Degree=Pos	6	amod	6:amod	MSeg=represent-ative
+6	sample	sample	NOUN	NN	Number=Sing	1	nmod	1:nmod:from	_
+7	of	of	ADP	IN	_	8	case	8:case	_
+8	adults	adult	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	Entity=(7-person-new-cf2-1-coref)6)5)|MSeg=adult-s
+
+# newpar
+# newpar_block = head (1 s)
+# sent_id = GUM_academic_discrimination-3
+# s_prominence = 2
+# s_type = frag
+# transition = null
+# text = Introduction.
+1	Introduction	introduction	NOUN	NN	Number=Sing	0	root	0:root	Discourse=organization-heading:3->38:3:grf-ly-|Entity=(8-abstract-new-cf1-1-sgl)|MSeg=Introduc-tion|SpaceAfter=No|XML=<hi rend:::"bold large">
+2	.	.	PUNCT	.	_	1	punct	1:punct	XML=</hi>
+
+# newpar
+# newpar_block = p (6 s)
+# sent_id = GUM_academic_discrimination-4
+# s_prominence = 4
+# s_type = decl
+# transition = null
+# text = Personal experiences of discrimination and bias have been the focus of much social science research. [1 - 3]
+1	Personal	personal	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=context-background:4->16:2:sem-rpt-25,132+sem-rpt-27,134|Entity=(9-abstract-new-cf2-2-sgl|MSeg=Person-al
+2	experiences	experience	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	MSeg=experience-s
+3	of	of	ADP	IN	_	4	case	4:case	_
+4	discrimination	discrimination	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	Entity=(2-abstract-giv:inact-cf1-1-coref)|MSeg=discriminat-ion
+5	and	and	CCONJ	CC	_	6	cc	6:cc	_
+6	bias	bias	NOUN	NN	Number=Sing	4	conj	2:nmod:of|4:conj:and	Entity=(10-abstract-new-cf4-1-coref)9)
+7	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
+8	been	be	AUX	VBN	Tense=Past|VerbForm=Part	10	cop	10:cop	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(11-abstract-new-cf3-2-sgl
+10	focus	focus	NOUN	NN	Number=Sing	0	root	0:root	_
+11	of	of	ADP	IN	_	15	case	15:case	_
+12	much	much	ADJ	JJ	Degree=Pos	15	dep	15:dep	Entity=(12-abstract-new-cf5-4-sgl
+13	social	social	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(13-abstract-new-cf8-2-sgl|MSeg=soci-al
+14	science	science	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=13)
+15	research	research	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	Entity=12)11)|SpaceAfter=No
+16	.	.	PUNCT	.	_	10	punct	10:punct	_
+17	[	[	PUNCT	-LRB-	_	18	punct	18:punct	Discourse=explanation-evidence:5->4:0:grf-prn-38,42|SpaceAfter=No
+18	1	1	NUM	CD	NumForm=Digit|NumType=Card	10	dep	10:dep	Entity=(14-abstract-new-cf6-1-sgl)|XML=<ref target:::"http://journals.sagepub.com/doi/10.1177/0963721415605257"></ref>
+19	-	-	SYM	SYM	_	20	case	20:case	_
+20	3	3	NUM	CD	NumForm=Digit|NumType=Card	18	nmod	18:nmod:minus	Entity=(15-abstract-new-cf7-1-coref)|SpaceAfter=No|XML=<ref></ref>
+21	]	]	PUNCT	-RRB-	_	18	punct	18:punct	_
+
+# sent_id = GUM_academic_discrimination-5
+# s_prominence = 5
+# s_type = decl
+# transition = establishment
+# text = Sociologists have explored the adverse consequences of discrimination [3 – 5];
+1	Sociologists	sociologist	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Discourse=explanation-evidence:6->4:1:_|Entity=(16-person-new-cf3-1-sgl)|MSeg=Sociolog-ist-s|PDTB=Implicit:Expansion.Instantiation.Arg2-as-instance:for example:_:22-42:43-56
+2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
+3	explored	explore	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MSeg=explor-ed
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(17-abstract-new-cf4-3-sgl
+5	adverse	adverse	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
+6	consequences	consequence	NOUN	NNS	Number=Plur	3	obj	3:obj	MSeg=consequ-ence-s
+7	of	of	ADP	IN	_	8	case	8:case	_
+8	discrimination	discrimination	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Entity=(2-abstract-giv:act-cf1*-1-coref)17)|MSeg=discriminat-ion
+9	[	[	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=explanation-evidence:7->6:0:grf-prn-51,55|SpaceAfter=No
+10	3	3	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(15-abstract-giv:act-cf2-1-coref)|XML=<ref></ref>
+11	–	-	SYM	SYM	_	12	case	12:case	_
+12	5	5	NUM	CD	NumForm=Digit|NumType=Card	10	nmod	10:nmod:to	Entity=(18-abstract-new-cf5-1-sgl)|SpaceAfter=No|XML=<ref target:::"http://psycnet.apa.org/doiLanding?doi:::10.1037/a0016059"></ref>
+13	]	]	PUNCT	-RRB-	_	10	punct	10:punct	SpaceAfter=No
+14	;	;	PUNCT	:	_	3	punct	3:punct	_
+
+# sent_id = GUM_academic_discrimination-6
+# s_prominence = 5
+# s_type = decl
+# transition = zero
+# text = psychologists have examined the mental processes that underpin conscious and unconscious biases [6];
+1	psychologists	psychologist	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Discourse=joint-list_m:8->6:1:sem-lxchn-45,59+grf-semcol-56,72|Entity=(19-person-new-cf1-1-sgl)|MSeg=psycholog-ist-s|PDTB=Implicit:Expansion.Conjunction:and:_:43-56:57-72
+2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
+3	examined	examine	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MSeg=examin-ed
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(20-abstract-new-cf2-3-sgl
+5	mental	mental	ADJ	JJ	Degree=Pos	6	amod	6:amod	MSeg=ment-al
+6	processes	process	NOUN	NNS	Number=Plur	3	obj	3:obj|8:nsubj	MSeg=processe-s
+7	that	that	PRON	WDT	PronType=Rel	8	nsubj	6:ref	Discourse=elaboration-attribute:9->8:0:syn-mdf-62+syn-relcl-63-64
+8	underpin	underpin	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	MSeg=under-pin
+9	conscious	conscious	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(21-abstract-new-cf3-4-coref
+10	and	and	CCONJ	CC	_	11	cc	11:cc	_
+11	unconscious	unconscious	ADJ	JJ	Degree=Pos	9	conj	9:conj:and|12:amod	MSeg=un-conscious|Negation=Yes
+12	biases	bias	NOUN	NNS	Number=Plur	8	obj	8:obj	Entity=21)20)|MSeg=bias-es
+13	[	[	PUNCT	-LRB-	_	14	punct	14:punct	Discourse=explanation-evidence:10->8:1:grf-prn-69,71|SpaceAfter=No
+14	6	6	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(22-abstract-new-cf4-1-sgl)|SpaceAfter=No|XML=<ref target:::"http://www.sciencedirect.com/science/article/pii/S0022103108000401?via%3Dihub"></ref>
+15	]	]	PUNCT	-RRB-	_	14	punct	14:punct	SpaceAfter=No
+16	;	;	PUNCT	:	_	3	punct	3:punct	_
+
+# sent_id = GUM_academic_discrimination-7
+# s_prominence = 5
+# s_type = decl
+# transition = null
+# text = neuroscientists have examined the neurobiological underpinnings of discrimination [7 – 9];
+1	neuroscientists	neuroscientist	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Discourse=joint-list_m:11->6:1:grf-semcol-86|Entity=(23-person-new-cf2-1-sgl)|MSeg=neuro-scient-ist-s|PDTB=Implicit:Expansion.Conjunction:and:_:57-72:73-86
+2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
+3	examined	examine	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MSeg=examin-ed
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(24-event-new-cf3-3-sgl
+5	neurobiological	neurobiological	ADJ	JJ	Degree=Pos	6	amod	6:amod	MSeg=neuro-bio-log-ic-al
+6	underpinnings	underpinning	NOUN	NNS	Number=Plur	3	obj	3:obj	MSeg=under-pinn-ing-s
+7	of	of	ADP	IN	_	8	case	8:case	_
+8	discrimination	discrimination	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Entity=(2-abstract-giv:inact-cf1-1-coref)24)|MSeg=discriminat-ion
+9	[	[	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=explanation-evidence:12->11:0:grf-prn-81,85|SpaceAfter=No
+10	7	7	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(25-abstract-new-cf4-1-sgl)|XML=<ref target:::"http://journals.sagepub.com/doi/10.1177/1745691614527464"></ref>
+11	–	-	SYM	SYM	_	12	case	12:case	_
+12	9	9	NUM	CD	NumForm=Digit|NumType=Card	10	nmod	10:nmod:to	Entity=(26-abstract-new-cf5-1-sgl)|SpaceAfter=No|XML=<ref target:::"http://www.sciencedirect.com/science/article/pii/S0149763413001498?via%3Dihub"></ref>
+13	]	]	PUNCT	-RRB-	_	10	punct	10:punct	SpaceAfter=No
+14	;	;	PUNCT	:	_	3	punct	3:punct	_
+
+# sent_id = GUM_academic_discrimination-8
+# s_prominence = 5
+# s_type = decl
+# transition = null
+# text = and evolutionary theorists have explored the various ways that in-group / out-group biases emerged across the history of our species. [10]
+1	and	and	CCONJ	CC	_	5	cc	5:cc	Discourse=joint-list_m:13->6:1:dm-and-87|PDTB=Explicit:Expansion.Conjunction:and:87:73-86:88-114
+2	evolutionary	evolutionary	ADJ	JJ	Degree=Pos	3	amod	3:amod	Entity=(27-person-new-cf1-2-sgl|MSeg=evolution-ary
+3	theorists	theorist	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=27)|MSeg=theor-ist-s
+4	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
+5	explored	explore	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MSeg=explor-ed
+6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(28-abstract-new-cf3-3-sgl
+7	various	various	ADJ	JJ	Degree=Pos	8	amod	8:amod	MSeg=vari-ous
+8	ways	way	NOUN	NNS	Number=Plur	5	obj	5:obj	MSeg=way-s
+9	that	that	SCONJ	IN	_	18	mark	18:mark	Discourse=elaboration-attribute:14->13:0:syn-mdf-94+syn-relcl-104
+10	in	in	ADP	IN	_	12	compound	12:compound	Entity=(29-abstract-new-cf2-8-sgl|SpaceAfter=No|XML=<w>
+11	-	-	PUNCT	HYPH	_	10	punct	10:punct	SpaceAfter=No
+12	group	group	NOUN	NN	Number=Sing	17	compound	17:compound	XML=</w>
+13	/	/	SYM	SYM	_	16	cc	16:cc	_
+14	out	out	ADP	IN	_	16	compound	16:compound	SpaceAfter=No|XML=<w>
+15	-	-	PUNCT	HYPH	_	14	punct	14:punct	SpaceAfter=No
+16	group	group	NOUN	NN	Number=Sing	12	conj	12:conj:slash|17:compound	XML=</w>
+17	biases	bias	NOUN	NNS	Number=Plur	18	nsubj	18:nsubj	Entity=29)|MSeg=bias-es
+18	emerged	emerge	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	MSeg=emerg-ed
+19	across	across	ADP	IN	_	21	case	21:case	MSeg=a-cross
+20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(30-abstract-new-cf4-2-sgl
+21	history	history	NOUN	NN	Number=Sing	18	obl	18:obl:across	_
+22	of	of	ADP	IN	_	24	case	24:case	_
+23	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	Entity=(31-person-new-cf5-2-sgl
+24	species	species	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	Entity=31)30)28)|SpaceAfter=No
+25	.	.	PUNCT	.	_	5	punct	5:punct	_
+26	[	[	PUNCT	-LRB-	_	27	punct	27:punct	Discourse=explanation-evidence:15->13:1:grf-prn-112,114|SpaceAfter=No
+27	10	10	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	Entity=(32-abstract-new-cf6-1-sgl)|SpaceAfter=No|XML=<ref target:::"http://psycnet.apa.org/doiLanding?doi:::10.1037%2F0033-2909.127.2.187"></ref>
+28	]	]	PUNCT	-RRB-	_	27	punct	27:punct	_
+
+# sent_id = GUM_academic_discrimination-9
+# s_prominence = 3
+# s_type = decl
+# transition = null
+# text = In many respects, researchers already possess a wealth of knowledge concerning the origins and consequences of discrimination and bias. [11]
+1	In	in	ADP	IN	_	3	case	3:case	Discourse=adversative-concession:16->19:3:_|PDTB=NoRel:NoRel:_:_:87-114:115-138
+2	many	many	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+3	respects	respect	NOUN	NNS	Number=Plur	7	obl	7:obl:in	MSeg=respect-s|SpaceAfter=No
+4	,	,	PUNCT	,	_	3	punct	3:punct	_
+5	researchers	researcher	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	Entity=(33-person-new-cf3-1-sgl)|MSeg=research-er-s
+6	already	already	ADV	RB	_	7	advmod	7:advmod	MSeg=al-ready
+7	possess	possess	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	Entity=(34-abstract-new-cf5-2-sgl
+9	wealth	wealth	NOUN	NN	Number=Sing	7	obj	7:obj	MSeg=weal-th
+10	of	of	ADP	IN	_	11	case	11:case	_
+11	knowledge	knowledge	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	MSeg=know-ledge
+12	concerning	concern	VERB	VBG	VerbForm=Ger	11	acl	11:acl	Discourse=elaboration-attribute:17->16:0:syn-mdf-125+syn-nmn-126|MSeg=concern-ing
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(35-abstract-new-cf4-2,4-sgl
+14	origins	origin	NOUN	NNS	Number=Plur	12	obj	12:obj	MSeg=origin-s
+15	and	and	CCONJ	CC	_	16	cc	16:cc	_
+16	consequences	consequence	NOUN	NNS	Number=Plur	14	conj	12:obj|14:conj:and	Entity=(36-abstract-new-cf6-3,5-sgl|MSeg=consequ-ence-s
+17	of	of	ADP	IN	_	18	case	18:case	_
+18	discrimination	discrimination	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	Entity=(2-abstract-giv:inact-cf1-1-coref)|MSeg=discriminat-ion
+19	and	and	CCONJ	CC	_	20	cc	20:cc	_
+20	bias	bias	NOUN	NN	Number=Sing	18	conj	14:nmod:of|18:conj:and	Entity=(10-abstract-giv:inact-cf2-1-coref)36)35)34)|SpaceAfter=No
+21	.	.	PUNCT	.	_	7	punct	7:punct	_
+22	[	[	PUNCT	-LRB-	_	23	punct	23:punct	Discourse=explanation-evidence:18->16:1:grf-prn-136,138|SpaceAfter=No
+23	11	11	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	Entity=(37-abstract-new-cf7-1-sgl)|SpaceAfter=No|XML=<ref target:::"https://academic.oup.com/ije/article-lookup/doi/10.1093/ije/dyl056"></ref>
+24	]	]	PUNCT	-RRB-	_	23	punct	23:punct	_
+
+# newpar
+# newpar_block = p (3 s)
+# sent_id = GUM_academic_discrimination-10
+# s_prominence = 2
+# s_type = decl
+# transition = establishment
+# text = What also should not be lost in discussion of discrimination is the growing push to implement social policy aimed at reducing the occurrence of discriminatory practices.
+1	What	what	PRON	WP	PronType=Rel	14	nsubj	14:nsubj	Discourse=context-background:19->38:2:sem-rpt-148,316;joint-list:19->16:1:2:orp-also-140|Entity=(38-event-new-cf1-1-coref
+2	also	also	ADV	RB	_	6	advmod	6:advmod	PDTB=Explicit:Expansion.Conjunction:also:140:115-138:139,141-165
+3	should	should	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
+4	not	not	PART	RB	Polarity=Neg	6	advmod	6:advmod	Negation=Yes
+5	be	be	AUX	VB	VerbForm=Inf	6	aux:pass	6:aux:pass	_
+6	lost	lose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	1	acl:relcl	1:acl:relcl	MSeg=los-t
+7	in	in	ADP	IN	_	8	case	8:case	_
+8	discussion	discussion	NOUN	NN	Number=Sing	6	obl	6:obl:in	Entity=(39-abstract-new-cf5-1-sgl|MSeg=discuss-ion
+9	of	of	ADP	IN	_	10	case	10:case	_
+10	discrimination	discrimination	NOUN	NN	Number=Sing	8	nmod	8:nmod:of	Entity=(2-abstract-giv:act-cf2*-1-coref)39)38)|MSeg=discriminat-ion
+11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
+12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(38-event-giv:act-cf1-3-coref
+13	growing	grow	VERB	VBG	VerbForm=Ger	14	amod	14:amod	MSeg=grow-ing
+14	push	push	NOUN	NN	Number=Sing	0	root	0:root	_
+15	to	to	PART	TO	_	16	mark	16:mark	Discourse=purpose-attribute:20->19:0:syn-mdf-152+syn-inf-153
+16	implement	implement	VERB	VB	VerbForm=Inf	14	acl	14:acl:to	_
+17	social	social	ADJ	JJ	Degree=Pos	18	amod	18:amod	Entity=(40-abstract-new-cf4-2-sgl|MSeg=soci-al
+18	policy	policy	NOUN	NN	Number=Sing	16	obj	16:obj	_
+19	aimed	aim	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	acl	18:acl	Discourse=purpose-attribute:21->20:0:syn-mdf-156+lex-indwd-157+syn-nmn-157|MSeg=aim-ed
+20	at	at	SCONJ	IN	_	21	mark	21:mark	_
+21	reducing	reduce	VERB	VBG	Tense=Pres|VerbForm=Part	19	advcl	19:advcl:at	MSeg=reduc-ing
+22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(41-event-new-cf3-2-sgl
+23	occurrence	occurrence	NOUN	NN	Number=Sing	21	obj	21:obj	MSeg=occurr-ence
+24	of	of	ADP	IN	_	26	case	26:case	_
+25	discriminatory	discriminatory	ADJ	JJ	Degree=Pos	26	amod	26:amod	Entity=(42-abstract-new-cf6-2-sgl|MSeg=discriminat-ory
+26	practices	practice	NOUN	NNS	Number=Plur	23	nmod	23:nmod:of	Entity=42)41)40)38)|MSeg=practice-s|SpaceAfter=No
+27	.	.	PUNCT	.	_	14	punct	14:punct	_
+
+# sent_id = GUM_academic_discrimination-11
+# s_prominence = 3
+# s_type = decl
+# transition = zero
+# text = Mandatory diversity trainings in professional settings, for example, are intended to reduce bias in the workplace by increasing the awareness of employees regarding the challenges facing minority group members. [12]
+1	Mandatory	mandatory	ADJ	JJ	Degree=Pos	3	amod	3:amod	Discourse=elaboration-additional:22->19:1:dm-for example-173-174|Entity=(43-abstract-new-cf3-3-sgl|MSeg=Mandat-ory
+2	diversity	diversity	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(44-abstract-new-cf10-1-sgl)|MSeg=divers-ity
+3	trainings	training	NOUN	NNS	Number=Plur	12	nsubj:pass	12:nsubj:pass|14:nsubj:xsubj	MSeg=train-ing-s
+4	in	in	ADP	IN	_	6	case	6:case	_
+5	professional	professional	ADJ	JJ	Degree=Pos	6	amod	6:amod	Entity=(45-abstract-new-cf7-2-coref|MSeg=profession-al
+6	settings	setting	NOUN	NNS	Number=Plur	3	nmod	3:nmod:in	Entity=45)43)|MSeg=sett-ing-s|SpaceAfter=No
+7	,	,	PUNCT	,	_	9	punct	9:punct	_
+8	for	for	ADP	IN	_	9	case	9:case	PDTB=Explicit:Expansion.Instantiation.Arg2-as-instance:for example:173-174:139-165:166-172,175-200
+9	example	example	NOUN	NN	Number=Sing	3	nmod	3:nmod:for	SpaceAfter=No
+10	,	,	PUNCT	,	_	3	punct	3:punct	_
+11	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	aux:pass	12:aux:pass	_
+12	intended	intend	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	MSeg=intend-ed
+13	to	to	PART	TO	_	14	mark	14:mark	_
+14	reduce	reduce	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
+15	bias	bias	NOUN	NN	Number=Sing	14	obj	14:obj	Entity=(46-abstract-new-cf8-4-sgl
+16	in	in	ADP	IN	_	18	case	18:case	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Bridge=45<47|Entity=(47-place-acc:inf-cf1-2-sgl
+18	workplace	workplace	NOUN	NN	Number=Sing	14	obl	14:obl:in	Entity=47)46)|MSeg=work-place
+19	by	by	SCONJ	IN	_	20	mark	20:mark	Discourse=mode-means:23->22:0:dm-by-184+syn-pres-185|PDTB=Explicit:Contingency.Purpose.Arg1-as-goal:by:184:166-183:185-197;Explicit:Expansion.Manner.Arg2-as-manner:by:184:166-183:185-197
+20	increasing	increase	VERB	VBG	Tense=Pres|VerbForm=Part	14	advcl	14:advcl:by	MSeg=increas-ing
+21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(48-abstract-new-cf4-2-sgl
+22	awareness	awareness	NOUN	NN	Number=Sing	20	obj	20:obj	MSeg=a-ware-ness
+23	of	of	ADP	IN	_	24	case	24:case	_
+24	employees	employee	NOUN	NNS	Number=Plur	22	nmod	22:nmod:of	Bridge=45<49|Entity=(49-person-acc:inf-cf2-1-sgl)|MSeg=employ-ee-s
+25	regarding	regard	VERB	VBG	Tense=Pres|VerbForm=Part	27	case	27:case	Discourse=elaboration-additional:24->23:0:_|MSeg=regard-ing
+26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(50-abstract-new-cf6-2-sgl
+27	challenges	challenge	NOUN	NNS	Number=Plur	22	nmod	22:nmod:regarding	MSeg=challenge-s
+28	facing	face	VERB	VBG	VerbForm=Ger	27	acl	27:acl	Discourse=elaboration-attribute:25->24:0:syn-mdf-192+syn-nmn-193|MSeg=fac-ing
+29	minority	minority	NOUN	NN	Number=Sing	30	compound	30:compound	Entity=(51-person-new-cf5-3-sgl(52-abstract-new-cf11-2-sgl|MSeg=minor-ity
+30	group	group	NOUN	NN	Number=Sing	31	compound	31:compound	Entity=52)
+31	members	member	NOUN	NNS	Number=Plur	28	obj	28:obj	Entity=51)50)48)|MSeg=member-s|SpaceAfter=No
+32	.	.	PUNCT	.	_	12	punct	12:punct	_
+33	[	[	PUNCT	-LRB-	_	34	punct	34:punct	Discourse=explanation-evidence:26->22:1:grf-prn-198,200|SpaceAfter=No
+34	12	12	NUM	CD	NumForm=Digit|NumType=Card	12	dep	12:dep	Entity=(53-abstract-new-cf9-1-sgl)|SpaceAfter=No|XML=<ref target:::"http://amle.aom.org/content/11/2/207"></ref>
+35	]	]	PUNCT	-RRB-	_	34	punct	34:punct	_
+
+# sent_id = GUM_academic_discrimination-12
+# s_prominence = 3
+# s_type = decl
+# transition = null
+# text = Indeed, the implementation of certain policies is rooted in the assumption that discrimination and biases are, at least to some appreciable amount, present in modern society.
+1	Indeed	indeed	ADV	RB	Degree=Pos	9	advmod	9:advmod	Discourse=context-background:27->19:2:sem-rpt-148,214;joint-list:27->22:1:2:orp-indeed-201|MSeg=In-deed|PDTB=Explicit:Expansion.Conjunction:indeed:201:166-200:202-230|SpaceAfter=No
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(54-abstract-new-cf3-2-sgl
+4	implementation	implementation	NOUN	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass	MSeg=implement-ation
+5	of	of	ADP	IN	_	7	case	7:case	_
+6	certain	certain	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(55-abstract-new-cf5-2-sgl
+7	policies	policy	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	Entity=55)54)|MSeg=policie-s
+8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	9:aux:pass	_
+9	rooted	root	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	MSeg=root-ed
+10	in	in	ADP	IN	_	12	case	12:case	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(56-abstract-new-cf4-2-sgl
+12	assumption	assumption	NOUN	NN	Number=Sing	9	obl	9:obl:in	MSeg=assumpt-ion
+13	that	that	SCONJ	IN	_	26	mark	26:mark	Discourse=elaboration-attribute:28->27:0:syn-mdf-212+syn-nmn-213,226
+14	discrimination	discrimination	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	Entity=(2-abstract-giv:inact-cf1-1-coref)|MSeg=discriminat-ion
+15	and	and	CCONJ	CC	_	16	cc	16:cc	_
+16	biases	bias	NOUN	NNS	Number=Plur	14	conj	14:conj:and|26:nsubj	Entity=(21-abstract-giv:inact-cf2-1-coref)|MSeg=bias-es
+17	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	26	cop	26:cop	SpaceAfter=No
+18	,	,	PUNCT	,	_	17	punct	17:punct	_
+19	at	at	ADP	IN	_	20	case	20:case	_
+20	least	least	ADJ	JJS	Degree=Sup	24	nmod	24:nmod:at	_
+21	to	to	ADP	IN	_	24	case	24:case	_
+22	some	some	DET	DT	PronType=Ind	24	det	24:det	Entity=(57-abstract-new-cf6-3-sgl
+23	appreciable	appreciable	ADJ	JJ	Degree=Pos	24	amod	24:amod	MSeg=appreci-able
+24	amount	amount	NOUN	NN	Number=Sing	26	obl	26:obl:to	Entity=57)|SpaceAfter=No
+25	,	,	PUNCT	,	_	24	punct	24:punct	_
+26	present	present	ADJ	JJ	Degree=Pos	12	acl	12:acl:that	_
+27	in	in	ADP	IN	_	29	case	29:case	_
+28	modern	modern	ADJ	JJ	Degree=Pos	29	amod	29:amod	Entity=(58-abstract-new-cf7-2-sgl
+29	society	society	NOUN	NN	Number=Sing	26	obl	26:obl:in	Entity=58)56)|MSeg=soci-ety|SpaceAfter=No
+30	.	.	PUNCT	.	_	9	punct	9:punct	_
+
+# newpar
+# newpar_block = p (4 s)
+# sent_id = GUM_academic_discrimination-13
+# s_prominence = 2
+# s_type = decl
+# transition = null
+# text = Even so, estimates of the prevalence of perceived discrimination remains rare (see [13 – 14]).
+1	Even	even	ADV	RB	_	2	advmod	2:advmod	Discourse=adversative-contrast_m:29->19:4:dm-even so-231-232|PDTB=Explicit:Comparison.Concession.Arg1-as-denier:even so:231-232:139-165:233-251
+2	so	so	ADV	RB	_	11	advmod	11:advmod	SpaceAfter=No
+3	,	,	PUNCT	,	_	2	punct	2:punct	_
+4	estimates	estimate	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj|12:nsubj:xsubj	Entity=(59-abstract-new-cf2-1-sgl|MSeg=estimate-s
+5	of	of	ADP	IN	_	7	case	7:case	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(60-abstract-acc:com-cf1-2-sgl
+7	prevalence	prevalence	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	MSeg=preval-ence
+8	of	of	ADP	IN	_	10	case	10:case	_
+9	perceived	perceive	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	amod	10:amod	Entity=(61-abstract-new-cf4-2-sgl|MSeg=perceiv-ed
+10	discrimination	discrimination	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	Entity=61)60)59)|MSeg=discriminat-ion
+11	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MSeg=remain-s
+12	rare	rare	ADJ	JJ	Degree=Pos	11	xcomp	11:xcomp	_
+13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	Discourse=explanation-evidence:30->29:0:lex-indwd-244+grf-prn-245,249|SpaceAfter=No
+14	see	see	VERB	VB	Person=2|VerbForm=Inf	11	parataxis	11:parataxis	_
+15	[	[	PUNCT	-LRB-	_	16	punct	16:punct	SpaceAfter=No
+16	13	13	NUM	CD	NumForm=Digit|NumType=Card	14	obj	14:obj	Entity=(62-abstract-new-cf3-1-sgl)|XML=<ref target:::"http://www.sciencedirect.com/science/article/pii/S0277953605000973?via%3Dihub"></ref>
+17	–	-	SYM	SYM	_	18	case	18:case	_
+18	14	14	NUM	CD	NumForm=Digit|NumType=Card	16	nmod	16:nmod:to	Entity=(63-abstract-new-cf5-1-sgl)|SpaceAfter=No|XML=<ref></ref>
+19	]	]	PUNCT	-RRB-	_	16	punct	16:punct	SpaceAfter=No
+20	)	)	PUNCT	-RRB-	_	14	punct	14:punct	SpaceAfter=No
+21	.	.	PUNCT	.	_	11	punct	11:punct	_
+
+# sent_id = GUM_academic_discrimination-14
+# s_prominence = 3
+# s_type = decl
+# transition = null
+# text = At least one prior study by Kessler and colleagues [15], however, using measures of perceived discrimination in a large American sample, reported that approximately 33% of respondents reported some form of discrimination (see also, Gibbons et al. [4]).
+1	At	at	ADP	IN	ExtPos=ADV	3	advmod	3:advmod	Discourse=adversative-concession:31->29:1:lex-indph-252-253+dm-however-265
+2	least	least	ADJ	JJS	Degree=Sup	1	fixed	1:fixed	_
+3	one	one	NUM	CD	NumForm=Word|NumType=Card	5	nummod	5:nummod	Entity=(64-abstract-new-cf2-12-coref
+4	prior	prior	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+5	study	study	NOUN	NN	Number=Sing	27	nsubj	27:nsubj	_
+6	by	by	ADP	IN	_	7	case	7:case	_
+7	Kessler	Kessler	PROPN	NNP	Number=Sing	5	nmod	5:nmod:by	Entity=(65-person-new-cf8-1-sgl)
+8	and	and	CCONJ	CC	_	9	cc	9:cc	_
+9	colleagues	colleague	NOUN	NNS	Number=Plur	7	conj	5:nmod:by|7:conj:and	Entity=(66-person-new-cf9-1-sgl)|MSeg=colleague-s
+10	[	[	PUNCT	-LRB-	_	11	punct	11:punct	Discourse=explanation-evidence:32->31:0:grf-prn-261,263|SpaceAfter=No
+11	15	15	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	Entity=(64-abstract-giv:act-cf2-1-coref)|SpaceAfter=No|XML=<ref target:::"http://www.jstor.org/stable/2676349?origin:::crossref&amp;seq:::1#page_scan_tab_contents"></ref>
+12	]	]	PUNCT	-RRB-	_	11	punct	11:punct	SpaceAfter=No
+13	,	,	PUNCT	,	_	5	punct	5:punct	_
+14	however	however	ADV	RB	_	27	advmod	27:advmod	Discourse=same-unit_m:33->31:1:_|MSeg=how-ever|PDTB=Explicit:Comparison.Concession.Arg1-as-denier:however:265:231-251:252-264,266-301|SpaceAfter=No
+15	,	,	PUNCT	,	_	14	punct	14:punct	_
+16	using	use	VERB	VBG	VerbForm=Ger	5	acl	5:acl	Discourse=mode-means:34->31:2:lex-indwd-267;elaboration-attribute:34->31:0:2:syn-mdf-256+syn-nmn-267|MSeg=us-ing
+17	measures	measure	NOUN	NNS	Number=Plur	16	obj	16:obj	Entity=(67-abstract-new-cf6-1-sgl|MSeg=measure-s
+18	of	of	ADP	IN	_	20	case	20:case	_
+19	perceived	perceive	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	amod	20:amod	Entity=(68-abstract-new-cf10-2-sgl|MSeg=perceiv-ed
+20	discrimination	discrimination	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	MSeg=discriminat-ion
+21	in	in	ADP	IN	_	25	case	25:case	_
+22	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	Entity=(69-person-new-cf1-4-coref
+23	large	large	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
+24	American	American	ADJ	JJ	Degree=Pos	25	amod	25:amod	MSeg=America-n
+25	sample	sample	NOUN	NN	Number=Sing	20	nmod	20:nmod:in	Entity=69)68)67)64)|SpaceAfter=No
+26	,	,	PUNCT	,	_	16	punct	16:punct	_
+27	reported	report	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=attribution-positive:35->36:0:sem-atsrc-252-263+lex-indwd-278+syn-rpr-279,282,287|MSeg=report-ed
+28	that	that	SCONJ	IN	_	34	mark	34:mark	Discourse=same-unit_m:36->31:3:_
+29	approximately	approximately	ADV	RB	Degree=Pos	30	advmod	30:advmod	Entity=(70-person-new-cf4-3-sgl|MSeg=approximate-ly
+30	33	33	NUM	CD	NumForm=Digit|NumType=Card	31	nummod	31:nummod	SpaceAfter=No
+31	%	%	SYM	NN	Number=Sing	34	nsubj	34:nsubj	_
+32	of	of	ADP	IN	_	33	case	33:case	_
+33	respondents	respondent	NOUN	NNS	Number=Plur	31	nmod	31:nmod:of	Entity=(69-person-giv:act-cf1-1-coref)70)|MSeg=respond-ent-s
+34	reported	report	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	ccomp	27:ccomp	MSeg=report-ed
+35	some	some	DET	DT	PronType=Ind	36	det	36:det	Entity=(71-abstract-new-cf7-2-sgl
+36	form	form	NOUN	NN	Number=Sing	34	obj	34:obj	_
+37	of	of	ADP	IN	_	38	case	38:case	_
+38	discrimination	discrimination	NOUN	NN	Number=Sing	36	nmod	36:nmod:of	Entity=(2-abstract-giv:inact-cf3-1-coref)71)|MSeg=discriminat-ion
+39	(	(	PUNCT	-LRB-	_	40	punct	40:punct	Discourse=explanation-evidence:37->31:4:lex-indwd-291+grf-prn-297,299;joint-list:37->31:0:4:orp-also-292|SpaceAfter=No
+40	see	see	VERB	VB	Person=2|VerbForm=Inf	27	parataxis	27:parataxis	_
+41	also	also	ADV	RB	_	40	advmod	40:advmod	PDTB=Explicit:Expansion.Conjunction:also:292:252-289:290-291,293-301|SpaceAfter=No
+42	,	,	PUNCT	,	_	43	punct	43:punct	_
+43	Gibbons	Gibbons	PROPN	NNP	Number=Sing	40	obj	40:obj	Entity=(72-person-new-cf5-1-sgl)
+44	et	et	X	FW	_	45	cc	45:cc	_
+45	al.	al.	X	FW	Abbr=Yes	43	conj	40:obj|43:conj:et	Entity=(73-person-new-cf11-1-sgl)
+46	[	[	PUNCT	-LRB-	_	47	punct	47:punct	SpaceAfter=No
+47	4	4	NUM	CD	NumForm=Digit|NumType=Card	43	dep	43:dep	Entity=(74-abstract-new-cf12-1-sgl)|SpaceAfter=No|XML=<ref target:::"http://psycnet.apa.org/doiLanding?doi:::10.1037%2F0022-3514.86.4.517"></ref>
+48	]	]	PUNCT	-RRB-	_	47	punct	47:punct	SpaceAfter=No
+49	)	)	PUNCT	-RRB-	_	40	punct	40:punct	SpaceAfter=No
+50	.	.	PUNCT	.	_	27	punct	27:punct	_
+
+# sent_id = GUM_academic_discrimination-15
+# s_prominence = 1
+# s_type = decl
+# transition = establishment
+# text = The current study seeks to build on this research by estimating the prevalence of discrimination experiences among a large, nationally representative sample of adults from the United States.
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=ROOT:38:0|Entity=(75-abstract-acc:com-cf5-3-coref|PDTB=NoRel:NoRel:_:_:252-301:302-331
+2	current	current	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+3	study	study	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	Entity=75)
+4	seeks	seek	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MSeg=seek-s
+5	to	to	PART	TO	_	6	mark	6:mark	_
+6	build	build	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
+7	on	on	ADP	IN	_	9	case	9:case	_
+8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	Entity=(64-abstract-giv:act-cf1*-2-coref
+9	research	research	NOUN	NN	Number=Sing	6	obl	6:obl:on	Entity=64)
+10	by	by	SCONJ	IN	_	11	mark	11:mark	Discourse=mode-means:39->38:0:dm-by-311+syn-pres-312|PDTB=Explicit:Contingency.Purpose.Arg1-as-goal:by:311:302-310:312-331;Explicit:Expansion.Manner.Arg2-as-manner:by:311:302-310:312-331
+11	estimating	estimate	VERB	VBG	Tense=Pres|VerbForm=Part	6	advcl	6:advcl:by	MSeg=estimat-ing
+12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(76-abstract-new-cf6-2,17-sgl
+13	prevalence	prevalence	NOUN	NN	Number=Sing	11	obj	11:obj	MSeg=preval-ence
+14	of	of	ADP	IN	_	16	case	16:case	_
+15	discrimination	discrimination	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=(77-abstract-new-cf8-2-sgl(2-abstract-giv:act-cf2-1-coref)|MSeg=discriminat-ion
+16	experiences	experience	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	Entity=77)|MSeg=experience-s
+17	among	among	ADP	IN	_	23	case	23:case	MSeg=a-mong
+18	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	Entity=(6-person-giv:inact-cf3-6,11-coref
+19	large	large	ADJ	JJ	Degree=Pos	23	amod	23:amod	SpaceAfter=No
+20	,	,	PUNCT	,	_	19	punct	19:punct	_
+21	nationally	nationally	ADV	RB	Degree=Pos	22	advmod	22:advmod	MSeg=nation-al-ly
+22	representative	representative	ADJ	JJ	Degree=Pos	23	amod	23:amod	MSeg=represent-ative
+23	sample	sample	NOUN	NN	Number=Sing	13	nmod	13:nmod:among	_
+24	of	of	ADP	IN	_	25	case	25:case	_
+25	adults	adult	NOUN	NNS	Number=Plur	23	nmod	23:nmod:of	Entity=(7-person-giv:inact-cf4-1,4-coref|MSeg=adult-s
+26	from	from	ADP	IN	_	29	case	29:case	_
+27	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Entity=(78-place-new-cf7-2,3-coref-United_States
+28	United	Unite	VERB	NNP	Tense=Past|VerbForm=Part	29	amod	29:amod	MSeg=Unit-ed
+29	States	State	PROPN	NNPS	Number=Plur	25	nmod	25:nmod:from	Entity=78)7)6)76)|MSeg=State-s|SpaceAfter=No
+30	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_academic_discrimination-16
+# s_prominence = 2
+# s_type = decl
+# transition = smooth-shift
+# text = Additionally, the analysis address the perceived reasons for reported discrimination experiences.
+1	Additionally	additionally	ADV	RB	Degree=Pos	5	advmod	5:advmod	Discourse=elaboration-additional:40->38:1:sem-mrnym-302-304,334-335+sem-rpt-316,342+dm-additionally-332|MSeg=Add-ition-al-ly|PDTB=Explicit:Expansion.Conjunction:additionally:332:302-331:333-344|SpaceAfter=No
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Bridge=75<79|Entity=(79-abstract-acc:inf-cf2-2-coref
+4	analysis	analysis	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Entity=79)
+5	address	address	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	0	root	0:root	CorrectForm=addresses|XML=<sic ana:::"addresses"></sic>
+6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(80-abstract-new-cf4-3-sgl
+7	perceived	perceive	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	amod	8:amod	MSeg=perceiv-ed
+8	reasons	reason	NOUN	NNS	Number=Plur	5	obj	5:obj	MSeg=reason-s
+9	for	for	ADP	IN	_	12	case	12:case	_
+10	reported	report	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	amod	12:amod	Entity=(81-abstract-acc:com-cf3-3-coref|MSeg=report-ed
+11	discrimination	discrimination	NOUN	NN	Number=Sing	12	compound	12:compound	Entity=(2-abstract-giv:act-cf1*-1-coref)|MSeg=discriminat-ion
+12	experiences	experience	NOUN	NNS	Number=Plur	8	nmod	8:nmod:for	Entity=81)80)|MSeg=experience-s|SpaceAfter=No
+13	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# newpar
+# newpar_block = head (1 s)
+# sent_id = GUM_academic_discrimination-17
+# s_prominence = 2
+# s_type = frag
+# transition = continue
+# text = Reason for discrimination.
+1	Reason	reason	NOUN	NN	Number=Sing	0	root	0:root	Discourse=organization-heading:41->49:4:grf-ly-+sem-lxchn-345,389|Entity=(82-abstract-new-cf2-1-sgl|XML=<hi rend:::" bold italic large">
+2	for	for	ADP	IN	_	3	case	3:case	_
+3	discrimination	discrimination	NOUN	NN	Number=Sing	1	nmod	1:nmod:for	Entity=(2-abstract-giv:act-cf1*-1-coref)82)|MSeg=discriminat-ion|SpaceAfter=No
+4	.	.	PUNCT	.	_	1	punct	1:punct	XML=</hi>
+
+# newpar
+# newpar_block = p (4 s)
+# sent_id = GUM_academic_discrimination-18
+# s_prominence = 2
+# s_type = decl
+# transition = retain
+# text = All respondents who indicated they were discriminated against — specifically, those who responded with sometimes or often to the perceived discrimination measure described above — were asked the following question:
+1	All	all	DET	DT	PronType=Ind	2	det	2:det	Discourse=organization-preparation:42->49:0:ref-prs-349-356,384+grf-dsh-374+lex-indph-377-378+sem-synym-377-379,382-393+grf-col-380|Entity=(83-person-new-cf1-2-coref
+2	respondents	respondent	NOUN	NNS	Number=Plur	28	nsubj:pass	4:nsubj|28:nsubj:pass	CxnElt=28:Ditransitive.Rec|MSeg=respond-ent-s
+3	who	who	PRON	WP	PronType=Rel	4	nsubj	2:ref	Discourse=attribution-positive:43->44:1:sem-atsrc-349-352+lex-indwd-352
+4	indicated	indicate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	MSeg=indicat-ed
+5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj:pass	7:nsubj:pass	Discourse=elaboration-additional:44->42:0:syn-relcl-351|Entity=(83-person-giv:act-cf1-1-ana)
+6	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	7:aux:pass	_
+7	discriminated	discriminate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	ccomp	4:ccomp	MSeg=dis-crimin-at-ed
+8	against	against	ADP	IN	_	7	obl	7:obl	Entity=83)|MSeg=a-gainst
+9	—	—	PUNCT	:	_	10	punct	10:punct	Discourse=elaboration-attribute:45->44:0:dm-specifically-358
+10	specifically	specifically	ADV	RB	Degree=Pos	12	advmod	12:advmod	MSeg=specif-ic-ally|SpaceAfter=No
+11	,	,	PUNCT	,	_	10	punct	10:punct	_
+12	those	that	PRON	DT	Number=Plur|PronType=Dem	2	appos	2:appos|14:nsubj	Entity=(83-person-giv:act-cf1-1-ana
+13	who	who	PRON	WP	PronType=Rel	14	nsubj	12:ref	Discourse=elaboration-attribute:46->45:0:syn-mdf-360+syn-relcl-361-362
+14	responded	respond	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	MSeg=respond-ed
+15	with	with	ADP	IN	_	16	case	16:case	_
+16	sometimes	sometimes	ADV	RB	_	14	obl	14:obl:with	MSeg=sometime-s|XML=<hi rend:::"italic"></hi>
+17	or	or	CCONJ	CC	_	18	cc	18:cc	_
+18	often	often	ADV	RB	Degree=Pos	16	conj	14:obl:with|16:conj:or	XML=<hi rend:::"italic"></hi>
+19	to	to	ADP	IN	_	23	case	23:case	_
+20	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(84-abstract-new-cf4-4-sgl
+21	perceived	perceive	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	22	amod	22:amod	MSeg=perceiv-ed
+22	discrimination	discrimination	NOUN	NN	Number=Sing	23	compound	23:compound	Entity=(2-abstract-giv:act-cf2*-1-coref)|MSeg=discriminat-ion
+23	measure	measure	NOUN	NN	Number=Sing	14	obl	14:obl:to	Entity=84)
+24	described	describe	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	23	acl	23:acl	Discourse=elaboration-attribute:47->46:0:syn-mdf-371+syn-nmn-372|MSeg=describ-ed
+25	above	above	ADV	RB	Degree=Pos	24	advmod	24:advmod	Entity=83)
+26	—	—	PUNCT	:	_	2	punct	2:punct	_
+27	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	28	aux:pass	28:aux:pass	Discourse=same-unit_m:48->42:1:_
+28	asked	ask	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	Cxn=Ditransitive|CxnElt=28:Ditransitive.V|MSeg=ask-ed
+29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(85-abstract-new-cf3-3-coref
+30	following	follow	VERB	VBG	VerbForm=Ger	31	amod	31:amod	MSeg=follow-ing
+31	question	question	NOUN	NN	Number=Sing	28	obj	28:obj	CxnElt=28:Ditransitive.Theme|Entity=85)|MSeg=quest-ion|SpaceAfter=No
+32	:	:	PUNCT	:	_	28	punct	28:punct	_
