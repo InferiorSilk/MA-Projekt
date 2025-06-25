@@ -1,10 +1,4 @@
-"""
-compare_with_spacy.py
-
-Read raw text files (e.g. en_gum-ud-test.txt) and run spaCy's transformer
-pipeline on them.  Outputs tokens, lemmas, POS tags, dependency relations
-and named entities in CoNLL-like format, written to comparison.conllu
-"""
+# Fully made by AI
 import sys
 import os
 import glob
