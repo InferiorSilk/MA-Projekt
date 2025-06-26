@@ -233,7 +233,7 @@ class NLP:
 
 if __name__ == "__main__":
     """Logging by AI"""
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.CRITICAL, filename="log.txt", filemode="w", format='%(asctime)s - %(levelname)s - %(message)s')
     model_input = input("Which version?\nRule-based (rb)\nHidden Markov Model (hmm)\n")
     if model_input.lower() == "rb":
         nlp = NLP()
@@ -250,7 +250,9 @@ if __name__ == "__main__":
 
             lines.append(line) 
         user_input = "\n".join(lines)
+        logging.critical("Started analysing - Rule-based\nInput:\n" + user_input)
         results = nlp.process(user_input)
+        logging.critical("Finished analysing - Rule-based")
         with open("rb_raw.txt", "w") as f:
             json.dump(results, f)
         print("\nProcessed sentences:")
@@ -272,7 +274,9 @@ if __name__ == "__main__":
 
             lines.append(line) 
         user_input = "\n".join(lines)
+        logging.critical("Started analysing - Viterbi\nInput:\n" + user_input)
         results = viterbi.process(user_input)
+        logging.critical("Finished analysing")
         with open("viterbi_raw.txt", "w") as f:
             json.dump(results, f)
         print(results)

@@ -3,6 +3,7 @@ import sys
 import os
 import glob
 import spacy
+import logging
 
 def process_file(nlp, path: str) -> str:
     """Return a single file's annotation in CoNLL-U-like format."""
@@ -38,18 +39,21 @@ def process_file(nlp, path: str) -> str:
     return "\n".join(lines)
 
 def main(folder: str) -> None:
+    logging.critical("Started analysing - spaCy")
     nlp = spacy.load("en_core_web_trf")
     nlp.add_pipe("sentencizer", first=True)
 
     conllu_chunks: list[str] = []
     for path in glob.glob(os.path.join(folder, "*.txt")):
         conllu_chunks.append(process_file(nlp, path))
+    logging.critical("Finished analysing - spaCy")
 
     # Dump everything once
     with open("comparison.conllu", "w", encoding="utf8") as f:
         f.write("\n".join(conllu_chunks))
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.CRITICAL, filename="log - spaCy.txt", filemode="w", format='%(asctime)s - %(levelname)s - %(message)s')
     if len(sys.argv) != 2:
         print("Usage: python comparison_spaCy.py <path_to_txt_folder>")
         sys.exit(1)
