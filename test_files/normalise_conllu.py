@@ -6,21 +6,15 @@ Changes compared with the previous version:
   * multi-line '# Sentence:' blocks collapsed into '# text = …'
   * sentence boundaries for that variant found via '# Sentence:' not blank lines
   * robust against space-separated token rows
+
+Fully made by AI
 """
 import argparse, pathlib, re, sys
 from typing import List, Iterable
 
-# ---------------------------------------------------------------------------
-# Utilities
-# ---------------------------------------------------------------------------
-
 def pad(cols: List[str], length: int = 10) -> List[str]:
     "Pad / truncate to `length` elements with '_'"
     return (cols + ["_"] * length)[:length]
-
-# ---------------------------------------------------------------------------
-# Sentence iterator
-# ---------------------------------------------------------------------------
 
 def iter_sentences(path: pathlib.Path) -> Iterable[List[str]]:
     """
@@ -52,11 +46,6 @@ def iter_sentences(path: pathlib.Path) -> Iterable[List[str]]:
                     yield current
                     current = []
 
-# ---------------------------------------------------------------------------
-# Sentence normaliser
-# ---------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------
 def fix_sentence(lines: List[str]) -> List[str]:
     """
     Return ONE sentence as canonical 10-column CoNLL-U.
@@ -139,20 +128,12 @@ def fix_sentence(lines: List[str]) -> List[str]:
 
 fix_sentence.sid = 0
 
-# ---------------------------------------------------------------------------
-# File-level processing
-# ---------------------------------------------------------------------------
-
 def normalise_file(fp: pathlib.Path) -> List[str]:
     out: List[str] = []
     for sent in iter_sentences(fp):
         out.extend(fix_sentence(sent))
         out.append("")                                    # blank sep
     return out
-
-# ---------------------------------------------------------------------------
-# CLI
-# ---------------------------------------------------------------------------
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Normalise weird CoNLL-U variants.")
