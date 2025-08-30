@@ -4,3 +4,4 @@ dist/
 main.spec
 .vs/
 mamba/
+*.txt
