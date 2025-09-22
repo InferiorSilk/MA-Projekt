@@ -137,12 +137,6 @@ class NLP:
             processed_words = self._context(stemmed_words)
             logging.debug(f"Processed words: {processed_words}")
 
-            # New dictionary to store cleaned pairs in
-            cleaned_pairs = {}
-            for word in list(processed_words.keys()):  # Create a list of keys to iterate over
-                self._clean_sentence(word, processed_words)
-            for word in processed_words:
-                cleaned_pairs[word] = processed_words.get(word, None)
             return processed_words
             
         except Exception as e:
@@ -212,7 +206,6 @@ class NLP:
                     'ending': self.word_endings.get(word, ''),
                     'tag': tag,
                 }
-            
                 
             if not tagged_words:
                 raise ValueError("No words were successfully tagged")
@@ -221,13 +214,6 @@ class NLP:
             
         except Exception as e:
             raise ValueError(f"Error processing words in context: {str(e)}")
-        
-    def _clean_sentence(self, word, tagged_words):
-        """Self made"""
-        # Remove unnecessary words / stopwords
-        if tagged_words[word]['tag'] == tagging.Tag.CONJUNCTION.value or \
-            tagged_words[word]['tag'] == tagging.Tag.PREPOSITION.value:
-            tagged_words.pop(word)
 
 if __name__ == "__main__":
     """Logging by AI"""
