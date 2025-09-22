@@ -24,8 +24,6 @@ class NLP:
         }
         self.contraction_pattern = re.compile(r'\b(' + '|'.join(re.escape(key) for key in self.contractions.keys()) + r')\b')
         self.tagging = tagging.Tagging(dictionaries.patterns)  # Initialize Tagging with patterns and empty word_endings
-        # self.tense = tagging.Tense()  # Initialize the Tense analyzer. NOT USED ANYMORE
-        self.semantic_role_labelling = tagging.Semantic_Role_Labelling() # Initialize srl
 
     def _stem(self, word):
         stemmed, ending = self.stemmer.stem(word)

@@ -5,3 +5,5 @@ main.spec
 .vs/
 mamba/
 *.txt
+*.conllu
+*.old
