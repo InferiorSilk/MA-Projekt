@@ -1,0 +1,2558 @@
+# newdoc id = converted_rule_based
+# newpar
+# sent_id = 1
+# text = the preval of discrimin across racial group in contemporari america :
+1	the	_	DET	_	_	_	_	_	_
+2	preval	_	X	_	_	_	_	_	_
+3	of	_	ADP	_	_	_	_	_	_
+4	discrimin	_	X	_	_	_	_	_	_
+5	across	_	X	_	_	_	_	_	_
+6	racial	_	X	_	_	_	_	_	_
+7	group	_	NOUN	_	_	_	_	_	_
+8	in	_	ADP	_	_	_	_	_	_
+9	contemporari	_	X	_	_	_	_	_	_
+10	america	_	X	_	_	_	_	_	_
+11	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 2
+# text = result from a nation repres sampl of adult introduct .
+1	result	_	NOUN	_	_	_	_	_	_
+2	from	_	ADP	_	_	_	_	_	_
+3	a	_	DET	_	_	_	_	_	_
+4	nation	_	ADJ	_	_	_	_	_	_
+5	repres	_	X	_	_	_	_	_	_
+6	sampl	_	X	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	adult	_	NOUN	_	_	_	_	_	_
+9	introduct	_	X	_	_	_	_	_	_
+10	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 3
+# text = person experi of discrimin and bia have been the focu much social scienc research .
+1	person	_	ADJ	_	_	_	_	_	_
+2	experi	_	X	_	_	_	_	_	_
+3	of	_	ADP	_	_	_	_	_	_
+4	discrimin	_	X	_	_	_	_	_	_
+5	and	_	CCONJ	_	_	_	_	_	_
+6	bia	_	X	_	_	_	_	_	_
+7	have	_	VERB	_	_	_	_	_	_
+8	been	_	VERB	_	_	_	_	_	_
+9	the	_	DET	_	_	_	_	_	_
+10	focu	_	X	_	_	_	_	_	_
+11	much	_	ADV	_	_	_	_	_	_
+12	social	_	ADJ	_	_	_	_	_	_
+13	scienc	_	X	_	_	_	_	_	_
+14	research	_	NOUN	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 4
+# text = 1 -
+1	1	_	NUM	_	_	_	_	_	_
+2	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 5
+# text = 3 sociologist have explor the advers consequ of discrimin 5 ;
+1	3	_	NUM	_	_	_	_	_	_
+2	sociologist	_	X	_	_	_	_	_	_
+3	have	_	VERB	_	_	_	_	_	_
+4	explor	_	VERB	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	advers	_	X	_	_	_	_	_	_
+7	consequ	_	X	_	_	_	_	_	_
+8	of	_	ADP	_	_	_	_	_	_
+9	discrimin	_	X	_	_	_	_	_	_
+10	5	_	NUM	_	_	_	_	_	_
+11	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 6
+# text = psychologist have examin the mental process that underpin consciou and unconsci bias 6 ;
+1	psychologist	_	NOUN	_	_	_	_	_	_
+2	have	_	VERB	_	_	_	_	_	_
+3	examin	_	VERB	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	mental	_	ADJ	_	_	_	_	_	_
+6	process	_	NOUN	_	_	_	_	_	_
+7	that	_	DET	_	_	_	_	_	_
+8	underpin	_	X	_	_	_	_	_	_
+9	consciou	_	X	_	_	_	_	_	_
+10	and	_	CCONJ	_	_	_	_	_	_
+11	unconsci	_	X	_	_	_	_	_	_
+12	bias	_	NOUN	_	_	_	_	_	_
+13	6	_	NUM	_	_	_	_	_	_
+14	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 7
+# text = neuroscientist have examin the neurobiolog underpin of discrimin 7 9 ;
+1	neuroscientist	_	X	_	_	_	_	_	_
+2	have	_	VERB	_	_	_	_	_	_
+3	examin	_	VERB	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	neurobiolog	_	ADJ	_	_	_	_	_	_
+6	underpin	_	VERB	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	discrimin	_	X	_	_	_	_	_	_
+9	7	_	NUM	_	_	_	_	_	_
+10	9	_	NUM	_	_	_	_	_	_
+11	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 8
+# text = and evolutionari theorist have explor the variou wai that in -
+1	and	_	CCONJ	_	_	_	_	_	_
+2	evolutionari	_	X	_	_	_	_	_	_
+3	theorist	_	X	_	_	_	_	_	_
+4	have	_	VERB	_	_	_	_	_	_
+5	explor	_	VERB	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	variou	_	X	_	_	_	_	_	_
+8	wai	_	X	_	_	_	_	_	_
+9	that	_	DET	_	_	_	_	_	_
+10	in	_	ADP	_	_	_	_	_	_
+11	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 9
+# text = group out -
+1	group	_	NOUN	_	_	_	_	_	_
+2	out	_	ADV	_	_	_	_	_	_
+3	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 10
+# text = group bias emerg across the histori of our speci .
+1	group	_	NOUN	_	_	_	_	_	_
+2	bias	_	NOUN	_	_	_	_	_	_
+3	emerg	_	VERB	_	_	_	_	_	_
+4	across	_	X	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	histori	_	X	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	our	_	X	_	_	_	_	_	_
+9	speci	_	X	_	_	_	_	_	_
+10	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 11
+# text = 10 in mani respect , research alreadi possess a wealth of knowledg concern the origin and consequ discrimin bia .
+1	10	_	NUM	_	_	_	_	_	_
+2	in	_	ADP	_	_	_	_	_	_
+3	mani	_	X	_	_	_	_	_	_
+4	respect	_	NOUN	_	_	_	_	_	_
+5	,	_	PUNCT	_	_	_	_	_	_
+6	research	_	NOUN	_	_	_	_	_	_
+7	alreadi	_	X	_	_	_	_	_	_
+8	possess	_	X	_	_	_	_	_	_
+9	a	_	DET	_	_	_	_	_	_
+10	wealth	_	NOUN	_	_	_	_	_	_
+11	of	_	ADP	_	_	_	_	_	_
+12	knowledg	_	X	_	_	_	_	_	_
+13	concern	_	VERB	_	_	_	_	_	_
+14	the	_	DET	_	_	_	_	_	_
+15	origin	_	NOUN	_	_	_	_	_	_
+16	and	_	CCONJ	_	_	_	_	_	_
+17	consequ	_	NOUN	_	_	_	_	_	_
+18	discrimin	_	X	_	_	_	_	_	_
+19	bia	_	X	_	_	_	_	_	_
+20	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 12
+# text = 11 what also should not be lost in discuss of discrimin is the grow push to implement social polici aim at reduc occurr discriminatori practic .
+1	11	_	NUM	_	_	_	_	_	_
+2	what	_	X	_	_	_	_	_	_
+3	also	_	CCONJ	_	_	_	_	_	_
+4	should	_	X	_	_	_	_	_	_
+5	not	_	X	_	_	_	_	_	_
+6	be	_	VERB	_	_	_	_	_	_
+7	lost	_	ADJ	_	_	_	_	_	_
+8	in	_	ADP	_	_	_	_	_	_
+9	discuss	_	VERB	_	_	_	_	_	_
+10	of	_	ADP	_	_	_	_	_	_
+11	discrimin	_	X	_	_	_	_	_	_
+12	is	_	VERB	_	_	_	_	_	_
+13	the	_	DET	_	_	_	_	_	_
+14	grow	_	ADJ	_	_	_	_	_	_
+15	push	_	VERB	_	_	_	_	_	_
+16	to	_	ADP	_	_	_	_	_	_
+17	implement	_	NOUN	_	_	_	_	_	_
+18	social	_	ADJ	_	_	_	_	_	_
+19	polici	_	X	_	_	_	_	_	_
+20	aim	_	VERB	_	_	_	_	_	_
+21	at	_	ADP	_	_	_	_	_	_
+22	reduc	_	VERB	_	_	_	_	_	_
+23	occurr	_	X	_	_	_	_	_	_
+24	discriminatori	_	X	_	_	_	_	_	_
+25	practic	_	X	_	_	_	_	_	_
+26	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 13
+# text = mandatori divers train in profession set , for exampl ar intend to reduc bia the workplac by increas awar of employe regard challeng faci minor group member .
+1	mandatori	_	X	_	_	_	_	_	_
+2	divers	_	X	_	_	_	_	_	_
+3	train	_	VERB	_	_	_	_	_	_
+4	in	_	ADP	_	_	_	_	_	_
+5	profession	_	ADJ	_	_	_	_	_	_
+6	set	_	VERB	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	for	_	ADP	_	_	_	_	_	_
+9	exampl	_	PUNCT	_	_	_	_	_	_
+10	ar	_	X	_	_	_	_	_	_
+11	intend	_	VERB	_	_	_	_	_	_
+12	to	_	ADP	_	_	_	_	_	_
+13	reduc	_	X	_	_	_	_	_	_
+14	bia	_	NOUN	_	_	_	_	_	_
+15	the	_	DET	_	_	_	_	_	_
+16	workplac	_	X	_	_	_	_	_	_
+17	by	_	ADP	_	_	_	_	_	_
+18	increas	_	VERB	_	_	_	_	_	_
+19	awar	_	X	_	_	_	_	_	_
+20	of	_	ADP	_	_	_	_	_	_
+21	employe	_	X	_	_	_	_	_	_
+22	regard	_	VERB	_	_	_	_	_	_
+23	challeng	_	X	_	_	_	_	_	_
+24	faci	_	VERB	_	_	_	_	_	_
+25	minor	_	NOUN	_	_	_	_	_	_
+26	group	_	NOUN	_	_	_	_	_	_
+27	member	_	NOUN	_	_	_	_	_	_
+28	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 14
+# text = 12 inde , the implement of certain polici is root in assumpt that discrimin and bias ar at least to some appreci amount present modern societi .
+1	12	_	NUM	_	_	_	_	_	_
+2	inde	_	X	_	_	_	_	_	_
+3	,	_	PUNCT	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	implement	_	NOUN	_	_	_	_	_	_
+6	of	_	ADP	_	_	_	_	_	_
+7	certain	_	X	_	_	_	_	_	_
+8	polici	_	X	_	_	_	_	_	_
+9	is	_	VERB	_	_	_	_	_	_
+10	root	_	ADJ	_	_	_	_	_	_
+11	in	_	ADP	_	_	_	_	_	_
+12	assumpt	_	X	_	_	_	_	_	_
+13	that	_	DET	_	_	_	_	_	_
+14	discrimin	_	X	_	_	_	_	_	_
+15	and	_	CCONJ	_	_	_	_	_	_
+16	bias	_	X	_	_	_	_	_	_
+17	ar	_	X	_	_	_	_	_	_
+18	at	_	ADP	_	_	_	_	_	_
+19	least	_	ADV	_	_	_	_	_	_
+20	to	_	ADP	_	_	_	_	_	_
+21	some	_	X	_	_	_	_	_	_
+22	appreci	_	ADJ	_	_	_	_	_	_
+23	amount	_	NOUN	_	_	_	_	_	_
+24	present	_	VERB	_	_	_	_	_	_
+25	modern	_	ADJ	_	_	_	_	_	_
+26	societi	_	X	_	_	_	_	_	_
+27	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 15
+# text = even so , estim of the preval perceiv discrimin remain rare see 13 14 .
+1	even	_	ADV	_	_	_	_	_	_
+2	so	_	CCONJ	_	_	_	_	_	_
+3	,	_	PUNCT	_	_	_	_	_	_
+4	estim	_	NOUN	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	preval	_	X	_	_	_	_	_	_
+8	perceiv	_	VERB	_	_	_	_	_	_
+9	discrimin	_	X	_	_	_	_	_	_
+10	remain	_	X	_	_	_	_	_	_
+11	rare	_	X	_	_	_	_	_	_
+12	see	_	VERB	_	_	_	_	_	_
+13	13	_	NUM	_	_	_	_	_	_
+14	14	_	NUM	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 16
+# text = at least on prior studi by kessler and colleagu 15 , howev us measur of perceiv discrimin in a larg american sampl report that approxim 33 respond some form see also gibbon et al .
+1	at	_	ADP	_	_	_	_	_	_
+2	least	_	ADV	_	_	_	_	_	_
+3	on	_	ADP	_	_	_	_	_	_
+4	prior	_	NOUN	_	_	_	_	_	_
+5	studi	_	X	_	_	_	_	_	_
+6	by	_	ADP	_	_	_	_	_	_
+7	kessler	_	X	_	_	_	_	_	_
+8	and	_	CCONJ	_	_	_	_	_	_
+9	colleagu	_	X	_	_	_	_	_	_
+10	15	_	NUM	_	_	_	_	_	_
+11	,	_	PUNCT	_	_	_	_	_	_
+12	howev	_	X	_	_	_	_	_	_
+13	us	_	PRON	_	_	_	_	_	_
+14	measur	_	VERB	_	_	_	_	_	_
+15	of	_	ADP	_	_	_	_	_	_
+16	perceiv	_	VERB	_	_	_	_	_	_
+17	discrimin	_	X	_	_	_	_	_	_
+18	in	_	ADP	_	_	_	_	_	_
+19	a	_	DET	_	_	_	_	_	_
+20	larg	_	X	_	_	_	_	_	_
+21	american	_	X	_	_	_	_	_	_
+22	sampl	_	X	_	_	_	_	_	_
+23	report	_	VERB	_	_	_	_	_	_
+24	that	_	DET	_	_	_	_	_	_
+25	approxim	_	X	_	_	_	_	_	_
+26	33	_	NUM	_	_	_	_	_	_
+27	respond	_	X	_	_	_	_	_	_
+28	some	_	X	_	_	_	_	_	_
+29	form	_	NOUN	_	_	_	_	_	_
+30	see	_	VERB	_	_	_	_	_	_
+31	also	_	CCONJ	_	_	_	_	_	_
+32	gibbon	_	X	_	_	_	_	_	_
+33	et	_	VERB	_	_	_	_	_	_
+34	al	_	X	_	_	_	_	_	_
+35	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 17
+# text = 4 .
+1	4	_	NUM	_	_	_	_	_	_
+2	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 18
+# text = the current studi seek to build on this research by estim preval of discrimin experi among a larg , nation repres sampl adult from unit state .
+1	the	_	DET	_	_	_	_	_	_
+2	current	_	NOUN	_	_	_	_	_	_
+3	studi	_	X	_	_	_	_	_	_
+4	seek	_	X	_	_	_	_	_	_
+5	to	_	ADP	_	_	_	_	_	_
+6	build	_	NOUN	_	_	_	_	_	_
+7	on	_	ADP	_	_	_	_	_	_
+8	this	_	DET	_	_	_	_	_	_
+9	research	_	NOUN	_	_	_	_	_	_
+10	by	_	ADP	_	_	_	_	_	_
+11	estim	_	X	_	_	_	_	_	_
+12	preval	_	X	_	_	_	_	_	_
+13	of	_	ADP	_	_	_	_	_	_
+14	discrimin	_	X	_	_	_	_	_	_
+15	experi	_	X	_	_	_	_	_	_
+16	among	_	X	_	_	_	_	_	_
+17	a	_	DET	_	_	_	_	_	_
+18	larg	_	X	_	_	_	_	_	_
+19	,	_	PUNCT	_	_	_	_	_	_
+20	nation	_	ADJ	_	_	_	_	_	_
+21	repres	_	X	_	_	_	_	_	_
+22	sampl	_	X	_	_	_	_	_	_
+23	adult	_	NOUN	_	_	_	_	_	_
+24	from	_	ADP	_	_	_	_	_	_
+25	unit	_	ADJ	_	_	_	_	_	_
+26	state	_	NOUN	_	_	_	_	_	_
+27	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 19
+# text = addition , the analysi address perceiv reason for report discrimin experi .
+1	addition	_	ADJ	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	analysi	_	X	_	_	_	_	_	_
+5	address	_	NOUN	_	_	_	_	_	_
+6	perceiv	_	ADJ	_	_	_	_	_	_
+7	reason	_	NOUN	_	_	_	_	_	_
+8	for	_	ADP	_	_	_	_	_	_
+9	report	_	NOUN	_	_	_	_	_	_
+10	discrimin	_	X	_	_	_	_	_	_
+11	experi	_	X	_	_	_	_	_	_
+12	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 20
+# text = reason for discrimin .
+1	reason	_	NOUN	_	_	_	_	_	_
+2	for	_	ADP	_	_	_	_	_	_
+3	discrimin	_	NOUN	_	_	_	_	_	_
+4	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 21
+# text = all respond who indic they were discrimin against specif , those with sometim or often to the perceiv measur describ abov ask follow question :
+1	all	_	X	_	_	_	_	_	_
+2	respond	_	VERB	_	_	_	_	_	_
+3	who	_	X	_	_	_	_	_	_
+4	indic	_	X	_	_	_	_	_	_
+5	they	_	PRON	_	_	_	_	_	_
+6	were	_	VERB	_	_	_	_	_	_
+7	discrimin	_	X	_	_	_	_	_	_
+8	against	_	X	_	_	_	_	_	_
+9	specif	_	ADJ	_	_	_	_	_	_
+10	,	_	PUNCT	_	_	_	_	_	_
+11	those	_	DET	_	_	_	_	_	_
+12	with	_	ADP	_	_	_	_	_	_
+13	sometim	_	X	_	_	_	_	_	_
+14	or	_	CCONJ	_	_	_	_	_	_
+15	often	_	NOUN	_	_	_	_	_	_
+16	to	_	ADP	_	_	_	_	_	_
+17	the	_	DET	_	_	_	_	_	_
+18	perceiv	_	ADJ	_	_	_	_	_	_
+19	measur	_	X	_	_	_	_	_	_
+20	describ	_	VERB	_	_	_	_	_	_
+21	abov	_	X	_	_	_	_	_	_
+22	ask	_	VERB	_	_	_	_	_	_
+23	follow	_	ADJ	_	_	_	_	_	_
+24	question	_	NOUN	_	_	_	_	_	_
+25	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 22
+# text = what do you think wa the main reason for these experi ?
+1	what	_	X	_	_	_	_	_	_
+2	do	_	VERB	_	_	_	_	_	_
+3	you	_	PRON	_	_	_	_	_	_
+4	think	_	VERB	_	_	_	_	_	_
+5	wa	_	X	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	main	_	NOUN	_	_	_	_	_	_
+8	reason	_	NOUN	_	_	_	_	_	_
+9	for	_	ADP	_	_	_	_	_	_
+10	these	_	DET	_	_	_	_	_	_
+11	experi	_	X	_	_	_	_	_	_
+12	?	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 23
+# text = respond were allow to choos on respons from 11 categori .
+1	respond	_	X	_	_	_	_	_	_
+2	were	_	VERB	_	_	_	_	_	_
+3	allow	_	VERB	_	_	_	_	_	_
+4	to	_	ADP	_	_	_	_	_	_
+5	choos	_	VERB	_	_	_	_	_	_
+6	on	_	ADP	_	_	_	_	_	_
+7	respons	_	X	_	_	_	_	_	_
+8	from	_	ADP	_	_	_	_	_	_
+9	11	_	NUM	_	_	_	_	_	_
+10	categori	_	X	_	_	_	_	_	_
+11	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 24
+# text = for the present analysi , these respons were recod into nine mutual exclus categori captur follow option :
+1	for	_	ADP	_	_	_	_	_	_
+2	the	_	DET	_	_	_	_	_	_
+3	present	_	VERB	_	_	_	_	_	_
+4	analysi	_	X	_	_	_	_	_	_
+5	,	_	PUNCT	_	_	_	_	_	_
+6	these	_	DET	_	_	_	_	_	_
+7	respons	_	X	_	_	_	_	_	_
+8	were	_	VERB	_	_	_	_	_	_
+9	recod	_	VERB	_	_	_	_	_	_
+10	into	_	X	_	_	_	_	_	_
+11	nine	_	X	_	_	_	_	_	_
+12	mutual	_	X	_	_	_	_	_	_
+13	exclus	_	X	_	_	_	_	_	_
+14	categori	_	X	_	_	_	_	_	_
+15	captur	_	VERB	_	_	_	_	_	_
+16	follow	_	ADJ	_	_	_	_	_	_
+17	option	_	NOUN	_	_	_	_	_	_
+18	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 25
+# text = race ancestri skin color ;
+1	race	_	NOUN	_	_	_	_	_	_
+2	ancestri	_	X	_	_	_	_	_	_
+3	skin	_	NOUN	_	_	_	_	_	_
+4	color	_	NOUN	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 26
+# text = gender ;
+1	gender	_	NOUN	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 27
+# text = ag ;
+1	ag	_	X	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 28
+# text = religion ;
+1	religion	_	NOUN	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 29
+# text = height or weight ;
+1	height	_	NOUN	_	_	_	_	_	_
+2	or	_	CCONJ	_	_	_	_	_	_
+3	weight	_	NOUN	_	_	_	_	_	_
+4	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 30
+# text = sexual orient ;
+1	sexual	_	X	_	_	_	_	_	_
+2	orient	_	NOUN	_	_	_	_	_	_
+3	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 31
+# text = educ or incom ;
+1	educ	_	X	_	_	_	_	_	_
+2	or	_	CCONJ	_	_	_	_	_	_
+3	incom	_	X	_	_	_	_	_	_
+4	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 32
+# text = physic disabil ;
+1	physic	_	X	_	_	_	_	_	_
+2	disabil	_	X	_	_	_	_	_	_
+3	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 33
+# text = and other .
+1	and	_	CCONJ	_	_	_	_	_	_
+2	other	_	NOUN	_	_	_	_	_	_
+3	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 34
+# text = the follow categori from origin questionnair were collaps into on for analysi :
+1	the	_	DET	_	_	_	_	_	_
+2	follow	_	ADJ	_	_	_	_	_	_
+3	categori	_	NOUN	_	_	_	_	_	_
+4	from	_	ADP	_	_	_	_	_	_
+5	origin	_	ADJ	_	_	_	_	_	_
+6	questionnair	_	X	_	_	_	_	_	_
+7	were	_	VERB	_	_	_	_	_	_
+8	collaps	_	VERB	_	_	_	_	_	_
+9	into	_	X	_	_	_	_	_	_
+10	on	_	ADP	_	_	_	_	_	_
+11	for	_	ADP	_	_	_	_	_	_
+12	analysi	_	X	_	_	_	_	_	_
+13	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 35
+# text = race ;
+1	race	_	NOUN	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 36
+# text = ancestri or nation origin ;
+1	ancestri	_	X	_	_	_	_	_	_
+2	or	_	CCONJ	_	_	_	_	_	_
+3	nation	_	X	_	_	_	_	_	_
+4	origin	_	NOUN	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 37
+# text = and shade of skin color .
+1	and	_	CCONJ	_	_	_	_	_	_
+2	shade	_	NOUN	_	_	_	_	_	_
+3	of	_	ADP	_	_	_	_	_	_
+4	skin	_	NOUN	_	_	_	_	_	_
+5	color	_	NOUN	_	_	_	_	_	_
+6	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 38
+# text = addition , becaus this question wa onli ask of respond who report prior discrimin experi the built -
+1	addition	_	ADJ	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	becaus	_	X	_	_	_	_	_	_
+4	this	_	DET	_	_	_	_	_	_
+5	question	_	NOUN	_	_	_	_	_	_
+6	wa	_	X	_	_	_	_	_	_
+7	onli	_	X	_	_	_	_	_	_
+8	ask	_	VERB	_	_	_	_	_	_
+9	of	_	ADP	_	_	_	_	_	_
+10	respond	_	X	_	_	_	_	_	_
+11	who	_	X	_	_	_	_	_	_
+12	report	_	VERB	_	_	_	_	_	_
+13	prior	_	NOUN	_	_	_	_	_	_
+14	discrimin	_	X	_	_	_	_	_	_
+15	experi	_	X	_	_	_	_	_	_
+16	the	_	DET	_	_	_	_	_	_
+17	built	_	X	_	_	_	_	_	_
+18	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 39
+# text = in skip pattern result a larg number of case score as miss legitim .
+1	in	_	ADP	_	_	_	_	_	_
+2	skip	_	X	_	_	_	_	_	_
+3	pattern	_	NOUN	_	_	_	_	_	_
+4	result	_	NOUN	_	_	_	_	_	_
+5	a	_	DET	_	_	_	_	_	_
+6	larg	_	X	_	_	_	_	_	_
+7	number	_	NOUN	_	_	_	_	_	_
+8	of	_	ADP	_	_	_	_	_	_
+9	case	_	NOUN	_	_	_	_	_	_
+10	score	_	VERB	_	_	_	_	_	_
+11	as	_	X	_	_	_	_	_	_
+12	miss	_	VERB	_	_	_	_	_	_
+13	legitim	_	X	_	_	_	_	_	_
+14	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 40
+# text = respond race .
+1	respond	_	X	_	_	_	_	_	_
+2	race	_	NOUN	_	_	_	_	_	_
+3	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 41
+# text = becaus a race variabl is not avail from the wave 4 interview , we us racial categori report by respond duri 1 .
+1	becaus	_	X	_	_	_	_	_	_
+2	a	_	DET	_	_	_	_	_	_
+3	race	_	NOUN	_	_	_	_	_	_
+4	variabl	_	X	_	_	_	_	_	_
+5	is	_	VERB	_	_	_	_	_	_
+6	not	_	ADJ	_	_	_	_	_	_
+7	avail	_	NOUN	_	_	_	_	_	_
+8	from	_	ADP	_	_	_	_	_	_
+9	the	_	DET	_	_	_	_	_	_
+10	wave	_	NOUN	_	_	_	_	_	_
+11	4	_	NUM	_	_	_	_	_	_
+12	interview	_	NOUN	_	_	_	_	_	_
+13	,	_	PUNCT	_	_	_	_	_	_
+14	we	_	PRON	_	_	_	_	_	_
+15	us	_	PRON	_	_	_	_	_	_
+16	racial	_	X	_	_	_	_	_	_
+17	categori	_	X	_	_	_	_	_	_
+18	report	_	NOUN	_	_	_	_	_	_
+19	by	_	ADP	_	_	_	_	_	_
+20	respond	_	X	_	_	_	_	_	_
+21	duri	_	VERB	_	_	_	_	_	_
+22	1	_	NUM	_	_	_	_	_	_
+23	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 42
+# text = wave 1 race rather than , sai 3 wa us to preserv case count .
+1	wave	_	NOUN	_	_	_	_	_	_
+2	1	_	NUM	_	_	_	_	_	_
+3	race	_	NOUN	_	_	_	_	_	_
+4	rather	_	ADV	_	_	_	_	_	_
+5	than	_	ADJ	_	_	_	_	_	_
+6	,	_	PUNCT	_	_	_	_	_	_
+7	sai	_	X	_	_	_	_	_	_
+8	3	_	NUM	_	_	_	_	_	_
+9	wa	_	X	_	_	_	_	_	_
+10	us	_	PRON	_	_	_	_	_	_
+11	to	_	ADP	_	_	_	_	_	_
+12	preserv	_	X	_	_	_	_	_	_
+13	case	_	NOUN	_	_	_	_	_	_
+14	count	_	VERB	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 43
+# text = the logic is that nearli all wave 4 respond appear in 1 sampl , but not would have been interview at 3 due to differenti pattern of temporari attrit .
+1	the	_	DET	_	_	_	_	_	_
+2	logic	_	NOUN	_	_	_	_	_	_
+3	is	_	VERB	_	_	_	_	_	_
+4	that	_	DET	_	_	_	_	_	_
+5	nearli	_	X	_	_	_	_	_	_
+6	all	_	X	_	_	_	_	_	_
+7	wave	_	NOUN	_	_	_	_	_	_
+8	4	_	NUM	_	_	_	_	_	_
+9	respond	_	X	_	_	_	_	_	_
+10	appear	_	NOUN	_	_	_	_	_	_
+11	in	_	ADP	_	_	_	_	_	_
+12	1	_	NUM	_	_	_	_	_	_
+13	sampl	_	X	_	_	_	_	_	_
+14	,	_	PUNCT	_	_	_	_	_	_
+15	but	_	CCONJ	_	_	_	_	_	_
+16	not	_	PUNCT	_	_	_	_	_	_
+17	would	_	X	_	_	_	_	_	_
+18	have	_	VERB	_	_	_	_	_	_
+19	been	_	VERB	_	_	_	_	_	_
+20	interview	_	VERB	_	_	_	_	_	_
+21	at	_	ADP	_	_	_	_	_	_
+22	3	_	NUM	_	_	_	_	_	_
+23	due	_	NOUN	_	_	_	_	_	_
+24	to	_	ADP	_	_	_	_	_	_
+25	differenti	_	ADJ	_	_	_	_	_	_
+26	pattern	_	NOUN	_	_	_	_	_	_
+27	of	_	ADP	_	_	_	_	_	_
+28	temporari	_	X	_	_	_	_	_	_
+29	attrit	_	X	_	_	_	_	_	_
+30	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 44
+# text = respond were ask to indic their race from among the follow categori :
+1	respond	_	X	_	_	_	_	_	_
+2	were	_	VERB	_	_	_	_	_	_
+3	ask	_	VERB	_	_	_	_	_	_
+4	to	_	ADP	_	_	_	_	_	_
+5	indic	_	X	_	_	_	_	_	_
+6	their	_	X	_	_	_	_	_	_
+7	race	_	NOUN	_	_	_	_	_	_
+8	from	_	ADP	_	_	_	_	_	_
+9	among	_	X	_	_	_	_	_	_
+10	the	_	DET	_	_	_	_	_	_
+11	follow	_	ADJ	_	_	_	_	_	_
+12	categori	_	X	_	_	_	_	_	_
+13	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 45
+# text = white ;
+1	white	_	NOUN	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 46
+# text = black or african american ;
+1	black	_	NOUN	_	_	_	_	_	_
+2	or	_	CCONJ	_	_	_	_	_	_
+3	african	_	NOUN	_	_	_	_	_	_
+4	american	_	X	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 47
+# text = hispan ;
+1	hispan	_	ADJ	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 48
+# text = american indian or nativ ;
+1	american	_	X	_	_	_	_	_	_
+2	indian	_	X	_	_	_	_	_	_
+3	or	_	CCONJ	_	_	_	_	_	_
+4	nativ	_	X	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 49
+# text = and asian or pacif island .
+1	and	_	CCONJ	_	_	_	_	_	_
+2	asian	_	X	_	_	_	_	_	_
+3	or	_	CCONJ	_	_	_	_	_	_
+4	pacif	_	X	_	_	_	_	_	_
+5	island	_	NOUN	_	_	_	_	_	_
+6	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 50
+# text = respond were provid the opportun to select more than on race , and those who did ask a follow -
+1	respond	_	X	_	_	_	_	_	_
+2	were	_	VERB	_	_	_	_	_	_
+3	provid	_	VERB	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	opportun	_	X	_	_	_	_	_	_
+6	to	_	ADP	_	_	_	_	_	_
+7	select	_	X	_	_	_	_	_	_
+8	more	_	ADV	_	_	_	_	_	_
+9	than	_	X	_	_	_	_	_	_
+10	on	_	ADP	_	_	_	_	_	_
+11	race	_	NOUN	_	_	_	_	_	_
+12	,	_	PUNCT	_	_	_	_	_	_
+13	and	_	CCONJ	_	_	_	_	_	_
+14	those	_	DET	_	_	_	_	_	_
+15	who	_	X	_	_	_	_	_	_
+16	did	_	VERB	_	_	_	_	_	_
+17	ask	_	VERB	_	_	_	_	_	_
+18	a	_	DET	_	_	_	_	_	_
+19	follow	_	VERB	_	_	_	_	_	_
+20	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 51
+# text = up question regard which categori best describ their racial background .
+1	up	_	ADV	_	_	_	_	_	_
+2	question	_	NOUN	_	_	_	_	_	_
+3	regard	_	VERB	_	_	_	_	_	_
+4	which	_	X	_	_	_	_	_	_
+5	categori	_	X	_	_	_	_	_	_
+6	best	_	ADV	_	_	_	_	_	_
+7	describ	_	VERB	_	_	_	_	_	_
+8	their	_	X	_	_	_	_	_	_
+9	racial	_	X	_	_	_	_	_	_
+10	background	_	NOUN	_	_	_	_	_	_
+11	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 52
+# text = in the current studi , those respond who indic more than on race were code as mix .
+1	in	_	ADP	_	_	_	_	_	_
+2	the	_	DET	_	_	_	_	_	_
+3	current	_	NOUN	_	_	_	_	_	_
+4	studi	_	X	_	_	_	_	_	_
+5	,	_	PUNCT	_	_	_	_	_	_
+6	those	_	DET	_	_	_	_	_	_
+7	respond	_	X	_	_	_	_	_	_
+8	who	_	X	_	_	_	_	_	_
+9	indic	_	X	_	_	_	_	_	_
+10	more	_	ADV	_	_	_	_	_	_
+11	than	_	X	_	_	_	_	_	_
+12	on	_	ADP	_	_	_	_	_	_
+13	race	_	NOUN	_	_	_	_	_	_
+14	were	_	VERB	_	_	_	_	_	_
+15	code	_	VERB	_	_	_	_	_	_
+16	as	_	X	_	_	_	_	_	_
+17	mix	_	VERB	_	_	_	_	_	_
+18	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 53
+# text = demograph variabl .
+1	demograph	_	ADJ	_	_	_	_	_	_
+2	variabl	_	X	_	_	_	_	_	_
+3	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 54
+# text = to provid inform on the analyt sampl as a whole , two addit demograph variabl ar includ .
+1	to	_	ADP	_	_	_	_	_	_
+2	provid	_	X	_	_	_	_	_	_
+3	inform	_	NOUN	_	_	_	_	_	_
+4	on	_	ADP	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	analyt	_	ADJ	_	_	_	_	_	_
+7	sampl	_	X	_	_	_	_	_	_
+8	as	_	X	_	_	_	_	_	_
+9	a	_	DET	_	_	_	_	_	_
+10	whole	_	NOUN	_	_	_	_	_	_
+11	,	_	PUNCT	_	_	_	_	_	_
+12	two	_	X	_	_	_	_	_	_
+13	addit	_	X	_	_	_	_	_	_
+14	demograph	_	ADJ	_	_	_	_	_	_
+15	variabl	_	X	_	_	_	_	_	_
+16	ar	_	X	_	_	_	_	_	_
+17	includ	_	VERB	_	_	_	_	_	_
+18	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 55
+# text = first , ag is a continu measur creat by subtract the year of respond birth obtain from wave 1 interview at 4 .
+1	first	_	NOUN	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	ag	_	X	_	_	_	_	_	_
+4	is	_	VERB	_	_	_	_	_	_
+5	a	_	DET	_	_	_	_	_	_
+6	continu	_	X	_	_	_	_	_	_
+7	measur	_	X	_	_	_	_	_	_
+8	creat	_	X	_	_	_	_	_	_
+9	by	_	ADP	_	_	_	_	_	_
+10	subtract	_	VERB	_	_	_	_	_	_
+11	the	_	DET	_	_	_	_	_	_
+12	year	_	NOUN	_	_	_	_	_	_
+13	of	_	ADP	_	_	_	_	_	_
+14	respond	_	X	_	_	_	_	_	_
+15	birth	_	NOUN	_	_	_	_	_	_
+16	obtain	_	VERB	_	_	_	_	_	_
+17	from	_	ADP	_	_	_	_	_	_
+18	wave	_	NOUN	_	_	_	_	_	_
+19	1	_	NUM	_	_	_	_	_	_
+20	interview	_	NOUN	_	_	_	_	_	_
+21	at	_	ADP	_	_	_	_	_	_
+22	4	_	NUM	_	_	_	_	_	_
+23	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 56
+# text = second , sex wa dichotom code base on the self -
+1	second	_	NOUN	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	sex	_	NOUN	_	_	_	_	_	_
+4	wa	_	X	_	_	_	_	_	_
+5	dichotom	_	X	_	_	_	_	_	_
+6	code	_	VERB	_	_	_	_	_	_
+7	base	_	NOUN	_	_	_	_	_	_
+8	on	_	ADP	_	_	_	_	_	_
+9	the	_	DET	_	_	_	_	_	_
+10	self	_	NOUN	_	_	_	_	_	_
+11	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 57
+# text = report sex of the respond at wave 4 0 femal and 1 male .
+1	report	_	X	_	_	_	_	_	_
+2	sex	_	NOUN	_	_	_	_	_	_
+3	of	_	ADP	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	respond	_	X	_	_	_	_	_	_
+6	at	_	ADP	_	_	_	_	_	_
+7	wave	_	NOUN	_	_	_	_	_	_
+8	4	_	NUM	_	_	_	_	_	_
+9	0	_	NUM	_	_	_	_	_	_
+10	femal	_	X	_	_	_	_	_	_
+11	and	_	CCONJ	_	_	_	_	_	_
+12	1	_	NUM	_	_	_	_	_	_
+13	male	_	NOUN	_	_	_	_	_	_
+14	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 58
+# text = analyt plan .
+1	analyt	_	ADJ	_	_	_	_	_	_
+2	plan	_	VERB	_	_	_	_	_	_
+3	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 59
+# text = our exploratori studi includ three basic step .
+1	our	_	X	_	_	_	_	_	_
+2	exploratori	_	X	_	_	_	_	_	_
+3	studi	_	X	_	_	_	_	_	_
+4	includ	_	VERB	_	_	_	_	_	_
+5	three	_	X	_	_	_	_	_	_
+6	basic	_	X	_	_	_	_	_	_
+7	step	_	NOUN	_	_	_	_	_	_
+8	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 60
+# text = first , summari statist of the studi variabl and racial categori were produc .
+1	first	_	NOUN	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	summari	_	X	_	_	_	_	_	_
+4	statist	_	NOUN	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	studi	_	X	_	_	_	_	_	_
+8	variabl	_	X	_	_	_	_	_	_
+9	and	_	CCONJ	_	_	_	_	_	_
+10	racial	_	X	_	_	_	_	_	_
+11	categori	_	X	_	_	_	_	_	_
+12	were	_	VERB	_	_	_	_	_	_
+13	produc	_	VERB	_	_	_	_	_	_
+14	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 61
+# text = second , we examin the rel proport of two discrimin experi measur across each racial categori .
+1	second	_	NOUN	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	we	_	PRON	_	_	_	_	_	_
+4	examin	_	VERB	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	rel	_	X	_	_	_	_	_	_
+7	proport	_	NOUN	_	_	_	_	_	_
+8	of	_	ADP	_	_	_	_	_	_
+9	two	_	X	_	_	_	_	_	_
+10	discrimin	_	X	_	_	_	_	_	_
+11	experi	_	X	_	_	_	_	_	_
+12	measur	_	X	_	_	_	_	_	_
+13	across	_	X	_	_	_	_	_	_
+14	each	_	X	_	_	_	_	_	_
+15	racial	_	X	_	_	_	_	_	_
+16	categori	_	X	_	_	_	_	_	_
+17	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 62
+# text = final , we assess the distribut of report reason for discrimin across racial categori .
+1	final	_	NOUN	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	we	_	PRON	_	_	_	_	_	_
+4	assess	_	VERB	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	distribut	_	X	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	report	_	VERB	_	_	_	_	_	_
+9	reason	_	NOUN	_	_	_	_	_	_
+10	for	_	ADP	_	_	_	_	_	_
+11	discrimin	_	NOUN	_	_	_	_	_	_
+12	across	_	X	_	_	_	_	_	_
+13	racial	_	X	_	_	_	_	_	_
+14	categori	_	X	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 63
+# text = in order to examin potenti bivari associ , the adjust f statist design -
+1	in	_	ADP	_	_	_	_	_	_
+2	order	_	VERB	_	_	_	_	_	_
+3	to	_	ADP	_	_	_	_	_	_
+4	examin	_	X	_	_	_	_	_	_
+5	potenti	_	ADJ	_	_	_	_	_	_
+6	bivari	_	X	_	_	_	_	_	_
+7	associ	_	X	_	_	_	_	_	_
+8	,	_	PUNCT	_	_	_	_	_	_
+9	the	_	DET	_	_	_	_	_	_
+10	adjust	_	ADJ	_	_	_	_	_	_
+11	f	_	VERB	_	_	_	_	_	_
+12	statist	_	ADJ	_	_	_	_	_	_
+13	design	_	VERB	_	_	_	_	_	_
+14	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 64
+# text = base f wa emploi as it correct for a complex sampl design such that us in the add health .
+1	base	_	X	_	_	_	_	_	_
+2	f	_	VERB	_	_	_	_	_	_
+3	wa	_	X	_	_	_	_	_	_
+4	emploi	_	X	_	_	_	_	_	_
+5	as	_	X	_	_	_	_	_	_
+6	it	_	PRON	_	_	_	_	_	_
+7	correct	_	VERB	_	_	_	_	_	_
+8	for	_	ADP	_	_	_	_	_	_
+9	a	_	DET	_	_	_	_	_	_
+10	complex	_	NOUN	_	_	_	_	_	_
+11	sampl	_	X	_	_	_	_	_	_
+12	design	_	VERB	_	_	_	_	_	_
+13	such	_	X	_	_	_	_	_	_
+14	that	_	DET	_	_	_	_	_	_
+15	us	_	PRON	_	_	_	_	_	_
+16	in	_	ADP	_	_	_	_	_	_
+17	the	_	DET	_	_	_	_	_	_
+18	add	_	VERB	_	_	_	_	_	_
+19	health	_	NOUN	_	_	_	_	_	_
+20	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 65
+# text = 21 more specif , when analyz weight sampl data emploi the svy suit of command in stata convent pearson χ2 statist test independ is convert into an fstatist with noninteg degre freedom by us a second -
+1	21	_	NUM	_	_	_	_	_	_
+2	more	_	ADV	_	_	_	_	_	_
+3	specif	_	ADJ	_	_	_	_	_	_
+4	,	_	PUNCT	_	_	_	_	_	_
+5	when	_	X	_	_	_	_	_	_
+6	analyz	_	VERB	_	_	_	_	_	_
+7	weight	_	VERB	_	_	_	_	_	_
+8	sampl	_	X	_	_	_	_	_	_
+9	data	_	NOUN	_	_	_	_	_	_
+10	emploi	_	X	_	_	_	_	_	_
+11	the	_	DET	_	_	_	_	_	_
+12	svy	_	X	_	_	_	_	_	_
+13	suit	_	NOUN	_	_	_	_	_	_
+14	of	_	ADP	_	_	_	_	_	_
+15	command	_	NOUN	_	_	_	_	_	_
+16	in	_	ADP	_	_	_	_	_	_
+17	stata	_	X	_	_	_	_	_	_
+18	convent	_	X	_	_	_	_	_	_
+19	pearson	_	X	_	_	_	_	_	_
+20	χ2	_	X	_	_	_	_	_	_
+21	statist	_	ADJ	_	_	_	_	_	_
+22	test	_	NOUN	_	_	_	_	_	_
+23	independ	_	X	_	_	_	_	_	_
+24	is	_	VERB	_	_	_	_	_	_
+25	convert	_	ADJ	_	_	_	_	_	_
+26	into	_	X	_	_	_	_	_	_
+27	an	_	DET	_	_	_	_	_	_
+28	fstatist	_	ADJ	_	_	_	_	_	_
+29	with	_	ADP	_	_	_	_	_	_
+30	noninteg	_	X	_	_	_	_	_	_
+31	degre	_	X	_	_	_	_	_	_
+32	freedom	_	NOUN	_	_	_	_	_	_
+33	by	_	ADP	_	_	_	_	_	_
+34	us	_	PRON	_	_	_	_	_	_
+35	a	_	DET	_	_	_	_	_	_
+36	second	_	NOUN	_	_	_	_	_	_
+37	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 66
+# text = order rao and scott 1981 22 , 1984 23 correct .
+1	order	_	VERB	_	_	_	_	_	_
+2	rao	_	X	_	_	_	_	_	_
+3	and	_	CCONJ	_	_	_	_	_	_
+4	scott	_	X	_	_	_	_	_	_
+5	1981	_	NUM	_	_	_	_	_	_
+6	22	_	NUM	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	1984	_	NUM	_	_	_	_	_	_
+9	23	_	NUM	_	_	_	_	_	_
+10	correct	_	VERB	_	_	_	_	_	_
+11	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 67
+# text = 24 the p -
+1	24	_	NUM	_	_	_	_	_	_
+2	the	_	DET	_	_	_	_	_	_
+3	p	_	VERB	_	_	_	_	_	_
+4	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 68
+# text = valu associ with the design -
+1	valu	_	X	_	_	_	_	_	_
+2	associ	_	NOUN	_	_	_	_	_	_
+3	with	_	ADP	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	design	_	VERB	_	_	_	_	_	_
+6	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 69
+# text = base f is thu more accur than the associ with χ2 statist given adjust and calcul take into account weight natur of data .
+1	base	_	X	_	_	_	_	_	_
+2	f	_	VERB	_	_	_	_	_	_
+3	is	_	VERB	_	_	_	_	_	_
+4	thu	_	ADJ	_	_	_	_	_	_
+5	more	_	ADV	_	_	_	_	_	_
+6	accur	_	X	_	_	_	_	_	_
+7	than	_	X	_	_	_	_	_	_
+8	the	_	DET	_	_	_	_	_	_
+9	associ	_	NOUN	_	_	_	_	_	_
+10	with	_	ADP	_	_	_	_	_	_
+11	χ2	_	X	_	_	_	_	_	_
+12	statist	_	ADJ	_	_	_	_	_	_
+13	given	_	VERB	_	_	_	_	_	_
+14	adjust	_	X	_	_	_	_	_	_
+15	and	_	CCONJ	_	_	_	_	_	_
+16	calcul	_	X	_	_	_	_	_	_
+17	take	_	VERB	_	_	_	_	_	_
+18	into	_	X	_	_	_	_	_	_
+19	account	_	NOUN	_	_	_	_	_	_
+20	weight	_	ADJ	_	_	_	_	_	_
+21	natur	_	NOUN	_	_	_	_	_	_
+22	of	_	ADP	_	_	_	_	_	_
+23	data	_	NOUN	_	_	_	_	_	_
+24	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 70
+# text = this final step also includ an examin of the rel distribut racial categori across variou report reason for discrimin .
+1	this	_	DET	_	_	_	_	_	_
+2	final	_	NOUN	_	_	_	_	_	_
+3	step	_	NOUN	_	_	_	_	_	_
+4	also	_	CCONJ	_	_	_	_	_	_
+5	includ	_	VERB	_	_	_	_	_	_
+6	an	_	DET	_	_	_	_	_	_
+7	examin	_	NOUN	_	_	_	_	_	_
+8	of	_	ADP	_	_	_	_	_	_
+9	the	_	DET	_	_	_	_	_	_
+10	rel	_	X	_	_	_	_	_	_
+11	distribut	_	X	_	_	_	_	_	_
+12	racial	_	X	_	_	_	_	_	_
+13	categori	_	X	_	_	_	_	_	_
+14	across	_	X	_	_	_	_	_	_
+15	variou	_	X	_	_	_	_	_	_
+16	report	_	VERB	_	_	_	_	_	_
+17	reason	_	NOUN	_	_	_	_	_	_
+18	for	_	ADP	_	_	_	_	_	_
+19	discrimin	_	NOUN	_	_	_	_	_	_
+20	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 71
+# text = as note earlier , all analys were weight accord to the survei provid by add health research staff and standard error correct for cluster stratif that defin sampl strategi .
+1	as	_	X	_	_	_	_	_	_
+2	note	_	VERB	_	_	_	_	_	_
+3	earlier	_	X	_	_	_	_	_	_
+4	,	_	PUNCT	_	_	_	_	_	_
+5	all	_	X	_	_	_	_	_	_
+6	analys	_	X	_	_	_	_	_	_
+7	were	_	VERB	_	_	_	_	_	_
+8	weight	_	NOUN	_	_	_	_	_	_
+9	accord	_	NOUN	_	_	_	_	_	_
+10	to	_	ADP	_	_	_	_	_	_
+11	the	_	DET	_	_	_	_	_	_
+12	survei	_	X	_	_	_	_	_	_
+13	provid	_	NOUN	_	_	_	_	_	_
+14	by	_	ADP	_	_	_	_	_	_
+15	add	_	VERB	_	_	_	_	_	_
+16	health	_	NOUN	_	_	_	_	_	_
+17	research	_	NOUN	_	_	_	_	_	_
+18	staff	_	NOUN	_	_	_	_	_	_
+19	and	_	CCONJ	_	_	_	_	_	_
+20	standard	_	NOUN	_	_	_	_	_	_
+21	error	_	NOUN	_	_	_	_	_	_
+22	correct	_	NOUN	_	_	_	_	_	_
+23	for	_	ADP	_	_	_	_	_	_
+24	cluster	_	ADJ	_	_	_	_	_	_
+25	stratif	_	ADJ	_	_	_	_	_	_
+26	that	_	DET	_	_	_	_	_	_
+27	defin	_	ADJ	_	_	_	_	_	_
+28	sampl	_	ADJ	_	_	_	_	_	_
+29	strategi	_	X	_	_	_	_	_	_
+30	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 72
+# text = thu , all estim report here can be consid nation repres of the unit state .
+1	thu	_	X	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	all	_	X	_	_	_	_	_	_
+4	estim	_	X	_	_	_	_	_	_
+5	report	_	VERB	_	_	_	_	_	_
+6	here	_	ADV	_	_	_	_	_	_
+7	can	_	VERB	_	_	_	_	_	_
+8	be	_	VERB	_	_	_	_	_	_
+9	consid	_	ADJ	_	_	_	_	_	_
+10	nation	_	ADJ	_	_	_	_	_	_
+11	repres	_	NOUN	_	_	_	_	_	_
+12	of	_	ADP	_	_	_	_	_	_
+13	the	_	DET	_	_	_	_	_	_
+14	unit	_	ADJ	_	_	_	_	_	_
+15	state	_	NOUN	_	_	_	_	_	_
+16	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 73
+# text = 2 .
+1	2	_	NUM	_	_	_	_	_	_
+2	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 74
+# text = gujjolaai eegimaa , it speaker and their neighbour this section briefli present the gújjolaai for short ;
+1	gujjolaai	_	X	_	_	_	_	_	_
+2	eegimaa	_	X	_	_	_	_	_	_
+3	,	_	PUNCT	_	_	_	_	_	_
+4	it	_	PRON	_	_	_	_	_	_
+5	speaker	_	VERB	_	_	_	_	_	_
+6	and	_	CCONJ	_	_	_	_	_	_
+7	their	_	VERB	_	_	_	_	_	_
+8	neighbour	_	NOUN	_	_	_	_	_	_
+9	this	_	DET	_	_	_	_	_	_
+10	section	_	NOUN	_	_	_	_	_	_
+11	briefli	_	X	_	_	_	_	_	_
+12	present	_	VERB	_	_	_	_	_	_
+13	the	_	DET	_	_	_	_	_	_
+14	gújjolaai	_	X	_	_	_	_	_	_
+15	for	_	ADP	_	_	_	_	_	_
+16	short	_	X	_	_	_	_	_	_
+17	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 75
+# text = ethnologu code :
+1	ethnologu	_	X	_	_	_	_	_	_
+2	code	_	NOUN	_	_	_	_	_	_
+3	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 76
+# text = iso 639 -
+1	iso	_	X	_	_	_	_	_	_
+2	639	_	NUM	_	_	_	_	_	_
+3	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 77
+# text = 3 :
+1	3	_	NUM	_	_	_	_	_	_
+2	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 78
+# text = bqj , it speaker and varieti .
+1	bqj	_	X	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	it	_	PRON	_	_	_	_	_	_
+4	speaker	_	VERB	_	_	_	_	_	_
+5	and	_	CCONJ	_	_	_	_	_	_
+6	varieti	_	VERB	_	_	_	_	_	_
+7	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 79
+# text = we also discuss aspect of the contact situat eegimaa languag .
+1	we	_	PRON	_	_	_	_	_	_
+2	also	_	CCONJ	_	_	_	_	_	_
+3	discuss	_	VERB	_	_	_	_	_	_
+4	aspect	_	NOUN	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	contact	_	NOUN	_	_	_	_	_	_
+8	situat	_	NOUN	_	_	_	_	_	_
+9	eegimaa	_	X	_	_	_	_	_	_
+10	languag	_	X	_	_	_	_	_	_
+11	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 80
+# text = this is import , becaus as we will show in 6 below some of the eegimaa death prevent name and child -
+1	this	_	DET	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	import	_	ADJ	_	_	_	_	_	_
+4	,	_	PUNCT	_	_	_	_	_	_
+5	becaus	_	X	_	_	_	_	_	_
+6	as	_	X	_	_	_	_	_	_
+7	we	_	PRON	_	_	_	_	_	_
+8	will	_	VERB	_	_	_	_	_	_
+9	show	_	VERB	_	_	_	_	_	_
+10	in	_	ADP	_	_	_	_	_	_
+11	6	_	NUM	_	_	_	_	_	_
+12	below	_	X	_	_	_	_	_	_
+13	some	_	NOUN	_	_	_	_	_	_
+14	of	_	ADP	_	_	_	_	_	_
+15	the	_	DET	_	_	_	_	_	_
+16	eegimaa	_	X	_	_	_	_	_	_
+17	death	_	NOUN	_	_	_	_	_	_
+18	prevent	_	VERB	_	_	_	_	_	_
+19	name	_	NOUN	_	_	_	_	_	_
+20	and	_	CCONJ	_	_	_	_	_	_
+21	child	_	NOUN	_	_	_	_	_	_
+22	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 81
+# text = bear name ar given to eegimaa peopl from other commun .
+1	bear	_	X	_	_	_	_	_	_
+2	name	_	NOUN	_	_	_	_	_	_
+3	ar	_	X	_	_	_	_	_	_
+4	given	_	VERB	_	_	_	_	_	_
+5	to	_	ADP	_	_	_	_	_	_
+6	eegimaa	_	X	_	_	_	_	_	_
+7	peopl	_	X	_	_	_	_	_	_
+8	from	_	ADP	_	_	_	_	_	_
+9	other	_	NOUN	_	_	_	_	_	_
+10	commun	_	X	_	_	_	_	_	_
+11	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 82
+# text = eegimaa is a jóola languag spoken in the bass casam area of southern seneg by popul estim to be between 7 , 000 bassèn 2007 and 11 200 speaker lewi simon fennig 2014 .
+1	eegimaa	_	X	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	a	_	DET	_	_	_	_	_	_
+4	jóola	_	X	_	_	_	_	_	_
+5	languag	_	X	_	_	_	_	_	_
+6	spoken	_	NOUN	_	_	_	_	_	_
+7	in	_	ADP	_	_	_	_	_	_
+8	the	_	DET	_	_	_	_	_	_
+9	bass	_	NOUN	_	_	_	_	_	_
+10	casam	_	X	_	_	_	_	_	_
+11	area	_	NOUN	_	_	_	_	_	_
+12	of	_	ADP	_	_	_	_	_	_
+13	southern	_	X	_	_	_	_	_	_
+14	seneg	_	NOUN	_	_	_	_	_	_
+15	by	_	ADP	_	_	_	_	_	_
+16	popul	_	X	_	_	_	_	_	_
+17	estim	_	X	_	_	_	_	_	_
+18	to	_	ADP	_	_	_	_	_	_
+19	be	_	VERB	_	_	_	_	_	_
+20	between	_	ADJ	_	_	_	_	_	_
+21	7	_	NUM	_	_	_	_	_	_
+22	,	_	PUNCT	_	_	_	_	_	_
+23	000	_	NUM	_	_	_	_	_	_
+24	bassèn	_	X	_	_	_	_	_	_
+25	2007	_	NUM	_	_	_	_	_	_
+26	and	_	CCONJ	_	_	_	_	_	_
+27	11	_	NUM	_	_	_	_	_	_
+28	200	_	NUM	_	_	_	_	_	_
+29	speaker	_	NOUN	_	_	_	_	_	_
+30	lewi	_	X	_	_	_	_	_	_
+31	simon	_	X	_	_	_	_	_	_
+32	fennig	_	X	_	_	_	_	_	_
+33	2014	_	NUM	_	_	_	_	_	_
+34	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 83
+# text = jóola languag ar classifi as member of sapir s 1971 bak group atlant the niger congo phylum .
+1	jóola	_	X	_	_	_	_	_	_
+2	languag	_	X	_	_	_	_	_	_
+3	ar	_	X	_	_	_	_	_	_
+4	classifi	_	VERB	_	_	_	_	_	_
+5	as	_	X	_	_	_	_	_	_
+6	member	_	NOUN	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	sapir	_	X	_	_	_	_	_	_
+9	s	_	VERB	_	_	_	_	_	_
+10	1971	_	NUM	_	_	_	_	_	_
+11	bak	_	X	_	_	_	_	_	_
+12	group	_	NOUN	_	_	_	_	_	_
+13	atlant	_	ADJ	_	_	_	_	_	_
+14	the	_	DET	_	_	_	_	_	_
+15	niger	_	X	_	_	_	_	_	_
+16	congo	_	NOUN	_	_	_	_	_	_
+17	phylum	_	X	_	_	_	_	_	_
+18	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 84
+# text = speaker of these languag ar found in the gambia , former casam region southern seneg and guinea bissau .
+1	speaker	_	NOUN	_	_	_	_	_	_
+2	of	_	ADP	_	_	_	_	_	_
+3	these	_	DET	_	_	_	_	_	_
+4	languag	_	X	_	_	_	_	_	_
+5	ar	_	X	_	_	_	_	_	_
+6	found	_	NOUN	_	_	_	_	_	_
+7	in	_	ADP	_	_	_	_	_	_
+8	the	_	DET	_	_	_	_	_	_
+9	gambia	_	X	_	_	_	_	_	_
+10	,	_	PUNCT	_	_	_	_	_	_
+11	former	_	NOUN	_	_	_	_	_	_
+12	casam	_	X	_	_	_	_	_	_
+13	region	_	NOUN	_	_	_	_	_	_
+14	southern	_	X	_	_	_	_	_	_
+15	seneg	_	ADJ	_	_	_	_	_	_
+16	and	_	CCONJ	_	_	_	_	_	_
+17	guinea	_	NOUN	_	_	_	_	_	_
+18	bissau	_	X	_	_	_	_	_	_
+19	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 85
+# text = the map in figur 1 , taken from ethnologu present languag of seneg .
+1	the	_	DET	_	_	_	_	_	_
+2	map	_	NOUN	_	_	_	_	_	_
+3	in	_	ADP	_	_	_	_	_	_
+4	figur	_	X	_	_	_	_	_	_
+5	1	_	NUM	_	_	_	_	_	_
+6	,	_	PUNCT	_	_	_	_	_	_
+7	taken	_	VERB	_	_	_	_	_	_
+8	from	_	ADP	_	_	_	_	_	_
+9	ethnologu	_	X	_	_	_	_	_	_
+10	present	_	VERB	_	_	_	_	_	_
+11	languag	_	X	_	_	_	_	_	_
+12	of	_	ADP	_	_	_	_	_	_
+13	seneg	_	ADJ	_	_	_	_	_	_
+14	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 86
+# text = the arrow on map point to eegimaa speak area bandial is name us by ethnologu for .
+1	the	_	DET	_	_	_	_	_	_
+2	arrow	_	NOUN	_	_	_	_	_	_
+3	on	_	ADP	_	_	_	_	_	_
+4	map	_	NOUN	_	_	_	_	_	_
+5	point	_	NOUN	_	_	_	_	_	_
+6	to	_	ADP	_	_	_	_	_	_
+7	eegimaa	_	X	_	_	_	_	_	_
+8	speak	_	VERB	_	_	_	_	_	_
+9	area	_	NOUN	_	_	_	_	_	_
+10	bandial	_	X	_	_	_	_	_	_
+11	is	_	VERB	_	_	_	_	_	_
+12	name	_	NOUN	_	_	_	_	_	_
+13	us	_	PRON	_	_	_	_	_	_
+14	by	_	ADP	_	_	_	_	_	_
+15	ethnologu	_	X	_	_	_	_	_	_
+16	for	_	ADP	_	_	_	_	_	_
+17	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 87
+# text = eegimaa is mainli spoken in mof -
+1	eegimaa	_	X	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	mainli	_	ADJ	_	_	_	_	_	_
+4	spoken	_	VERB	_	_	_	_	_	_
+5	in	_	ADP	_	_	_	_	_	_
+6	mof	_	X	_	_	_	_	_	_
+7	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 88
+# text = ávvi , a former kingdom of 10 villag locat to the west ziguinchor capit citi administr region casam in south seneg .
+1	ávvi	_	X	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	a	_	DET	_	_	_	_	_	_
+4	former	_	NOUN	_	_	_	_	_	_
+5	kingdom	_	NOUN	_	_	_	_	_	_
+6	of	_	ADP	_	_	_	_	_	_
+7	10	_	NUM	_	_	_	_	_	_
+8	villag	_	X	_	_	_	_	_	_
+9	locat	_	NOUN	_	_	_	_	_	_
+10	to	_	ADP	_	_	_	_	_	_
+11	the	_	DET	_	_	_	_	_	_
+12	west	_	NOUN	_	_	_	_	_	_
+13	ziguinchor	_	X	_	_	_	_	_	_
+14	capit	_	ADJ	_	_	_	_	_	_
+15	citi	_	NOUN	_	_	_	_	_	_
+16	administr	_	X	_	_	_	_	_	_
+17	region	_	NOUN	_	_	_	_	_	_
+18	casam	_	NOUN	_	_	_	_	_	_
+19	in	_	ADP	_	_	_	_	_	_
+20	south	_	NOUN	_	_	_	_	_	_
+21	seneg	_	ADJ	_	_	_	_	_	_
+22	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 89
+# text = mof -
+1	mof	_	X	_	_	_	_	_	_
+2	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 90
+# text = ávvi is a peninsula border by the casam river to north , which separ it from jóola búluf and fogni area east villag brin djibonk where speaker of kujirerai baïnounk gubëeh live .
+1	ávvi	_	X	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	a	_	DET	_	_	_	_	_	_
+4	peninsula	_	NOUN	_	_	_	_	_	_
+5	border	_	NOUN	_	_	_	_	_	_
+6	by	_	ADP	_	_	_	_	_	_
+7	the	_	DET	_	_	_	_	_	_
+8	casam	_	X	_	_	_	_	_	_
+9	river	_	NOUN	_	_	_	_	_	_
+10	to	_	ADP	_	_	_	_	_	_
+11	north	_	NOUN	_	_	_	_	_	_
+12	,	_	PUNCT	_	_	_	_	_	_
+13	which	_	X	_	_	_	_	_	_
+14	separ	_	X	_	_	_	_	_	_
+15	it	_	PRON	_	_	_	_	_	_
+16	from	_	ADP	_	_	_	_	_	_
+17	jóola	_	X	_	_	_	_	_	_
+18	búluf	_	X	_	_	_	_	_	_
+19	and	_	CCONJ	_	_	_	_	_	_
+20	fogni	_	X	_	_	_	_	_	_
+21	area	_	NOUN	_	_	_	_	_	_
+22	east	_	NOUN	_	_	_	_	_	_
+23	villag	_	X	_	_	_	_	_	_
+24	brin	_	X	_	_	_	_	_	_
+25	djibonk	_	X	_	_	_	_	_	_
+26	where	_	X	_	_	_	_	_	_
+27	speaker	_	NOUN	_	_	_	_	_	_
+28	of	_	ADP	_	_	_	_	_	_
+29	kujirerai	_	X	_	_	_	_	_	_
+30	baïnounk	_	X	_	_	_	_	_	_
+31	gubëeh	_	X	_	_	_	_	_	_
+32	live	_	VERB	_	_	_	_	_	_
+33	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 91
+# text = in the south , river known as kamobeul bolon separ mof -
+1	in	_	ADP	_	_	_	_	_	_
+2	the	_	DET	_	_	_	_	_	_
+3	south	_	NOUN	_	_	_	_	_	_
+4	,	_	PUNCT	_	_	_	_	_	_
+5	river	_	NOUN	_	_	_	_	_	_
+6	known	_	VERB	_	_	_	_	_	_
+7	as	_	X	_	_	_	_	_	_
+8	kamobeul	_	X	_	_	_	_	_	_
+9	bolon	_	X	_	_	_	_	_	_
+10	separ	_	X	_	_	_	_	_	_
+11	mof	_	X	_	_	_	_	_	_
+12	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 92
+# text = ávvi from the bayot speak area , while west side of mof -
+1	ávvi	_	NOUN	_	_	_	_	_	_
+2	from	_	ADP	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	bayot	_	X	_	_	_	_	_	_
+5	speak	_	VERB	_	_	_	_	_	_
+6	area	_	NOUN	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	while	_	X	_	_	_	_	_	_
+9	west	_	NOUN	_	_	_	_	_	_
+10	side	_	NOUN	_	_	_	_	_	_
+11	of	_	ADP	_	_	_	_	_	_
+12	mof	_	X	_	_	_	_	_	_
+13	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 93
+# text = ávvi coincid with the homeland of jóola kaasa húluf and ésuulaaluʔ .
+1	ávvi	_	X	_	_	_	_	_	_
+2	coincid	_	NOUN	_	_	_	_	_	_
+3	with	_	ADP	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	homeland	_	NOUN	_	_	_	_	_	_
+6	of	_	ADP	_	_	_	_	_	_
+7	jóola	_	X	_	_	_	_	_	_
+8	kaasa	_	X	_	_	_	_	_	_
+9	húluf	_	X	_	_	_	_	_	_
+10	and	_	CCONJ	_	_	_	_	_	_
+11	ésuulaaluʔ	_	X	_	_	_	_	_	_
+12	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 94
+# text = the map in figur 2 below , adapt from palmeri and gazio 1995 show a veri approxim locat of mof -
+1	the	_	DET	_	_	_	_	_	_
+2	map	_	NOUN	_	_	_	_	_	_
+3	in	_	ADP	_	_	_	_	_	_
+4	figur	_	X	_	_	_	_	_	_
+5	2	_	NUM	_	_	_	_	_	_
+6	below	_	X	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	adapt	_	VERB	_	_	_	_	_	_
+9	from	_	ADP	_	_	_	_	_	_
+10	palmeri	_	X	_	_	_	_	_	_
+11	and	_	CCONJ	_	_	_	_	_	_
+12	gazio	_	X	_	_	_	_	_	_
+13	1995	_	NUM	_	_	_	_	_	_
+14	show	_	VERB	_	_	_	_	_	_
+15	a	_	DET	_	_	_	_	_	_
+16	veri	_	X	_	_	_	_	_	_
+17	approxim	_	ADJ	_	_	_	_	_	_
+18	locat	_	X	_	_	_	_	_	_
+19	of	_	ADP	_	_	_	_	_	_
+20	mof	_	X	_	_	_	_	_	_
+21	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 95
+# text = ávvi in relat to other neighbour speech commun .
+1	ávvi	_	X	_	_	_	_	_	_
+2	in	_	ADP	_	_	_	_	_	_
+3	relat	_	X	_	_	_	_	_	_
+4	to	_	ADP	_	_	_	_	_	_
+5	other	_	NOUN	_	_	_	_	_	_
+6	neighbour	_	VERB	_	_	_	_	_	_
+7	speech	_	NOUN	_	_	_	_	_	_
+8	commun	_	X	_	_	_	_	_	_
+9	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 96
+# text = some of these commun will be refer to in our discuss death prevent name 6 .
+1	some	_	NOUN	_	_	_	_	_	_
+2	of	_	ADP	_	_	_	_	_	_
+3	these	_	DET	_	_	_	_	_	_
+4	commun	_	X	_	_	_	_	_	_
+5	will	_	NOUN	_	_	_	_	_	_
+6	be	_	VERB	_	_	_	_	_	_
+7	refer	_	ADJ	_	_	_	_	_	_
+8	to	_	ADP	_	_	_	_	_	_
+9	in	_	ADP	_	_	_	_	_	_
+10	our	_	X	_	_	_	_	_	_
+11	discuss	_	VERB	_	_	_	_	_	_
+12	death	_	NOUN	_	_	_	_	_	_
+13	prevent	_	VERB	_	_	_	_	_	_
+14	name	_	NOUN	_	_	_	_	_	_
+15	6	_	NUM	_	_	_	_	_	_
+16	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 97
+# text = the eegimaa spoken in mof -
+1	the	_	DET	_	_	_	_	_	_
+2	eegimaa	_	X	_	_	_	_	_	_
+3	spoken	_	VERB	_	_	_	_	_	_
+4	in	_	ADP	_	_	_	_	_	_
+5	mof	_	X	_	_	_	_	_	_
+6	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 98
+# text = ávvi is known by sever name given speaker of neighbour languag .
+1	ávvi	_	X	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	known	_	ADJ	_	_	_	_	_	_
+4	by	_	ADP	_	_	_	_	_	_
+5	sever	_	ADJ	_	_	_	_	_	_
+6	name	_	NOUN	_	_	_	_	_	_
+7	given	_	VERB	_	_	_	_	_	_
+8	speaker	_	NOUN	_	_	_	_	_	_
+9	of	_	ADP	_	_	_	_	_	_
+10	neighbour	_	VERB	_	_	_	_	_	_
+11	languag	_	X	_	_	_	_	_	_
+12	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 99
+# text = for exampl , the name kusiilai 1 languag of essil is given by speaker kujirerai to eegimaa becaus which bajjat wa a district villag ha border with their .
+1	for	_	ADP	_	_	_	_	_	_
+2	exampl	_	X	_	_	_	_	_	_
+3	,	_	PUNCT	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	name	_	NOUN	_	_	_	_	_	_
+6	kusiilai	_	X	_	_	_	_	_	_
+7	1	_	NUM	_	_	_	_	_	_
+8	languag	_	X	_	_	_	_	_	_
+9	of	_	ADP	_	_	_	_	_	_
+10	essil	_	X	_	_	_	_	_	_
+11	is	_	VERB	_	_	_	_	_	_
+12	given	_	VERB	_	_	_	_	_	_
+13	by	_	ADP	_	_	_	_	_	_
+14	speaker	_	NOUN	_	_	_	_	_	_
+15	kujirerai	_	NOUN	_	_	_	_	_	_
+16	to	_	ADP	_	_	_	_	_	_
+17	eegimaa	_	X	_	_	_	_	_	_
+18	becaus	_	X	_	_	_	_	_	_
+19	which	_	X	_	_	_	_	_	_
+20	bajjat	_	X	_	_	_	_	_	_
+21	wa	_	X	_	_	_	_	_	_
+22	a	_	DET	_	_	_	_	_	_
+23	district	_	NOUN	_	_	_	_	_	_
+24	villag	_	X	_	_	_	_	_	_
+25	ha	_	VERB	_	_	_	_	_	_
+26	border	_	NOUN	_	_	_	_	_	_
+27	with	_	ADP	_	_	_	_	_	_
+28	their	_	X	_	_	_	_	_	_
+29	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 100
+# text = endungo is the name given by bayot speaker , but it mean not known .
+1	endungo	_	X	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	name	_	NOUN	_	_	_	_	_	_
+5	given	_	VERB	_	_	_	_	_	_
+6	by	_	ADP	_	_	_	_	_	_
+7	bayot	_	X	_	_	_	_	_	_
+8	speaker	_	NOUN	_	_	_	_	_	_
+9	,	_	PUNCT	_	_	_	_	_	_
+10	but	_	CCONJ	_	_	_	_	_	_
+11	it	_	PRON	_	_	_	_	_	_
+12	mean	_	VERB	_	_	_	_	_	_
+13	not	_	ADJ	_	_	_	_	_	_
+14	known	_	VERB	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 101
+# text = kúlaakiai , the languag of villag seleki sállagi is name given by jóola kaasa speaker who ar more familiar with than all other mof -
+1	kúlaakiai	_	X	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	languag	_	X	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	villag	_	X	_	_	_	_	_	_
+7	seleki	_	X	_	_	_	_	_	_
+8	sállagi	_	X	_	_	_	_	_	_
+9	is	_	VERB	_	_	_	_	_	_
+10	name	_	NOUN	_	_	_	_	_	_
+11	given	_	VERB	_	_	_	_	_	_
+12	by	_	ADP	_	_	_	_	_	_
+13	jóola	_	X	_	_	_	_	_	_
+14	kaasa	_	X	_	_	_	_	_	_
+15	speaker	_	NOUN	_	_	_	_	_	_
+16	who	_	X	_	_	_	_	_	_
+17	ar	_	X	_	_	_	_	_	_
+18	more	_	ADV	_	_	_	_	_	_
+19	familiar	_	NOUN	_	_	_	_	_	_
+20	with	_	ADP	_	_	_	_	_	_
+21	than	_	X	_	_	_	_	_	_
+22	all	_	X	_	_	_	_	_	_
+23	other	_	NOUN	_	_	_	_	_	_
+24	mof	_	X	_	_	_	_	_	_
+25	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 102
+# text = ávvi .
+1	ávvi	_	X	_	_	_	_	_	_
+2	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 103
+# text = final , banjal bandial the languag of villag most popular all those name is given by jóola búluf and fogni speaker to eegimaa peopl their becaus from were first be in contact with them .
+1	final	_	NOUN	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	banjal	_	X	_	_	_	_	_	_
+4	bandial	_	X	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	languag	_	X	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	villag	_	X	_	_	_	_	_	_
+9	most	_	NOUN	_	_	_	_	_	_
+10	popular	_	ADJ	_	_	_	_	_	_
+11	all	_	X	_	_	_	_	_	_
+12	those	_	DET	_	_	_	_	_	_
+13	name	_	NOUN	_	_	_	_	_	_
+14	is	_	VERB	_	_	_	_	_	_
+15	given	_	NOUN	_	_	_	_	_	_
+16	by	_	ADP	_	_	_	_	_	_
+17	jóola	_	X	_	_	_	_	_	_
+18	búluf	_	X	_	_	_	_	_	_
+19	and	_	CCONJ	_	_	_	_	_	_
+20	fogni	_	X	_	_	_	_	_	_
+21	speaker	_	NOUN	_	_	_	_	_	_
+22	to	_	ADP	_	_	_	_	_	_
+23	eegimaa	_	X	_	_	_	_	_	_
+24	peopl	_	NOUN	_	_	_	_	_	_
+25	their	_	X	_	_	_	_	_	_
+26	becaus	_	X	_	_	_	_	_	_
+27	from	_	ADP	_	_	_	_	_	_
+28	were	_	VERB	_	_	_	_	_	_
+29	first	_	NOUN	_	_	_	_	_	_
+30	be	_	VERB	_	_	_	_	_	_
+31	in	_	ADP	_	_	_	_	_	_
+32	contact	_	NOUN	_	_	_	_	_	_
+33	with	_	ADP	_	_	_	_	_	_
+34	them	_	PRON	_	_	_	_	_	_
+35	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 104
+# text = figur 1 .
+1	figur	_	X	_	_	_	_	_	_
+2	1	_	NUM	_	_	_	_	_	_
+3	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 105
+# text = map of seneg courtesi googl figur 2 .
+1	map	_	NOUN	_	_	_	_	_	_
+2	of	_	ADP	_	_	_	_	_	_
+3	seneg	_	ADJ	_	_	_	_	_	_
+4	courtesi	_	X	_	_	_	_	_	_
+5	googl	_	X	_	_	_	_	_	_
+6	figur	_	X	_	_	_	_	_	_
+7	2	_	NUM	_	_	_	_	_	_
+8	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 106
+# text = map of the eegimaa speak area villag name ar written us their usual spell .
+1	map	_	NOUN	_	_	_	_	_	_
+2	of	_	ADP	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	eegimaa	_	X	_	_	_	_	_	_
+5	speak	_	VERB	_	_	_	_	_	_
+6	area	_	NOUN	_	_	_	_	_	_
+7	villag	_	X	_	_	_	_	_	_
+8	name	_	NOUN	_	_	_	_	_	_
+9	ar	_	X	_	_	_	_	_	_
+10	written	_	VERB	_	_	_	_	_	_
+11	us	_	PRON	_	_	_	_	_	_
+12	their	_	VERB	_	_	_	_	_	_
+13	usual	_	NOUN	_	_	_	_	_	_
+14	spell	_	VERB	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 107
+# text = the ethnologu languag code ar provid for varieti that have them .
+1	the	_	DET	_	_	_	_	_	_
+2	ethnologu	_	X	_	_	_	_	_	_
+3	languag	_	VERB	_	_	_	_	_	_
+4	code	_	NOUN	_	_	_	_	_	_
+5	ar	_	X	_	_	_	_	_	_
+6	provid	_	VERB	_	_	_	_	_	_
+7	for	_	ADP	_	_	_	_	_	_
+8	varieti	_	X	_	_	_	_	_	_
+9	that	_	DET	_	_	_	_	_	_
+10	have	_	VERB	_	_	_	_	_	_
+11	them	_	PRON	_	_	_	_	_	_
+12	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 108
+# text = languag name ar written follow the recommend for transcript of nation seneg , decre 2005 -
+1	languag	_	X	_	_	_	_	_	_
+2	name	_	NOUN	_	_	_	_	_	_
+3	ar	_	X	_	_	_	_	_	_
+4	written	_	VERB	_	_	_	_	_	_
+5	follow	_	VERB	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	recommend	_	NOUN	_	_	_	_	_	_
+8	for	_	ADP	_	_	_	_	_	_
+9	transcript	_	NOUN	_	_	_	_	_	_
+10	of	_	ADP	_	_	_	_	_	_
+11	nation	_	ADJ	_	_	_	_	_	_
+12	seneg	_	ADJ	_	_	_	_	_	_
+13	,	_	PUNCT	_	_	_	_	_	_
+14	decre	_	X	_	_	_	_	_	_
+15	2005	_	NUM	_	_	_	_	_	_
+16	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 109
+# text = 981 .
+1	981	_	NUM	_	_	_	_	_	_
+2	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 110
+# text = name of the villag mof -
+1	name	_	NOUN	_	_	_	_	_	_
+2	of	_	ADP	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	villag	_	X	_	_	_	_	_	_
+5	mof	_	X	_	_	_	_	_	_
+6	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 111
+# text = ávvi ar written us the eegimaa orthographi and follow pronunci of villag name by nativ speaker .
+1	ávvi	_	X	_	_	_	_	_	_
+2	ar	_	X	_	_	_	_	_	_
+3	written	_	VERB	_	_	_	_	_	_
+4	us	_	PRON	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	eegimaa	_	X	_	_	_	_	_	_
+7	orthographi	_	X	_	_	_	_	_	_
+8	and	_	CCONJ	_	_	_	_	_	_
+9	follow	_	X	_	_	_	_	_	_
+10	pronunci	_	X	_	_	_	_	_	_
+11	of	_	ADP	_	_	_	_	_	_
+12	villag	_	X	_	_	_	_	_	_
+13	name	_	NOUN	_	_	_	_	_	_
+14	by	_	ADP	_	_	_	_	_	_
+15	nativ	_	X	_	_	_	_	_	_
+16	speaker	_	NOUN	_	_	_	_	_	_
+17	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 112
+# text = jóola languag varieti which ar close relat to eegimaa includ kujirerai kuluunaai from the villag of brin with 76 lexic similar and gufiñamai afiniam 74 base on lewi et al .
+1	jóola	_	X	_	_	_	_	_	_
+2	languag	_	X	_	_	_	_	_	_
+3	varieti	_	X	_	_	_	_	_	_
+4	which	_	X	_	_	_	_	_	_
+5	ar	_	X	_	_	_	_	_	_
+6	close	_	VERB	_	_	_	_	_	_
+7	relat	_	X	_	_	_	_	_	_
+8	to	_	ADP	_	_	_	_	_	_
+9	eegimaa	_	X	_	_	_	_	_	_
+10	includ	_	X	_	_	_	_	_	_
+11	kujirerai	_	X	_	_	_	_	_	_
+12	kuluunaai	_	NOUN	_	_	_	_	_	_
+13	from	_	ADP	_	_	_	_	_	_
+14	the	_	DET	_	_	_	_	_	_
+15	villag	_	X	_	_	_	_	_	_
+16	of	_	ADP	_	_	_	_	_	_
+17	brin	_	X	_	_	_	_	_	_
+18	with	_	ADP	_	_	_	_	_	_
+19	76	_	NUM	_	_	_	_	_	_
+20	lexic	_	X	_	_	_	_	_	_
+21	similar	_	X	_	_	_	_	_	_
+22	and	_	CCONJ	_	_	_	_	_	_
+23	gufiñamai	_	NOUN	_	_	_	_	_	_
+24	afiniam	_	X	_	_	_	_	_	_
+25	74	_	NUM	_	_	_	_	_	_
+26	base	_	VERB	_	_	_	_	_	_
+27	on	_	ADP	_	_	_	_	_	_
+28	lewi	_	X	_	_	_	_	_	_
+29	et	_	VERB	_	_	_	_	_	_
+30	al	_	X	_	_	_	_	_	_
+31	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 113
+# text = , 2014 ed .
+1	,	_	PUNCT	_	_	_	_	_	_
+2	2014	_	NUM	_	_	_	_	_	_
+3	ed	_	X	_	_	_	_	_	_
+4	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 114
+# text = .
+1	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 115
+# text = gútaamai from the villag of butam , gulapaorai djilapaor and gusiilai iso 639 -
+1	gútaamai	_	NOUN	_	_	_	_	_	_
+2	from	_	ADP	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	villag	_	X	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	butam	_	X	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	gulapaorai	_	NOUN	_	_	_	_	_	_
+9	djilapaor	_	X	_	_	_	_	_	_
+10	and	_	CCONJ	_	_	_	_	_	_
+11	gusiilai	_	X	_	_	_	_	_	_
+12	iso	_	X	_	_	_	_	_	_
+13	639	_	NUM	_	_	_	_	_	_
+14	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 116
+# text = 3 :
+1	3	_	NUM	_	_	_	_	_	_
+2	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 117
+# text = bsl from the villag of thionk essil ar also other languag relat to eegimaa .
+1	bsl	_	NOUN	_	_	_	_	_	_
+2	from	_	ADP	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	villag	_	X	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	thionk	_	X	_	_	_	_	_	_
+7	essil	_	X	_	_	_	_	_	_
+8	ar	_	X	_	_	_	_	_	_
+9	also	_	CCONJ	_	_	_	_	_	_
+10	other	_	NOUN	_	_	_	_	_	_
+11	languag	_	X	_	_	_	_	_	_
+12	relat	_	X	_	_	_	_	_	_
+13	to	_	ADP	_	_	_	_	_	_
+14	eegimaa	_	X	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 118
+# text = they ar locat north of the casam river in jóola búluf area .
+1	they	_	PRON	_	_	_	_	_	_
+2	ar	_	VERB	_	_	_	_	_	_
+3	locat	_	X	_	_	_	_	_	_
+4	north	_	NOUN	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	casam	_	X	_	_	_	_	_	_
+8	river	_	NOUN	_	_	_	_	_	_
+9	in	_	ADP	_	_	_	_	_	_
+10	jóola	_	X	_	_	_	_	_	_
+11	búluf	_	X	_	_	_	_	_	_
+12	area	_	NOUN	_	_	_	_	_	_
+13	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 119
+# text = there ar also small migrant eegimaa commun in villag like djifanghor east of ziguinchor and bourofay south , where they cohabit with speaker baïnounk languag .
+1	there	_	ADV	_	_	_	_	_	_
+2	ar	_	X	_	_	_	_	_	_
+3	also	_	CCONJ	_	_	_	_	_	_
+4	small	_	ADJ	_	_	_	_	_	_
+5	migrant	_	NOUN	_	_	_	_	_	_
+6	eegimaa	_	X	_	_	_	_	_	_
+7	commun	_	X	_	_	_	_	_	_
+8	in	_	ADP	_	_	_	_	_	_
+9	villag	_	X	_	_	_	_	_	_
+10	like	_	VERB	_	_	_	_	_	_
+11	djifanghor	_	X	_	_	_	_	_	_
+12	east	_	NOUN	_	_	_	_	_	_
+13	of	_	ADP	_	_	_	_	_	_
+14	ziguinchor	_	X	_	_	_	_	_	_
+15	and	_	CCONJ	_	_	_	_	_	_
+16	bourofay	_	X	_	_	_	_	_	_
+17	south	_	NOUN	_	_	_	_	_	_
+18	,	_	PUNCT	_	_	_	_	_	_
+19	where	_	X	_	_	_	_	_	_
+20	they	_	PRON	_	_	_	_	_	_
+21	cohabit	_	VERB	_	_	_	_	_	_
+22	with	_	ADP	_	_	_	_	_	_
+23	speaker	_	NOUN	_	_	_	_	_	_
+24	baïnounk	_	X	_	_	_	_	_	_
+25	languag	_	X	_	_	_	_	_	_
+26	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 120
+# text = nowadai most eegimaa speaker from mof -
+1	nowadai	_	X	_	_	_	_	_	_
+2	most	_	NOUN	_	_	_	_	_	_
+3	eegimaa	_	X	_	_	_	_	_	_
+4	speaker	_	NOUN	_	_	_	_	_	_
+5	from	_	ADP	_	_	_	_	_	_
+6	mof	_	X	_	_	_	_	_	_
+7	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 121
+# text = ávvi live outsid their homeland , gener in urban area like ziguinchor and dakar .
+1	ávvi	_	X	_	_	_	_	_	_
+2	live	_	VERB	_	_	_	_	_	_
+3	outsid	_	X	_	_	_	_	_	_
+4	their	_	X	_	_	_	_	_	_
+5	homeland	_	NOUN	_	_	_	_	_	_
+6	,	_	PUNCT	_	_	_	_	_	_
+7	gener	_	ADJ	_	_	_	_	_	_
+8	in	_	ADP	_	_	_	_	_	_
+9	urban	_	X	_	_	_	_	_	_
+10	area	_	NOUN	_	_	_	_	_	_
+11	like	_	VERB	_	_	_	_	_	_
+12	ziguinchor	_	X	_	_	_	_	_	_
+13	and	_	CCONJ	_	_	_	_	_	_
+14	dakar	_	X	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 122
+# text = speaker of eegimaa us the term gújjolaai mean jóola to refer their languag when they speak each other , but distinguish varieti from that peopl .
+1	speaker	_	NOUN	_	_	_	_	_	_
+2	of	_	ADP	_	_	_	_	_	_
+3	eegimaa	_	PUNCT	_	_	_	_	_	_
+4	us	_	PRON	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	term	_	NOUN	_	_	_	_	_	_
+7	gújjolaai	_	X	_	_	_	_	_	_
+8	mean	_	VERB	_	_	_	_	_	_
+9	jóola	_	X	_	_	_	_	_	_
+10	to	_	ADP	_	_	_	_	_	_
+11	refer	_	VERB	_	_	_	_	_	_
+12	their	_	X	_	_	_	_	_	_
+13	languag	_	X	_	_	_	_	_	_
+14	when	_	X	_	_	_	_	_	_
+15	they	_	PRON	_	_	_	_	_	_
+16	speak	_	VERB	_	_	_	_	_	_
+17	each	_	X	_	_	_	_	_	_
+18	other	_	NOUN	_	_	_	_	_	_
+19	,	_	PUNCT	_	_	_	_	_	_
+20	but	_	CCONJ	_	_	_	_	_	_
+21	distinguish	_	X	_	_	_	_	_	_
+22	varieti	_	NOUN	_	_	_	_	_	_
+23	from	_	ADP	_	_	_	_	_	_
+24	that	_	DET	_	_	_	_	_	_
+25	peopl	_	X	_	_	_	_	_	_
+26	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 123
+# text = eegimaa is an endang languag whose transmiss to new gener ha been declin significantli in the last decad .
+1	eegimaa	_	X	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	an	_	DET	_	_	_	_	_	_
+4	endang	_	X	_	_	_	_	_	_
+5	languag	_	X	_	_	_	_	_	_
+6	whose	_	X	_	_	_	_	_	_
+7	transmiss	_	X	_	_	_	_	_	_
+8	to	_	ADP	_	_	_	_	_	_
+9	new	_	ADJ	_	_	_	_	_	_
+10	gener	_	X	_	_	_	_	_	_
+11	ha	_	VERB	_	_	_	_	_	_
+12	been	_	VERB	_	_	_	_	_	_
+13	declin	_	VERB	_	_	_	_	_	_
+14	significantli	_	NOUN	_	_	_	_	_	_
+15	in	_	ADP	_	_	_	_	_	_
+16	the	_	DET	_	_	_	_	_	_
+17	last	_	NOUN	_	_	_	_	_	_
+18	decad	_	X	_	_	_	_	_	_
+19	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 124
+# text = it is import to understand the contact situat of eegimaa , becaus some ritual name analys in this paper come from other languag or neighbour commun .
+1	it	_	PRON	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	import	_	ADJ	_	_	_	_	_	_
+4	to	_	ADP	_	_	_	_	_	_
+5	understand	_	VERB	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	contact	_	NOUN	_	_	_	_	_	_
+8	situat	_	X	_	_	_	_	_	_
+9	of	_	ADP	_	_	_	_	_	_
+10	eegimaa	_	X	_	_	_	_	_	_
+11	,	_	PUNCT	_	_	_	_	_	_
+12	becaus	_	X	_	_	_	_	_	_
+13	some	_	NOUN	_	_	_	_	_	_
+14	ritual	_	NOUN	_	_	_	_	_	_
+15	name	_	NOUN	_	_	_	_	_	_
+16	analys	_	NOUN	_	_	_	_	_	_
+17	in	_	ADP	_	_	_	_	_	_
+18	this	_	DET	_	_	_	_	_	_
+19	paper	_	NOUN	_	_	_	_	_	_
+20	come	_	VERB	_	_	_	_	_	_
+21	from	_	ADP	_	_	_	_	_	_
+22	other	_	NOUN	_	_	_	_	_	_
+23	languag	_	X	_	_	_	_	_	_
+24	or	_	CCONJ	_	_	_	_	_	_
+25	neighbour	_	VERB	_	_	_	_	_	_
+26	commun	_	X	_	_	_	_	_	_
+27	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 125
+# text = these name ar given either in eegimaa or a differ languag .
+1	these	_	DET	_	_	_	_	_	_
+2	name	_	NOUN	_	_	_	_	_	_
+3	ar	_	X	_	_	_	_	_	_
+4	given	_	VERB	_	_	_	_	_	_
+5	either	_	X	_	_	_	_	_	_
+6	in	_	ADP	_	_	_	_	_	_
+7	eegimaa	_	X	_	_	_	_	_	_
+8	or	_	CCONJ	_	_	_	_	_	_
+9	a	_	DET	_	_	_	_	_	_
+10	differ	_	X	_	_	_	_	_	_
+11	languag	_	X	_	_	_	_	_	_
+12	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 126
+# text = antonín dvořák leopold d ə ˈvɔːrʒɑːk , -
+1	antonín	_	X	_	_	_	_	_	_
+2	dvořák	_	X	_	_	_	_	_	_
+3	leopold	_	X	_	_	_	_	_	_
+4	d	_	VERB	_	_	_	_	_	_
+5	ə	_	X	_	_	_	_	_	_
+6	ˈvɔːrʒɑːk	_	X	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 127
+# text = ʒæk d ə -
+1	ʒæk	_	X	_	_	_	_	_	_
+2	d	_	VERB	_	_	_	_	_	_
+3	ə	_	X	_	_	_	_	_	_
+4	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 128
+# text = vor -
+1	vor	_	X	_	_	_	_	_	_
+2	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 129
+# text = zha h k ;
+1	zha	_	X	_	_	_	_	_	_
+2	h	_	VERB	_	_	_	_	_	_
+3	k	_	VERB	_	_	_	_	_	_
+4	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 130
+# text = czech :
+1	czech	_	X	_	_	_	_	_	_
+2	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 131
+# text = ˈantoɲiːn ˈlɛopolt ˈdvor aːk ;
+1	ˈantoɲiːn	_	X	_	_	_	_	_	_
+2	ˈlɛopolt	_	X	_	_	_	_	_	_
+3	ˈdvor	_	X	_	_	_	_	_	_
+4	aːk	_	X	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 132
+# text = 8 septemb 1841 1 may 1904 wa a czech compos .
+1	8	_	NUM	_	_	_	_	_	_
+2	septemb	_	X	_	_	_	_	_	_
+3	1841	_	NUM	_	_	_	_	_	_
+4	1	_	NUM	_	_	_	_	_	_
+5	may	_	X	_	_	_	_	_	_
+6	1904	_	NUM	_	_	_	_	_	_
+7	wa	_	X	_	_	_	_	_	_
+8	a	_	DET	_	_	_	_	_	_
+9	czech	_	X	_	_	_	_	_	_
+10	compos	_	X	_	_	_	_	_	_
+11	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 133
+# text = after bedřich smetana , he wa the next czech romant -
+1	after	_	X	_	_	_	_	_	_
+2	bedřich	_	X	_	_	_	_	_	_
+3	smetana	_	X	_	_	_	_	_	_
+4	,	_	PUNCT	_	_	_	_	_	_
+5	he	_	PRON	_	_	_	_	_	_
+6	wa	_	VERB	_	_	_	_	_	_
+7	the	_	DET	_	_	_	_	_	_
+8	next	_	ADJ	_	_	_	_	_	_
+9	czech	_	X	_	_	_	_	_	_
+10	romant	_	ADJ	_	_	_	_	_	_
+11	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 134
+# text = era compos to achiev worldwid recognit .
+1	era	_	NOUN	_	_	_	_	_	_
+2	compos	_	X	_	_	_	_	_	_
+3	to	_	ADP	_	_	_	_	_	_
+4	achiev	_	X	_	_	_	_	_	_
+5	worldwid	_	X	_	_	_	_	_	_
+6	recognit	_	X	_	_	_	_	_	_
+7	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 135
+# text = follow smetana is nationalist exampl , dvořák frequent emploi aspect specif rhythm of the folk music moravia and his nativ bohemia .
+1	follow	_	X	_	_	_	_	_	_
+2	smetana	_	X	_	_	_	_	_	_
+3	is	_	VERB	_	_	_	_	_	_
+4	nationalist	_	ADJ	_	_	_	_	_	_
+5	exampl	_	X	_	_	_	_	_	_
+6	,	_	PUNCT	_	_	_	_	_	_
+7	dvořák	_	X	_	_	_	_	_	_
+8	frequent	_	X	_	_	_	_	_	_
+9	emploi	_	X	_	_	_	_	_	_
+10	aspect	_	NOUN	_	_	_	_	_	_
+11	specif	_	ADJ	_	_	_	_	_	_
+12	rhythm	_	NOUN	_	_	_	_	_	_
+13	of	_	ADP	_	_	_	_	_	_
+14	the	_	DET	_	_	_	_	_	_
+15	folk	_	NOUN	_	_	_	_	_	_
+16	music	_	NOUN	_	_	_	_	_	_
+17	moravia	_	X	_	_	_	_	_	_
+18	and	_	CCONJ	_	_	_	_	_	_
+19	his	_	DET	_	_	_	_	_	_
+20	nativ	_	X	_	_	_	_	_	_
+21	bohemia	_	X	_	_	_	_	_	_
+22	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 136
+# text = dvořák is own style ha been describ as the fullest recreat of a nation idiom with that symphon tradit , absorb folk influenc and find effect wai us them .
+1	dvořák	_	X	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	own	_	ADJ	_	_	_	_	_	_
+4	style	_	NOUN	_	_	_	_	_	_
+5	ha	_	VERB	_	_	_	_	_	_
+6	been	_	VERB	_	_	_	_	_	_
+7	describ	_	VERB	_	_	_	_	_	_
+8	as	_	X	_	_	_	_	_	_
+9	the	_	DET	_	_	_	_	_	_
+10	fullest	_	X	_	_	_	_	_	_
+11	recreat	_	NOUN	_	_	_	_	_	_
+12	of	_	ADP	_	_	_	_	_	_
+13	a	_	DET	_	_	_	_	_	_
+14	nation	_	ADJ	_	_	_	_	_	_
+15	idiom	_	NOUN	_	_	_	_	_	_
+16	with	_	ADP	_	_	_	_	_	_
+17	that	_	DET	_	_	_	_	_	_
+18	symphon	_	ADJ	_	_	_	_	_	_
+19	tradit	_	X	_	_	_	_	_	_
+20	,	_	PUNCT	_	_	_	_	_	_
+21	absorb	_	VERB	_	_	_	_	_	_
+22	folk	_	NOUN	_	_	_	_	_	_
+23	influenc	_	X	_	_	_	_	_	_
+24	and	_	CCONJ	_	_	_	_	_	_
+25	find	_	X	_	_	_	_	_	_
+26	effect	_	NOUN	_	_	_	_	_	_
+27	wai	_	X	_	_	_	_	_	_
+28	us	_	PRON	_	_	_	_	_	_
+29	them	_	PRON	_	_	_	_	_	_
+30	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 137
+# text = 1 antonín dvořák displai his music gift at an earli ag , be apt violin student from six .
+1	1	_	NUM	_	_	_	_	_	_
+2	antonín	_	X	_	_	_	_	_	_
+3	dvořák	_	X	_	_	_	_	_	_
+4	displai	_	X	_	_	_	_	_	_
+5	his	_	DET	_	_	_	_	_	_
+6	music	_	NOUN	_	_	_	_	_	_
+7	gift	_	NOUN	_	_	_	_	_	_
+8	at	_	ADP	_	_	_	_	_	_
+9	an	_	DET	_	_	_	_	_	_
+10	earli	_	X	_	_	_	_	_	_
+11	ag	_	X	_	_	_	_	_	_
+12	,	_	PUNCT	_	_	_	_	_	_
+13	be	_	VERB	_	_	_	_	_	_
+14	apt	_	X	_	_	_	_	_	_
+15	violin	_	NOUN	_	_	_	_	_	_
+16	student	_	NOUN	_	_	_	_	_	_
+17	from	_	ADP	_	_	_	_	_	_
+18	six	_	X	_	_	_	_	_	_
+19	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 138
+# text = the first public perform of his work were in pragu 1872 and , with special success 1873 when he wa ag 31 .
+1	the	_	DET	_	_	_	_	_	_
+2	first	_	NOUN	_	_	_	_	_	_
+3	public	_	NOUN	_	_	_	_	_	_
+4	perform	_	NOUN	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	his	_	DET	_	_	_	_	_	_
+7	work	_	VERB	_	_	_	_	_	_
+8	were	_	VERB	_	_	_	_	_	_
+9	in	_	ADP	_	_	_	_	_	_
+10	pragu	_	X	_	_	_	_	_	_
+11	1872	_	NUM	_	_	_	_	_	_
+12	and	_	CCONJ	_	_	_	_	_	_
+13	,	_	PUNCT	_	_	_	_	_	_
+14	with	_	ADP	_	_	_	_	_	_
+15	special	_	NOUN	_	_	_	_	_	_
+16	success	_	NOUN	_	_	_	_	_	_
+17	1873	_	NUM	_	_	_	_	_	_
+18	when	_	X	_	_	_	_	_	_
+19	he	_	PRON	_	_	_	_	_	_
+20	wa	_	VERB	_	_	_	_	_	_
+21	ag	_	VERB	_	_	_	_	_	_
+22	31	_	NUM	_	_	_	_	_	_
+23	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 139
+# text = seek recognit beyond the pragu area , he submit a score of his first symphoni to prize competit in germani but did not win and unreturn manuscript wa lost until rediscov mani decad later .
+1	seek	_	X	_	_	_	_	_	_
+2	recognit	_	X	_	_	_	_	_	_
+3	beyond	_	NOUN	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	pragu	_	X	_	_	_	_	_	_
+6	area	_	NOUN	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	he	_	PRON	_	_	_	_	_	_
+9	submit	_	VERB	_	_	_	_	_	_
+10	a	_	DET	_	_	_	_	_	_
+11	score	_	NOUN	_	_	_	_	_	_
+12	of	_	ADP	_	_	_	_	_	_
+13	his	_	DET	_	_	_	_	_	_
+14	first	_	NOUN	_	_	_	_	_	_
+15	symphoni	_	NOUN	_	_	_	_	_	_
+16	to	_	ADP	_	_	_	_	_	_
+17	prize	_	NOUN	_	_	_	_	_	_
+18	competit	_	X	_	_	_	_	_	_
+19	in	_	ADP	_	_	_	_	_	_
+20	germani	_	X	_	_	_	_	_	_
+21	but	_	CCONJ	_	_	_	_	_	_
+22	did	_	PUNCT	_	_	_	_	_	_
+23	not	_	X	_	_	_	_	_	_
+24	win	_	VERB	_	_	_	_	_	_
+25	and	_	CCONJ	_	_	_	_	_	_
+26	unreturn	_	ADJ	_	_	_	_	_	_
+27	manuscript	_	X	_	_	_	_	_	_
+28	wa	_	X	_	_	_	_	_	_
+29	lost	_	X	_	_	_	_	_	_
+30	until	_	X	_	_	_	_	_	_
+31	rediscov	_	X	_	_	_	_	_	_
+32	mani	_	X	_	_	_	_	_	_
+33	decad	_	X	_	_	_	_	_	_
+34	later	_	X	_	_	_	_	_	_
+35	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 140
+# text = in 1874 he made a submiss to the austrian state prize for composit , includ score of two further symphoni and other work .
+1	in	_	ADP	_	_	_	_	_	_
+2	1874	_	NUM	_	_	_	_	_	_
+3	he	_	PRON	_	_	_	_	_	_
+4	made	_	VERB	_	_	_	_	_	_
+5	a	_	DET	_	_	_	_	_	_
+6	submiss	_	NOUN	_	_	_	_	_	_
+7	to	_	ADP	_	_	_	_	_	_
+8	the	_	DET	_	_	_	_	_	_
+9	austrian	_	X	_	_	_	_	_	_
+10	state	_	NOUN	_	_	_	_	_	_
+11	prize	_	NOUN	_	_	_	_	_	_
+12	for	_	ADP	_	_	_	_	_	_
+13	composit	_	NOUN	_	_	_	_	_	_
+14	,	_	PUNCT	_	_	_	_	_	_
+15	includ	_	VERB	_	_	_	_	_	_
+16	score	_	NOUN	_	_	_	_	_	_
+17	of	_	ADP	_	_	_	_	_	_
+18	two	_	X	_	_	_	_	_	_
+19	further	_	X	_	_	_	_	_	_
+20	symphoni	_	X	_	_	_	_	_	_
+21	and	_	CCONJ	_	_	_	_	_	_
+22	other	_	X	_	_	_	_	_	_
+23	work	_	VERB	_	_	_	_	_	_
+24	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 141
+# text = although dvořák wa not awar of it , johann brahm the lead member juri and highli impress .
+1	although	_	X	_	_	_	_	_	_
+2	dvořák	_	X	_	_	_	_	_	_
+3	wa	_	X	_	_	_	_	_	_
+4	not	_	X	_	_	_	_	_	_
+5	awar	_	X	_	_	_	_	_	_
+6	of	_	ADP	_	_	_	_	_	_
+7	it	_	PRON	_	_	_	_	_	_
+8	,	_	PUNCT	_	_	_	_	_	_
+9	johann	_	X	_	_	_	_	_	_
+10	brahm	_	X	_	_	_	_	_	_
+11	the	_	DET	_	_	_	_	_	_
+12	lead	_	ADJ	_	_	_	_	_	_
+13	member	_	NOUN	_	_	_	_	_	_
+14	juri	_	X	_	_	_	_	_	_
+15	and	_	CCONJ	_	_	_	_	_	_
+16	highli	_	X	_	_	_	_	_	_
+17	impress	_	VERB	_	_	_	_	_	_
+18	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 142
+# text = the prize wa award to dvořák in 1874 a and again 1876 1877 , when brahm promin critic eduard hanslick also member of juri made themselv known him .
+1	the	_	DET	_	_	_	_	_	_
+2	prize	_	NOUN	_	_	_	_	_	_
+3	wa	_	X	_	_	_	_	_	_
+4	award	_	VERB	_	_	_	_	_	_
+5	to	_	ADP	_	_	_	_	_	_
+6	dvořák	_	X	_	_	_	_	_	_
+7	in	_	ADP	_	_	_	_	_	_
+8	1874	_	NUM	_	_	_	_	_	_
+9	a	_	DET	_	_	_	_	_	_
+10	and	_	CCONJ	_	_	_	_	_	_
+11	again	_	DET	_	_	_	_	_	_
+12	1876	_	NUM	_	_	_	_	_	_
+13	1877	_	NUM	_	_	_	_	_	_
+14	,	_	PUNCT	_	_	_	_	_	_
+15	when	_	X	_	_	_	_	_	_
+16	brahm	_	X	_	_	_	_	_	_
+17	promin	_	X	_	_	_	_	_	_
+18	critic	_	NOUN	_	_	_	_	_	_
+19	eduard	_	X	_	_	_	_	_	_
+20	hanslick	_	X	_	_	_	_	_	_
+21	also	_	CCONJ	_	_	_	_	_	_
+22	member	_	NOUN	_	_	_	_	_	_
+23	of	_	ADP	_	_	_	_	_	_
+24	juri	_	X	_	_	_	_	_	_
+25	made	_	VERB	_	_	_	_	_	_
+26	themselv	_	X	_	_	_	_	_	_
+27	known	_	VERB	_	_	_	_	_	_
+28	him	_	PRON	_	_	_	_	_	_
+29	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 143
+# text = brahm recommend dvořák to his publish , simrock who soon afterward commiss what becam the slavon danc op .
+1	brahm	_	X	_	_	_	_	_	_
+2	recommend	_	VERB	_	_	_	_	_	_
+3	dvořák	_	NOUN	_	_	_	_	_	_
+4	to	_	ADP	_	_	_	_	_	_
+5	his	_	DET	_	_	_	_	_	_
+6	publish	_	X	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	simrock	_	X	_	_	_	_	_	_
+9	who	_	X	_	_	_	_	_	_
+10	soon	_	ADV	_	_	_	_	_	_
+11	afterward	_	X	_	_	_	_	_	_
+12	commiss	_	X	_	_	_	_	_	_
+13	what	_	X	_	_	_	_	_	_
+14	becam	_	X	_	_	_	_	_	_
+15	the	_	DET	_	_	_	_	_	_
+16	slavon	_	ADJ	_	_	_	_	_	_
+17	danc	_	X	_	_	_	_	_	_
+18	op	_	X	_	_	_	_	_	_
+19	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 144
+# text = 46 .
+1	46	_	NUM	_	_	_	_	_	_
+2	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 145
+# text = these were highli prais by the berlin music critic loui ehlert in 1878 , sheet of origin piano 4 -
+1	these	_	DET	_	_	_	_	_	_
+2	were	_	VERB	_	_	_	_	_	_
+3	highli	_	X	_	_	_	_	_	_
+4	prais	_	NOUN	_	_	_	_	_	_
+5	by	_	ADP	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	berlin	_	X	_	_	_	_	_	_
+8	music	_	NOUN	_	_	_	_	_	_
+9	critic	_	NOUN	_	_	_	_	_	_
+10	loui	_	X	_	_	_	_	_	_
+11	ehlert	_	X	_	_	_	_	_	_
+12	in	_	ADP	_	_	_	_	_	_
+13	1878	_	NUM	_	_	_	_	_	_
+14	,	_	PUNCT	_	_	_	_	_	_
+15	sheet	_	NOUN	_	_	_	_	_	_
+16	of	_	ADP	_	_	_	_	_	_
+17	origin	_	ADJ	_	_	_	_	_	_
+18	piano	_	NOUN	_	_	_	_	_	_
+19	4	_	NUM	_	_	_	_	_	_
+20	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 146
+# text = hand version had excel sale , and dvořák is intern reput wa launch at last .
+1	hand	_	NOUN	_	_	_	_	_	_
+2	version	_	NOUN	_	_	_	_	_	_
+3	had	_	VERB	_	_	_	_	_	_
+4	excel	_	X	_	_	_	_	_	_
+5	sale	_	NOUN	_	_	_	_	_	_
+6	,	_	PUNCT	_	_	_	_	_	_
+7	and	_	CCONJ	_	_	_	_	_	_
+8	dvořák	_	PUNCT	_	_	_	_	_	_
+9	is	_	VERB	_	_	_	_	_	_
+10	intern	_	ADJ	_	_	_	_	_	_
+11	reput	_	X	_	_	_	_	_	_
+12	wa	_	X	_	_	_	_	_	_
+13	launch	_	VERB	_	_	_	_	_	_
+14	at	_	ADP	_	_	_	_	_	_
+15	last	_	NOUN	_	_	_	_	_	_
+16	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 147
+# text = dvořák is first piec of a religi natur , his set stabat mater wa premier in pragu 1880 .
+1	dvořák	_	X	_	_	_	_	_	_
+2	is	_	VERB	_	_	_	_	_	_
+3	first	_	ADJ	_	_	_	_	_	_
+4	piec	_	NOUN	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	a	_	DET	_	_	_	_	_	_
+7	religi	_	X	_	_	_	_	_	_
+8	natur	_	X	_	_	_	_	_	_
+9	,	_	PUNCT	_	_	_	_	_	_
+10	his	_	DET	_	_	_	_	_	_
+11	set	_	ADJ	_	_	_	_	_	_
+12	stabat	_	X	_	_	_	_	_	_
+13	mater	_	X	_	_	_	_	_	_
+14	wa	_	X	_	_	_	_	_	_
+15	premier	_	VERB	_	_	_	_	_	_
+16	in	_	ADP	_	_	_	_	_	_
+17	pragu	_	X	_	_	_	_	_	_
+18	1880	_	NUM	_	_	_	_	_	_
+19	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 148
+# text = it wa veri successfulli perform in london 1883 , lead to mani other the unit kingdom and state .
+1	it	_	PRON	_	_	_	_	_	_
+2	wa	_	VERB	_	_	_	_	_	_
+3	veri	_	X	_	_	_	_	_	_
+4	successfulli	_	ADJ	_	_	_	_	_	_
+5	perform	_	NOUN	_	_	_	_	_	_
+6	in	_	ADP	_	_	_	_	_	_
+7	london	_	X	_	_	_	_	_	_
+8	1883	_	NUM	_	_	_	_	_	_
+9	,	_	PUNCT	_	_	_	_	_	_
+10	lead	_	VERB	_	_	_	_	_	_
+11	to	_	ADP	_	_	_	_	_	_
+12	mani	_	X	_	_	_	_	_	_
+13	other	_	NOUN	_	_	_	_	_	_
+14	the	_	DET	_	_	_	_	_	_
+15	unit	_	NOUN	_	_	_	_	_	_
+16	kingdom	_	NOUN	_	_	_	_	_	_
+17	and	_	CCONJ	_	_	_	_	_	_
+18	state	_	NOUN	_	_	_	_	_	_
+19	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 149
+# text = 2 in his career , dvořák made nine invit visit to england often conduct perform of own work .
+1	2	_	NUM	_	_	_	_	_	_
+2	in	_	ADP	_	_	_	_	_	_
+3	his	_	DET	_	_	_	_	_	_
+4	career	_	NOUN	_	_	_	_	_	_
+5	,	_	PUNCT	_	_	_	_	_	_
+6	dvořák	_	X	_	_	_	_	_	_
+7	made	_	VERB	_	_	_	_	_	_
+8	nine	_	X	_	_	_	_	_	_
+9	invit	_	VERB	_	_	_	_	_	_
+10	visit	_	VERB	_	_	_	_	_	_
+11	to	_	ADP	_	_	_	_	_	_
+12	england	_	X	_	_	_	_	_	_
+13	often	_	ADV	_	_	_	_	_	_
+14	conduct	_	VERB	_	_	_	_	_	_
+15	perform	_	NOUN	_	_	_	_	_	_
+16	of	_	ADP	_	_	_	_	_	_
+17	own	_	VERB	_	_	_	_	_	_
+18	work	_	VERB	_	_	_	_	_	_
+19	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 150
+# text = his seventh symphoni wa written for london .
+1	his	_	DET	_	_	_	_	_	_
+2	seventh	_	X	_	_	_	_	_	_
+3	symphoni	_	X	_	_	_	_	_	_
+4	wa	_	X	_	_	_	_	_	_
+5	written	_	VERB	_	_	_	_	_	_
+6	for	_	ADP	_	_	_	_	_	_
+7	london	_	VERB	_	_	_	_	_	_
+8	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 151
+# text = visit russia in march 1890 , he conduct concert of his own music moscow and saint petersburg .
+1	visit	_	X	_	_	_	_	_	_
+2	russia	_	X	_	_	_	_	_	_
+3	in	_	ADP	_	_	_	_	_	_
+4	march	_	NOUN	_	_	_	_	_	_
+5	1890	_	NUM	_	_	_	_	_	_
+6	,	_	PUNCT	_	_	_	_	_	_
+7	he	_	PRON	_	_	_	_	_	_
+8	conduct	_	VERB	_	_	_	_	_	_
+9	concert	_	NOUN	_	_	_	_	_	_
+10	of	_	ADP	_	_	_	_	_	_
+11	his	_	DET	_	_	_	_	_	_
+12	own	_	VERB	_	_	_	_	_	_
+13	music	_	NOUN	_	_	_	_	_	_
+14	moscow	_	X	_	_	_	_	_	_
+15	and	_	CCONJ	_	_	_	_	_	_
+16	saint	_	X	_	_	_	_	_	_
+17	petersburg	_	X	_	_	_	_	_	_
+18	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 152
+# text = 3 in 1891 dvořák wa appoint as a professor at the pragu conservatori .
+1	3	_	NUM	_	_	_	_	_	_
+2	in	_	ADP	_	_	_	_	_	_
+3	1891	_	NUM	_	_	_	_	_	_
+4	dvořák	_	X	_	_	_	_	_	_
+5	wa	_	X	_	_	_	_	_	_
+6	appoint	_	VERB	_	_	_	_	_	_
+7	as	_	X	_	_	_	_	_	_
+8	a	_	DET	_	_	_	_	_	_
+9	professor	_	NOUN	_	_	_	_	_	_
+10	at	_	ADP	_	_	_	_	_	_
+11	the	_	DET	_	_	_	_	_	_
+12	pragu	_	X	_	_	_	_	_	_
+13	conservatori	_	X	_	_	_	_	_	_
+14	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 153
+# text = in 1890 91 , he wrote his dumki trio on of most success chamber music piec .
+1	in	_	ADP	_	_	_	_	_	_
+2	1890	_	NUM	_	_	_	_	_	_
+3	91	_	NUM	_	_	_	_	_	_
+4	,	_	PUNCT	_	_	_	_	_	_
+5	he	_	PRON	_	_	_	_	_	_
+6	wrote	_	VERB	_	_	_	_	_	_
+7	his	_	DET	_	_	_	_	_	_
+8	dumki	_	X	_	_	_	_	_	_
+9	trio	_	X	_	_	_	_	_	_
+10	on	_	ADP	_	_	_	_	_	_
+11	of	_	ADP	_	_	_	_	_	_
+12	most	_	NOUN	_	_	_	_	_	_
+13	success	_	NOUN	_	_	_	_	_	_
+14	chamber	_	NOUN	_	_	_	_	_	_
+15	music	_	NOUN	_	_	_	_	_	_
+16	piec	_	X	_	_	_	_	_	_
+17	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 154
+# text = in 1892 , dvořák move to the unit state and becam director of nation conservatori music america new york citi .
+1	in	_	ADP	_	_	_	_	_	_
+2	1892	_	NUM	_	_	_	_	_	_
+3	,	_	PUNCT	_	_	_	_	_	_
+4	dvořák	_	X	_	_	_	_	_	_
+5	move	_	NOUN	_	_	_	_	_	_
+6	to	_	ADP	_	_	_	_	_	_
+7	the	_	DET	_	_	_	_	_	_
+8	unit	_	ADJ	_	_	_	_	_	_
+9	state	_	NOUN	_	_	_	_	_	_
+10	and	_	CCONJ	_	_	_	_	_	_
+11	becam	_	NOUN	_	_	_	_	_	_
+12	director	_	NOUN	_	_	_	_	_	_
+13	of	_	ADP	_	_	_	_	_	_
+14	nation	_	ADJ	_	_	_	_	_	_
+15	conservatori	_	X	_	_	_	_	_	_
+16	music	_	NOUN	_	_	_	_	_	_
+17	america	_	X	_	_	_	_	_	_
+18	new	_	ADJ	_	_	_	_	_	_
+19	york	_	X	_	_	_	_	_	_
+20	citi	_	X	_	_	_	_	_	_
+21	.	_	PUNCT	_	_	_	_	_	_

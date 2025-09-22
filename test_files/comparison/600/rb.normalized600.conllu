@@ -1,0 +1,756 @@
+# newdoc id = converted_rule_based
+# newpar
+# sent_id = 1
+# text = the preval of discrimin across racial group in contemporari america :
+1	the	_	DET	_	_	_	_	_	_
+2	preval	_	X	_	_	_	_	_	_
+3	of	_	ADP	_	_	_	_	_	_
+4	discrimin	_	X	_	_	_	_	_	_
+5	across	_	X	_	_	_	_	_	_
+6	racial	_	X	_	_	_	_	_	_
+7	group	_	NOUN	_	_	_	_	_	_
+8	in	_	ADP	_	_	_	_	_	_
+9	contemporari	_	X	_	_	_	_	_	_
+10	america	_	X	_	_	_	_	_	_
+11	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 2
+# text = result from a nation repres sampl of adult introduct .
+1	result	_	NOUN	_	_	_	_	_	_
+2	from	_	ADP	_	_	_	_	_	_
+3	a	_	DET	_	_	_	_	_	_
+4	nation	_	ADJ	_	_	_	_	_	_
+5	repres	_	X	_	_	_	_	_	_
+6	sampl	_	X	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	adult	_	NOUN	_	_	_	_	_	_
+9	introduct	_	X	_	_	_	_	_	_
+10	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 3
+# text = person experi of discrimin and bia have been the focu much social scienc research .
+1	person	_	ADJ	_	_	_	_	_	_
+2	experi	_	X	_	_	_	_	_	_
+3	of	_	ADP	_	_	_	_	_	_
+4	discrimin	_	X	_	_	_	_	_	_
+5	and	_	CCONJ	_	_	_	_	_	_
+6	bia	_	X	_	_	_	_	_	_
+7	have	_	VERB	_	_	_	_	_	_
+8	been	_	VERB	_	_	_	_	_	_
+9	the	_	DET	_	_	_	_	_	_
+10	focu	_	X	_	_	_	_	_	_
+11	much	_	ADV	_	_	_	_	_	_
+12	social	_	ADJ	_	_	_	_	_	_
+13	scienc	_	X	_	_	_	_	_	_
+14	research	_	NOUN	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 4
+# text = 1 -
+1	1	_	NUM	_	_	_	_	_	_
+2	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 5
+# text = 3 sociologist have explor the advers consequ of discrimin 5 ;
+1	3	_	NUM	_	_	_	_	_	_
+2	sociologist	_	X	_	_	_	_	_	_
+3	have	_	VERB	_	_	_	_	_	_
+4	explor	_	VERB	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	advers	_	X	_	_	_	_	_	_
+7	consequ	_	X	_	_	_	_	_	_
+8	of	_	ADP	_	_	_	_	_	_
+9	discrimin	_	X	_	_	_	_	_	_
+10	5	_	NUM	_	_	_	_	_	_
+11	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 6
+# text = psychologist have examin the mental process that underpin consciou and unconsci bias 6 ;
+1	psychologist	_	NOUN	_	_	_	_	_	_
+2	have	_	VERB	_	_	_	_	_	_
+3	examin	_	VERB	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	mental	_	ADJ	_	_	_	_	_	_
+6	process	_	NOUN	_	_	_	_	_	_
+7	that	_	DET	_	_	_	_	_	_
+8	underpin	_	X	_	_	_	_	_	_
+9	consciou	_	X	_	_	_	_	_	_
+10	and	_	CCONJ	_	_	_	_	_	_
+11	unconsci	_	X	_	_	_	_	_	_
+12	bias	_	NOUN	_	_	_	_	_	_
+13	6	_	NUM	_	_	_	_	_	_
+14	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 7
+# text = neuroscientist have examin the neurobiolog underpin of discrimin 7 9 ;
+1	neuroscientist	_	X	_	_	_	_	_	_
+2	have	_	VERB	_	_	_	_	_	_
+3	examin	_	VERB	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	neurobiolog	_	ADJ	_	_	_	_	_	_
+6	underpin	_	VERB	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	discrimin	_	X	_	_	_	_	_	_
+9	7	_	NUM	_	_	_	_	_	_
+10	9	_	NUM	_	_	_	_	_	_
+11	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 8
+# text = and evolutionari theorist have explor the variou wai that in -
+1	and	_	CCONJ	_	_	_	_	_	_
+2	evolutionari	_	X	_	_	_	_	_	_
+3	theorist	_	X	_	_	_	_	_	_
+4	have	_	VERB	_	_	_	_	_	_
+5	explor	_	VERB	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	variou	_	X	_	_	_	_	_	_
+8	wai	_	X	_	_	_	_	_	_
+9	that	_	DET	_	_	_	_	_	_
+10	in	_	ADP	_	_	_	_	_	_
+11	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 9
+# text = group out -
+1	group	_	NOUN	_	_	_	_	_	_
+2	out	_	ADV	_	_	_	_	_	_
+3	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 10
+# text = group bias emerg across the histori of our speci .
+1	group	_	NOUN	_	_	_	_	_	_
+2	bias	_	NOUN	_	_	_	_	_	_
+3	emerg	_	VERB	_	_	_	_	_	_
+4	across	_	X	_	_	_	_	_	_
+5	the	_	DET	_	_	_	_	_	_
+6	histori	_	X	_	_	_	_	_	_
+7	of	_	ADP	_	_	_	_	_	_
+8	our	_	X	_	_	_	_	_	_
+9	speci	_	X	_	_	_	_	_	_
+10	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 11
+# text = 10 in mani respect , research alreadi possess a wealth of knowledg concern the origin and consequ discrimin bia .
+1	10	_	NUM	_	_	_	_	_	_
+2	in	_	ADP	_	_	_	_	_	_
+3	mani	_	X	_	_	_	_	_	_
+4	respect	_	NOUN	_	_	_	_	_	_
+5	,	_	PUNCT	_	_	_	_	_	_
+6	research	_	NOUN	_	_	_	_	_	_
+7	alreadi	_	X	_	_	_	_	_	_
+8	possess	_	X	_	_	_	_	_	_
+9	a	_	DET	_	_	_	_	_	_
+10	wealth	_	NOUN	_	_	_	_	_	_
+11	of	_	ADP	_	_	_	_	_	_
+12	knowledg	_	X	_	_	_	_	_	_
+13	concern	_	VERB	_	_	_	_	_	_
+14	the	_	DET	_	_	_	_	_	_
+15	origin	_	NOUN	_	_	_	_	_	_
+16	and	_	CCONJ	_	_	_	_	_	_
+17	consequ	_	NOUN	_	_	_	_	_	_
+18	discrimin	_	X	_	_	_	_	_	_
+19	bia	_	X	_	_	_	_	_	_
+20	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 12
+# text = 11 what also should not be lost in discuss of discrimin is the grow push to implement social polici aim at reduc occurr discriminatori practic .
+1	11	_	NUM	_	_	_	_	_	_
+2	what	_	X	_	_	_	_	_	_
+3	also	_	CCONJ	_	_	_	_	_	_
+4	should	_	X	_	_	_	_	_	_
+5	not	_	X	_	_	_	_	_	_
+6	be	_	VERB	_	_	_	_	_	_
+7	lost	_	ADJ	_	_	_	_	_	_
+8	in	_	ADP	_	_	_	_	_	_
+9	discuss	_	VERB	_	_	_	_	_	_
+10	of	_	ADP	_	_	_	_	_	_
+11	discrimin	_	X	_	_	_	_	_	_
+12	is	_	VERB	_	_	_	_	_	_
+13	the	_	DET	_	_	_	_	_	_
+14	grow	_	ADJ	_	_	_	_	_	_
+15	push	_	VERB	_	_	_	_	_	_
+16	to	_	ADP	_	_	_	_	_	_
+17	implement	_	NOUN	_	_	_	_	_	_
+18	social	_	ADJ	_	_	_	_	_	_
+19	polici	_	X	_	_	_	_	_	_
+20	aim	_	VERB	_	_	_	_	_	_
+21	at	_	ADP	_	_	_	_	_	_
+22	reduc	_	VERB	_	_	_	_	_	_
+23	occurr	_	X	_	_	_	_	_	_
+24	discriminatori	_	X	_	_	_	_	_	_
+25	practic	_	X	_	_	_	_	_	_
+26	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 13
+# text = mandatori divers train in profession set , for exampl ar intend to reduc bia the workplac by increas awar of employe regard challeng faci minor group member .
+1	mandatori	_	X	_	_	_	_	_	_
+2	divers	_	X	_	_	_	_	_	_
+3	train	_	VERB	_	_	_	_	_	_
+4	in	_	ADP	_	_	_	_	_	_
+5	profession	_	ADJ	_	_	_	_	_	_
+6	set	_	VERB	_	_	_	_	_	_
+7	,	_	PUNCT	_	_	_	_	_	_
+8	for	_	ADP	_	_	_	_	_	_
+9	exampl	_	PUNCT	_	_	_	_	_	_
+10	ar	_	X	_	_	_	_	_	_
+11	intend	_	VERB	_	_	_	_	_	_
+12	to	_	ADP	_	_	_	_	_	_
+13	reduc	_	X	_	_	_	_	_	_
+14	bia	_	NOUN	_	_	_	_	_	_
+15	the	_	DET	_	_	_	_	_	_
+16	workplac	_	X	_	_	_	_	_	_
+17	by	_	ADP	_	_	_	_	_	_
+18	increas	_	VERB	_	_	_	_	_	_
+19	awar	_	X	_	_	_	_	_	_
+20	of	_	ADP	_	_	_	_	_	_
+21	employe	_	X	_	_	_	_	_	_
+22	regard	_	VERB	_	_	_	_	_	_
+23	challeng	_	X	_	_	_	_	_	_
+24	faci	_	VERB	_	_	_	_	_	_
+25	minor	_	NOUN	_	_	_	_	_	_
+26	group	_	NOUN	_	_	_	_	_	_
+27	member	_	NOUN	_	_	_	_	_	_
+28	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 14
+# text = 12 inde , the implement of certain polici is root in assumpt that discrimin and bias ar at least to some appreci amount present modern societi .
+1	12	_	NUM	_	_	_	_	_	_
+2	inde	_	X	_	_	_	_	_	_
+3	,	_	PUNCT	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	implement	_	NOUN	_	_	_	_	_	_
+6	of	_	ADP	_	_	_	_	_	_
+7	certain	_	X	_	_	_	_	_	_
+8	polici	_	X	_	_	_	_	_	_
+9	is	_	VERB	_	_	_	_	_	_
+10	root	_	ADJ	_	_	_	_	_	_
+11	in	_	ADP	_	_	_	_	_	_
+12	assumpt	_	X	_	_	_	_	_	_
+13	that	_	DET	_	_	_	_	_	_
+14	discrimin	_	X	_	_	_	_	_	_
+15	and	_	CCONJ	_	_	_	_	_	_
+16	bias	_	X	_	_	_	_	_	_
+17	ar	_	X	_	_	_	_	_	_
+18	at	_	ADP	_	_	_	_	_	_
+19	least	_	ADV	_	_	_	_	_	_
+20	to	_	ADP	_	_	_	_	_	_
+21	some	_	X	_	_	_	_	_	_
+22	appreci	_	ADJ	_	_	_	_	_	_
+23	amount	_	NOUN	_	_	_	_	_	_
+24	present	_	VERB	_	_	_	_	_	_
+25	modern	_	ADJ	_	_	_	_	_	_
+26	societi	_	X	_	_	_	_	_	_
+27	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 15
+# text = even so , estim of the preval perceiv discrimin remain rare see 13 14 .
+1	even	_	ADV	_	_	_	_	_	_
+2	so	_	CCONJ	_	_	_	_	_	_
+3	,	_	PUNCT	_	_	_	_	_	_
+4	estim	_	NOUN	_	_	_	_	_	_
+5	of	_	ADP	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	preval	_	X	_	_	_	_	_	_
+8	perceiv	_	VERB	_	_	_	_	_	_
+9	discrimin	_	X	_	_	_	_	_	_
+10	remain	_	X	_	_	_	_	_	_
+11	rare	_	X	_	_	_	_	_	_
+12	see	_	VERB	_	_	_	_	_	_
+13	13	_	NUM	_	_	_	_	_	_
+14	14	_	NUM	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 16
+# text = at least on prior studi by kessler and colleagu 15 , howev us measur of perceiv discrimin in a larg american sampl report that approxim 33 respond some form see also gibbon et al .
+1	at	_	ADP	_	_	_	_	_	_
+2	least	_	ADV	_	_	_	_	_	_
+3	on	_	ADP	_	_	_	_	_	_
+4	prior	_	NOUN	_	_	_	_	_	_
+5	studi	_	X	_	_	_	_	_	_
+6	by	_	ADP	_	_	_	_	_	_
+7	kessler	_	X	_	_	_	_	_	_
+8	and	_	CCONJ	_	_	_	_	_	_
+9	colleagu	_	X	_	_	_	_	_	_
+10	15	_	NUM	_	_	_	_	_	_
+11	,	_	PUNCT	_	_	_	_	_	_
+12	howev	_	X	_	_	_	_	_	_
+13	us	_	PRON	_	_	_	_	_	_
+14	measur	_	VERB	_	_	_	_	_	_
+15	of	_	ADP	_	_	_	_	_	_
+16	perceiv	_	VERB	_	_	_	_	_	_
+17	discrimin	_	X	_	_	_	_	_	_
+18	in	_	ADP	_	_	_	_	_	_
+19	a	_	DET	_	_	_	_	_	_
+20	larg	_	X	_	_	_	_	_	_
+21	american	_	X	_	_	_	_	_	_
+22	sampl	_	X	_	_	_	_	_	_
+23	report	_	VERB	_	_	_	_	_	_
+24	that	_	DET	_	_	_	_	_	_
+25	approxim	_	X	_	_	_	_	_	_
+26	33	_	NUM	_	_	_	_	_	_
+27	respond	_	X	_	_	_	_	_	_
+28	some	_	X	_	_	_	_	_	_
+29	form	_	NOUN	_	_	_	_	_	_
+30	see	_	VERB	_	_	_	_	_	_
+31	also	_	CCONJ	_	_	_	_	_	_
+32	gibbon	_	X	_	_	_	_	_	_
+33	et	_	VERB	_	_	_	_	_	_
+34	al	_	X	_	_	_	_	_	_
+35	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 17
+# text = 4 .
+1	4	_	NUM	_	_	_	_	_	_
+2	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 18
+# text = the current studi seek to build on this research by estim preval of discrimin experi among a larg , nation repres sampl adult from unit state .
+1	the	_	DET	_	_	_	_	_	_
+2	current	_	NOUN	_	_	_	_	_	_
+3	studi	_	X	_	_	_	_	_	_
+4	seek	_	X	_	_	_	_	_	_
+5	to	_	ADP	_	_	_	_	_	_
+6	build	_	NOUN	_	_	_	_	_	_
+7	on	_	ADP	_	_	_	_	_	_
+8	this	_	DET	_	_	_	_	_	_
+9	research	_	NOUN	_	_	_	_	_	_
+10	by	_	ADP	_	_	_	_	_	_
+11	estim	_	X	_	_	_	_	_	_
+12	preval	_	X	_	_	_	_	_	_
+13	of	_	ADP	_	_	_	_	_	_
+14	discrimin	_	X	_	_	_	_	_	_
+15	experi	_	X	_	_	_	_	_	_
+16	among	_	X	_	_	_	_	_	_
+17	a	_	DET	_	_	_	_	_	_
+18	larg	_	X	_	_	_	_	_	_
+19	,	_	PUNCT	_	_	_	_	_	_
+20	nation	_	ADJ	_	_	_	_	_	_
+21	repres	_	X	_	_	_	_	_	_
+22	sampl	_	X	_	_	_	_	_	_
+23	adult	_	NOUN	_	_	_	_	_	_
+24	from	_	ADP	_	_	_	_	_	_
+25	unit	_	ADJ	_	_	_	_	_	_
+26	state	_	NOUN	_	_	_	_	_	_
+27	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 19
+# text = addition , the analysi address perceiv reason for report discrimin experi .
+1	addition	_	ADJ	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	the	_	DET	_	_	_	_	_	_
+4	analysi	_	X	_	_	_	_	_	_
+5	address	_	NOUN	_	_	_	_	_	_
+6	perceiv	_	ADJ	_	_	_	_	_	_
+7	reason	_	NOUN	_	_	_	_	_	_
+8	for	_	ADP	_	_	_	_	_	_
+9	report	_	NOUN	_	_	_	_	_	_
+10	discrimin	_	X	_	_	_	_	_	_
+11	experi	_	X	_	_	_	_	_	_
+12	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 20
+# text = reason for discrimin .
+1	reason	_	NOUN	_	_	_	_	_	_
+2	for	_	ADP	_	_	_	_	_	_
+3	discrimin	_	NOUN	_	_	_	_	_	_
+4	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 21
+# text = all respond who indic they were discrimin against specif , those with sometim or often to the perceiv measur describ abov ask follow question :
+1	all	_	X	_	_	_	_	_	_
+2	respond	_	VERB	_	_	_	_	_	_
+3	who	_	X	_	_	_	_	_	_
+4	indic	_	X	_	_	_	_	_	_
+5	they	_	PRON	_	_	_	_	_	_
+6	were	_	VERB	_	_	_	_	_	_
+7	discrimin	_	X	_	_	_	_	_	_
+8	against	_	X	_	_	_	_	_	_
+9	specif	_	ADJ	_	_	_	_	_	_
+10	,	_	PUNCT	_	_	_	_	_	_
+11	those	_	DET	_	_	_	_	_	_
+12	with	_	ADP	_	_	_	_	_	_
+13	sometim	_	X	_	_	_	_	_	_
+14	or	_	CCONJ	_	_	_	_	_	_
+15	often	_	NOUN	_	_	_	_	_	_
+16	to	_	ADP	_	_	_	_	_	_
+17	the	_	DET	_	_	_	_	_	_
+18	perceiv	_	ADJ	_	_	_	_	_	_
+19	measur	_	X	_	_	_	_	_	_
+20	describ	_	VERB	_	_	_	_	_	_
+21	abov	_	X	_	_	_	_	_	_
+22	ask	_	VERB	_	_	_	_	_	_
+23	follow	_	ADJ	_	_	_	_	_	_
+24	question	_	NOUN	_	_	_	_	_	_
+25	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 22
+# text = what do you think wa the main reason for these experi ?
+1	what	_	X	_	_	_	_	_	_
+2	do	_	VERB	_	_	_	_	_	_
+3	you	_	PRON	_	_	_	_	_	_
+4	think	_	VERB	_	_	_	_	_	_
+5	wa	_	X	_	_	_	_	_	_
+6	the	_	DET	_	_	_	_	_	_
+7	main	_	NOUN	_	_	_	_	_	_
+8	reason	_	NOUN	_	_	_	_	_	_
+9	for	_	ADP	_	_	_	_	_	_
+10	these	_	DET	_	_	_	_	_	_
+11	experi	_	X	_	_	_	_	_	_
+12	?	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 23
+# text = respond were allow to choos on respons from 11 categori .
+1	respond	_	X	_	_	_	_	_	_
+2	were	_	VERB	_	_	_	_	_	_
+3	allow	_	VERB	_	_	_	_	_	_
+4	to	_	ADP	_	_	_	_	_	_
+5	choos	_	VERB	_	_	_	_	_	_
+6	on	_	ADP	_	_	_	_	_	_
+7	respons	_	X	_	_	_	_	_	_
+8	from	_	ADP	_	_	_	_	_	_
+9	11	_	NUM	_	_	_	_	_	_
+10	categori	_	X	_	_	_	_	_	_
+11	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 24
+# text = for the present analysi , these respons were recod into nine mutual exclus categori captur follow option :
+1	for	_	ADP	_	_	_	_	_	_
+2	the	_	DET	_	_	_	_	_	_
+3	present	_	VERB	_	_	_	_	_	_
+4	analysi	_	X	_	_	_	_	_	_
+5	,	_	PUNCT	_	_	_	_	_	_
+6	these	_	DET	_	_	_	_	_	_
+7	respons	_	X	_	_	_	_	_	_
+8	were	_	VERB	_	_	_	_	_	_
+9	recod	_	VERB	_	_	_	_	_	_
+10	into	_	X	_	_	_	_	_	_
+11	nine	_	X	_	_	_	_	_	_
+12	mutual	_	X	_	_	_	_	_	_
+13	exclus	_	X	_	_	_	_	_	_
+14	categori	_	X	_	_	_	_	_	_
+15	captur	_	VERB	_	_	_	_	_	_
+16	follow	_	ADJ	_	_	_	_	_	_
+17	option	_	NOUN	_	_	_	_	_	_
+18	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 25
+# text = race ancestri skin color ;
+1	race	_	NOUN	_	_	_	_	_	_
+2	ancestri	_	X	_	_	_	_	_	_
+3	skin	_	NOUN	_	_	_	_	_	_
+4	color	_	NOUN	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 26
+# text = gender ;
+1	gender	_	NOUN	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 27
+# text = ag ;
+1	ag	_	X	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 28
+# text = religion ;
+1	religion	_	NOUN	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 29
+# text = height or weight ;
+1	height	_	NOUN	_	_	_	_	_	_
+2	or	_	CCONJ	_	_	_	_	_	_
+3	weight	_	NOUN	_	_	_	_	_	_
+4	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 30
+# text = sexual orient ;
+1	sexual	_	X	_	_	_	_	_	_
+2	orient	_	NOUN	_	_	_	_	_	_
+3	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 31
+# text = educ or incom ;
+1	educ	_	X	_	_	_	_	_	_
+2	or	_	CCONJ	_	_	_	_	_	_
+3	incom	_	X	_	_	_	_	_	_
+4	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 32
+# text = physic disabil ;
+1	physic	_	X	_	_	_	_	_	_
+2	disabil	_	X	_	_	_	_	_	_
+3	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 33
+# text = and other .
+1	and	_	CCONJ	_	_	_	_	_	_
+2	other	_	NOUN	_	_	_	_	_	_
+3	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 34
+# text = the follow categori from origin questionnair were collaps into on for analysi :
+1	the	_	DET	_	_	_	_	_	_
+2	follow	_	ADJ	_	_	_	_	_	_
+3	categori	_	NOUN	_	_	_	_	_	_
+4	from	_	ADP	_	_	_	_	_	_
+5	origin	_	ADJ	_	_	_	_	_	_
+6	questionnair	_	X	_	_	_	_	_	_
+7	were	_	VERB	_	_	_	_	_	_
+8	collaps	_	VERB	_	_	_	_	_	_
+9	into	_	X	_	_	_	_	_	_
+10	on	_	ADP	_	_	_	_	_	_
+11	for	_	ADP	_	_	_	_	_	_
+12	analysi	_	X	_	_	_	_	_	_
+13	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 35
+# text = race ;
+1	race	_	NOUN	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 36
+# text = ancestri or nation origin ;
+1	ancestri	_	X	_	_	_	_	_	_
+2	or	_	CCONJ	_	_	_	_	_	_
+3	nation	_	X	_	_	_	_	_	_
+4	origin	_	NOUN	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 37
+# text = and shade of skin color .
+1	and	_	CCONJ	_	_	_	_	_	_
+2	shade	_	NOUN	_	_	_	_	_	_
+3	of	_	ADP	_	_	_	_	_	_
+4	skin	_	NOUN	_	_	_	_	_	_
+5	color	_	NOUN	_	_	_	_	_	_
+6	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 38
+# text = addition , becaus this question wa onli ask of respond who report prior discrimin experi the built -
+1	addition	_	ADJ	_	_	_	_	_	_
+2	,	_	PUNCT	_	_	_	_	_	_
+3	becaus	_	X	_	_	_	_	_	_
+4	this	_	DET	_	_	_	_	_	_
+5	question	_	NOUN	_	_	_	_	_	_
+6	wa	_	X	_	_	_	_	_	_
+7	onli	_	X	_	_	_	_	_	_
+8	ask	_	VERB	_	_	_	_	_	_
+9	of	_	ADP	_	_	_	_	_	_
+10	respond	_	X	_	_	_	_	_	_
+11	who	_	X	_	_	_	_	_	_
+12	report	_	VERB	_	_	_	_	_	_
+13	prior	_	NOUN	_	_	_	_	_	_
+14	discrimin	_	X	_	_	_	_	_	_
+15	experi	_	X	_	_	_	_	_	_
+16	the	_	DET	_	_	_	_	_	_
+17	built	_	X	_	_	_	_	_	_
+18	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 39
+# text = in skip pattern result a larg number of case score as miss legitim .
+1	in	_	ADP	_	_	_	_	_	_
+2	skip	_	X	_	_	_	_	_	_
+3	pattern	_	NOUN	_	_	_	_	_	_
+4	result	_	NOUN	_	_	_	_	_	_
+5	a	_	DET	_	_	_	_	_	_
+6	larg	_	X	_	_	_	_	_	_
+7	number	_	NOUN	_	_	_	_	_	_
+8	of	_	ADP	_	_	_	_	_	_
+9	case	_	NOUN	_	_	_	_	_	_
+10	score	_	VERB	_	_	_	_	_	_
+11	as	_	X	_	_	_	_	_	_
+12	miss	_	VERB	_	_	_	_	_	_
+13	legitim	_	X	_	_	_	_	_	_
+14	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 40
+# text = respond race .
+1	respond	_	X	_	_	_	_	_	_
+2	race	_	NOUN	_	_	_	_	_	_
+3	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 41
+# text = becaus a race variabl is not avail from the wave 4 interview , we us racial categori report by respond duri 1 .
+1	becaus	_	X	_	_	_	_	_	_
+2	a	_	DET	_	_	_	_	_	_
+3	race	_	NOUN	_	_	_	_	_	_
+4	variabl	_	X	_	_	_	_	_	_
+5	is	_	VERB	_	_	_	_	_	_
+6	not	_	ADJ	_	_	_	_	_	_
+7	avail	_	NOUN	_	_	_	_	_	_
+8	from	_	ADP	_	_	_	_	_	_
+9	the	_	DET	_	_	_	_	_	_
+10	wave	_	NOUN	_	_	_	_	_	_
+11	4	_	NUM	_	_	_	_	_	_
+12	interview	_	NOUN	_	_	_	_	_	_
+13	,	_	PUNCT	_	_	_	_	_	_
+14	we	_	PRON	_	_	_	_	_	_
+15	us	_	PRON	_	_	_	_	_	_
+16	racial	_	X	_	_	_	_	_	_
+17	categori	_	X	_	_	_	_	_	_
+18	report	_	NOUN	_	_	_	_	_	_
+19	by	_	ADP	_	_	_	_	_	_
+20	respond	_	X	_	_	_	_	_	_
+21	duri	_	VERB	_	_	_	_	_	_
+22	1	_	NUM	_	_	_	_	_	_
+23	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 42
+# text = wave 1 race rather than , sai 3 wa us to preserv case count .
+1	wave	_	NOUN	_	_	_	_	_	_
+2	1	_	NUM	_	_	_	_	_	_
+3	race	_	NOUN	_	_	_	_	_	_
+4	rather	_	ADV	_	_	_	_	_	_
+5	than	_	ADJ	_	_	_	_	_	_
+6	,	_	PUNCT	_	_	_	_	_	_
+7	sai	_	X	_	_	_	_	_	_
+8	3	_	NUM	_	_	_	_	_	_
+9	wa	_	X	_	_	_	_	_	_
+10	us	_	PRON	_	_	_	_	_	_
+11	to	_	ADP	_	_	_	_	_	_
+12	preserv	_	X	_	_	_	_	_	_
+13	case	_	NOUN	_	_	_	_	_	_
+14	count	_	VERB	_	_	_	_	_	_
+15	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 43
+# text = the logic is that nearli all wave 4 respond appear in 1 sampl , but not would have been interview at 3 due to differenti pattern of temporari attrit .
+1	the	_	DET	_	_	_	_	_	_
+2	logic	_	NOUN	_	_	_	_	_	_
+3	is	_	VERB	_	_	_	_	_	_
+4	that	_	DET	_	_	_	_	_	_
+5	nearli	_	X	_	_	_	_	_	_
+6	all	_	X	_	_	_	_	_	_
+7	wave	_	NOUN	_	_	_	_	_	_
+8	4	_	NUM	_	_	_	_	_	_
+9	respond	_	X	_	_	_	_	_	_
+10	appear	_	NOUN	_	_	_	_	_	_
+11	in	_	ADP	_	_	_	_	_	_
+12	1	_	NUM	_	_	_	_	_	_
+13	sampl	_	X	_	_	_	_	_	_
+14	,	_	PUNCT	_	_	_	_	_	_
+15	but	_	CCONJ	_	_	_	_	_	_
+16	not	_	PUNCT	_	_	_	_	_	_
+17	would	_	X	_	_	_	_	_	_
+18	have	_	VERB	_	_	_	_	_	_
+19	been	_	VERB	_	_	_	_	_	_
+20	interview	_	VERB	_	_	_	_	_	_
+21	at	_	ADP	_	_	_	_	_	_
+22	3	_	NUM	_	_	_	_	_	_
+23	due	_	NOUN	_	_	_	_	_	_
+24	to	_	ADP	_	_	_	_	_	_
+25	differenti	_	ADJ	_	_	_	_	_	_
+26	pattern	_	NOUN	_	_	_	_	_	_
+27	of	_	ADP	_	_	_	_	_	_
+28	temporari	_	X	_	_	_	_	_	_
+29	attrit	_	X	_	_	_	_	_	_
+30	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 44
+# text = respond were ask to indic their race from among the follow categori :
+1	respond	_	X	_	_	_	_	_	_
+2	were	_	VERB	_	_	_	_	_	_
+3	ask	_	VERB	_	_	_	_	_	_
+4	to	_	ADP	_	_	_	_	_	_
+5	indic	_	X	_	_	_	_	_	_
+6	their	_	X	_	_	_	_	_	_
+7	race	_	NOUN	_	_	_	_	_	_
+8	from	_	ADP	_	_	_	_	_	_
+9	among	_	X	_	_	_	_	_	_
+10	the	_	DET	_	_	_	_	_	_
+11	follow	_	ADJ	_	_	_	_	_	_
+12	categori	_	X	_	_	_	_	_	_
+13	:	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 45
+# text = white ;
+1	white	_	NOUN	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 46
+# text = black or african american ;
+1	black	_	NOUN	_	_	_	_	_	_
+2	or	_	CCONJ	_	_	_	_	_	_
+3	african	_	NOUN	_	_	_	_	_	_
+4	american	_	X	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 47
+# text = hispan ;
+1	hispan	_	ADJ	_	_	_	_	_	_
+2	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 48
+# text = american indian or nativ ;
+1	american	_	X	_	_	_	_	_	_
+2	indian	_	X	_	_	_	_	_	_
+3	or	_	CCONJ	_	_	_	_	_	_
+4	nativ	_	X	_	_	_	_	_	_
+5	;	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 49
+# text = and asian or pacif island .
+1	and	_	CCONJ	_	_	_	_	_	_
+2	asian	_	X	_	_	_	_	_	_
+3	or	_	CCONJ	_	_	_	_	_	_
+4	pacif	_	X	_	_	_	_	_	_
+5	island	_	NOUN	_	_	_	_	_	_
+6	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 50
+# text = respond were provid the opportun to select more than on race , and those who did ask a follow -
+1	respond	_	X	_	_	_	_	_	_
+2	were	_	VERB	_	_	_	_	_	_
+3	provid	_	VERB	_	_	_	_	_	_
+4	the	_	DET	_	_	_	_	_	_
+5	opportun	_	X	_	_	_	_	_	_
+6	to	_	ADP	_	_	_	_	_	_
+7	select	_	X	_	_	_	_	_	_
+8	more	_	ADV	_	_	_	_	_	_
+9	than	_	X	_	_	_	_	_	_
+10	on	_	ADP	_	_	_	_	_	_
+11	race	_	NOUN	_	_	_	_	_	_
+12	,	_	PUNCT	_	_	_	_	_	_
+13	and	_	CCONJ	_	_	_	_	_	_
+14	those	_	DET	_	_	_	_	_	_
+15	who	_	X	_	_	_	_	_	_
+16	did	_	VERB	_	_	_	_	_	_
+17	ask	_	VERB	_	_	_	_	_	_
+18	a	_	DET	_	_	_	_	_	_
+19	follow	_	VERB	_	_	_	_	_	_
+20	-	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 51
+# text = up question regard which categori best describ their racial background .
+1	up	_	ADV	_	_	_	_	_	_
+2	question	_	NOUN	_	_	_	_	_	_
+3	regard	_	VERB	_	_	_	_	_	_
+4	which	_	X	_	_	_	_	_	_
+5	categori	_	X	_	_	_	_	_	_
+6	best	_	ADV	_	_	_	_	_	_
+7	describ	_	VERB	_	_	_	_	_	_
+8	their	_	X	_	_	_	_	_	_
+9	racial	_	X	_	_	_	_	_	_
+10	background	_	NOUN	_	_	_	_	_	_
+11	.	_	PUNCT	_	_	_	_	_	_
+
+# sent_id = 52
+# text = in the current studi , those respond who indic more than on race were code as mix .
+1	in	_	ADP	_	_	_	_	_	_
+2	the	_	DET	_	_	_	_	_	_
+3	current	_	NOUN	_	_	_	_	_	_
+4	studi	_	X	_	_	_	_	_	_
+5	,	_	PUNCT	_	_	_	_	_	_
+6	those	_	DET	_	_	_	_	_	_
+7	respond	_	X	_	_	_	_	_	_
+8	who	_	X	_	_	_	_	_	_
+9	indic	_	X	_	_	_	_	_	_
+10	more	_	ADV	_	_	_	_	_	_
+11	than	_	X	_	_	_	_	_	_
+12	on	_	ADP	_	_	_	_	_	_
+13	race	_	NOUN	_	_	_	_	_	_
+14	were	_	VERB	_	_	_	_	_	_
+15	code	_	VERB	_	_	_	_	_	_
+16	as	_	X	_	_	_	_	_	_
+17	mix	_	VERB	_	_	_	_	_	_
+18	.	_	PUNCT	_	_	_	_	_	_
