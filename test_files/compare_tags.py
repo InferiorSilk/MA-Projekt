@@ -20,6 +20,7 @@ OPTIONS
 -------
     -t, --tag-field {upos,xpos}   column to evaluate (default: upos)
     -v, --verbose                 list every mismatch
+Fully implemented by AI
 """
 
 import argparse
