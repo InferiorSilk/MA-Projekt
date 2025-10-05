@@ -4,7 +4,7 @@ Token-stream comparison of POS tags in CoNLL-U files.
 Alignment heuristic:
     Two tokens are considered the “same” word if:
       - For punctuation: exact match after Unicode normalization
-      - For words: first N characters (default 5) of the normalized, lowercased FORM
+      - For words: first N characters (default 3) of the normalized, lowercased FORM
     If the token is shorter than N characters, the entire string is used.
 
 After alignment only the chosen tag column (UPOS or XPOS) is evaluated.
@@ -20,7 +20,7 @@ OPTIONS
 -------
     -t, --tag-field {upos,xpos}   column to evaluate (default: upos)
     -v, --verbose                 list every mismatch
-Fully implemented by AI
+Fully implemented by AI. I do not consider this as part of the product.
 """
 
 import argparse
@@ -48,7 +48,7 @@ def normalize_form(s: str) -> str:
     }
     return "".join(trans.get(ch, ch) for ch in s)
 
-def key_for_alignment(form: str, n: int = 5) -> str:
+def key_for_alignment(form: str, n: int = 3) -> str:
     f = normalize_form(form)
     if PUNCT_RE.match(f):
         return f
