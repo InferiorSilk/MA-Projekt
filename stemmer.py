@@ -8,7 +8,7 @@ class Stemmer(object):
         j (int): Index of the last character in the word
         _dirty_ending_tracker (str): String containing the stemmed word and the removed suffix
     
-    Explanation of the Porter stemmer and terms and keywords by AI, implementation by me. Docstrings by AI.
+    Some of the explanation of the Porter stemmer and terms and keywords by AI, implementation by me. Docstrings by AI.
     """
     def __init__(self):
         self.b = [] 
