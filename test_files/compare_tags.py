@@ -48,7 +48,7 @@ def normalize_form(s: str) -> str:
     }
     return "".join(trans.get(ch, ch) for ch in s)
 
-def key_for_alignment(form: str, n: int = 3) -> str:
+def key_for_alignment(form: str, n: int = 2) -> str:
     f = normalize_form(form)
     if PUNCT_RE.match(f):
         return f
